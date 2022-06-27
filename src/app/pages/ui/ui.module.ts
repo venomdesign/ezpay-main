@@ -9,7 +9,7 @@ import {
   NgbTooltipModule, NgbPopoverModule, NgbPaginationModule, NgbNavModule, NgbAccordionModule,
   NgbCollapseModule, NgbButtonsModule
 } from '@ng-bootstrap/ng-bootstrap';
-import { Ng5SliderModule } from 'ng5-slider';
+//import { Ng5SliderModule } from 'ng5-slider';
 
 import { UiRoutingModule } from './ui-routing.module';
 import { AlertsComponent } from './alerts/alerts.component';
@@ -51,7 +51,7 @@ import { RangesliderComponent } from './rangeslider/rangeslider.component';
     CommonModule,
     UiRoutingModule,
     FormsModule,
-    Ng5SliderModule,
+    //Ng5SliderModule,
     NgbAlertModule,
     NgbCarouselModule,
     NgbDropdownModule,

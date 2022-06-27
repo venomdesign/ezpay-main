@@ -321,25 +321,25 @@ exports.MENU = [
                     }
                 ]
             },
-            {
-                id: 57,
-                label: 'MENUITEMS.MAPS.TEXT',
-                icon: 'ri-map-pin-line',
-                subItems: [
-                    {
-                        id: 58,
-                        label: 'MENUITEMS.MAPS.LIST.GOOGLEMAP',
-                        link: '/maps/google',
-                        parentId: 57
-                    },
-                    {
-                        id: 59,
-                        label: 'Leaflet Maps',
-                        link: '/maps/leaflet',
-                        parentId: 57
-                    },
-                ]
-            }
+            // {
+            //     id: 57,
+            //     label: 'MENUITEMS.MAPS.TEXT',
+            //     icon: 'ri-map-pin-line',
+            //     subItems: [
+            //         {
+            //             id: 58,
+            //             label: 'MENUITEMS.MAPS.LIST.GOOGLEMAP',
+            //             link: '/maps/google',
+            //             parentId: 57
+            //         },
+            //         {
+            //             id: 59,
+            //             label: 'Leaflet Maps',
+            //             link: '/maps/leaflet',
+            //             parentId: 57
+            //         },
+            //     ]
+            // }
         ]
     },
     {

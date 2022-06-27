@@ -8,14 +8,12 @@ import { WidgetModule } from '../shared/widget/widget.module';
 import { PagesRoutingModule } from './pages-routing.module';
 
 import { NgbModalModule, NgbNavModule, NgbDropdownModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
-//import { NgApexchartsModule } from 'ng-apexcharts';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { DndModule } from 'ngx-drag-drop';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 //Account
 import { NotificationsComponent } from './account/notifications/notifications.component';

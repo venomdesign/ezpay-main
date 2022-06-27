@@ -427,25 +427,25 @@ export const MENU: MenuItem[] = [
             }
         ]
     },
-    {
-        id: 68,
-        label: 'MENUITEMS.MAPS.TEXT',
-        icon: 'ri-map-pin-line',
-        subItems: [
-            {
-                id: 69,
-                label: 'MENUITEMS.MAPS.LIST.GOOGLEMAP',
-                link: '/maps/google',
-                parentId: 68
-            },
-            {
-                id: 70,
-                label: 'Leaflet Maps',
-                link: '/maps/leaflet',
-                parentId: 68
-            },
-        ]
-    },
+    // {
+    //     id: 68,
+    //     label: 'MENUITEMS.MAPS.TEXT',
+    //     icon: 'ri-map-pin-line',
+    //     subItems: [
+    //         {
+    //             id: 69,
+    //             label: 'MENUITEMS.MAPS.LIST.GOOGLEMAP',
+    //             link: '/maps/google',
+    //             parentId: 68
+    //         },
+    //         {
+    //             id: 70,
+    //             label: 'Leaflet Maps',
+    //             link: '/maps/leaflet',
+    //             parentId: 68
+    //         },
+    //     ]
+    // },
     {
         id: 69,
         label: 'MENUITEMS.MULTILEVEL.TEXT',
