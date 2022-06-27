@@ -1,0 +1,227 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <h1>Pay Online</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    
+    <div class="col-xl-8">
+      
+      <div class="card">
+        <h4 class="card-header mt-0">Please choose method of payment to continue</h4>
+        <div class="card-body">
+          <p class="card-text">To make your payment, please fill in all the required fields. Once all the fields are complete press 'Continue' to move to the next step in the payment process.</p>
+          <ul ngbNav #nav="ngbNav" [activeId]="1" class="nav-tabs mb-2">
+            <li [ngbNavItem]="1">
+              <a ngbNavLink>
+                <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                <span class="d-none d-sm-block">Credit / Debit Card</span>
+              </a>
+              <ng-template ngbNavContent>
+                <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+              <a ngbNavLink>
+                <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                <span class="d-none d-sm-block">ACH/Bank Account</span>
+              </a>
+              <ng-template ngbNavContent>
+                <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+              </ng-template>
+            </li>
+          </ul>
+          <div [ngbNavOutlet]="nav"></div>
+          <div class="border-light border-top pt-2 pb-2"></div> 
+          <div class="row custom-control custom-checkbox">
+            <div class="col-md-12">
+              <input type="checkbox" class="custom-control-input" id="customCheck2">
+              <label class="custom-control-label" for="customCheck2">Sign me up for Auto-Pay<sup>1</sup></label>
+            </div>
+          </div>
+          <div class="row custom-control custom-checkbox mt-3">
+            <div class="col-md-12">
+              <input type="checkbox" class="custom-control-input" id="customCheck3">
+              <label class="custom-control-label" for="customCheck3">Simplify my life! Sign me up for Paperless Invoices<sup>2</sup></label>
+            </div>
+          </div>
+          <div class="form-group mt-2 mb-2">
+            <div class="row">
+              <div class="col-md-12">
+                <label for="contact-name" class="col-form-label fs-12">Your account will be registered with the email address below. To register with a different email, please modify here: <sup>*</sup></label>
+              </div>
+              <div class="col-md-6"><input class="form-control" type="text" value="" placeholder="Enter Email" id="contact-name"></div>
+            </div>
+          </div>
+          <p class="card-text fs-12 mt-3">
+            <sup>1</sup> By signing up for Auto-Pay, you agree to the following <a (click)="openModal(paperlessTerms)">Terms</a>.<br>
+            <sup>2</sup> By signing up for Paperless Invoices, you agree to the following <a (click)="openModal(paperlessTerms)">Terms</a>
+          </p>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+      <privacy-card></privacy-card>
+    </div>
+
+    <div class="col-xl-4">
+      <div class="card">
+        <h4 class="card-header">Policy Number: NDO1556838G</h4>
+        <div class="card-body">
+          <p class="card-text">This transaction will be shown as U.S. Liability Insurance on your account statement and an email confirmation will be sent to the address provided.</p>
+          <dl>
+            <dt class="d-flex justify-content-between border-bottom border-light p-2">
+              <span class="fw-bold text-uppercase">Payment Date</span>
+              <span class="fw-bold blue-500">10/4/2021</span>
+            </dt>
+            <dt class="d-flex justify-content-between p-2">
+              <span class="fw-bold text-uppercase">Total Payment</span>
+              <span class="fw-bold blue-500">$2,213.55</span>
+            </dt>
+          </dl>
+          <div class="d-flex flex-row flex-wrap">
+            <button type="button" class="btn btn-secondary flex-fill" [routerLink]="['/payonline']">Back</button>
+            <button type="button" class="btn btn-success ml-2 flex-fill" [routerLink]="['/payonline/confirmation']">Pay Now</button>
+          </div>
+        </div>
+      </div>
+
+      <chat-card></chat-card>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Tab Content -->
+<ng-template #TabContent>
+  <div class="form-group row">
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Cardholder Name <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter name on front of credit card" id="contact-name">
+      <sub class="col-6">(only letters and numbers)</sub>
+    </div>
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Card Number <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter the cardholder's card number" id="contact-name">
+      <sub class="col-6">(no spaces or dashes)</sub>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="contact-name" class="col-form-label">Expiration Date <sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="MM" id="contact-name">
+        </div>
+        <div class="col-md-6">
+          <label for="contact-name" class="col-form-label">&nbsp;</label>
+          <input class="form-control" type="text" value="" placeholder="YYYY" id="contact-name">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="contact-name" class="col-form-label">CVV/CVC Number <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="CVV" id="contact-name">
+    </div>
+    <div class="col-md-3">
+      <label for="contact-name" class="col-form-label">Zip/Postal Code <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter Zip/Postal Code" id="contact-name">
+    </div>    
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Email <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter Email" id="contact-name">
+    </div>
+  </div>
+  <div class="row custom-control custom-checkbox mt-3 mb-3">
+    <div class="col-md-12">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="custom-control-label" for="customCheck1">Do you want to process the payment as a Debit card?</label>
+    </div>
+  </div>
+  
+</ng-template>
+<!-- Tab Content -->
+<ng-template #TabContent1>
+  <div class="form-group row">
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Select Account Type <sup>*</sup></label>
+      <select class="form-control">
+        <option value="">Please select account type</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Routing Transit Number <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter routing number" id="contact-name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Account Number <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter account number" id="contact-name">
+    </div>
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Confirm Account Number <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Re-enter account number" id="contact-name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6">
+      <label for="contact-name" class="col-form-label">Phone Number <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter phone number" id="contact-name">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="contact-name" class="col-form-label">Email <sup>*</sup></label>
+      <input class="form-control" type="text" value="" placeholder="Enter email" id="contact-name">
+    </div>
+  </div>  
+</ng-template>
+
+
+
+
+<!-- Standard Modal -->
+<ng-template #paperlessTerms role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Terms and Conditions for Electronic (Paperless) Delivery</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+    <p>Chat client will be used, this is just for demonstration purposes when you click the chat button</p>
+    <ol class="m-0 pl-3 pr-3">
+      <li>You agree to have USLI electronically deliver policies, endorsements, mid-year questionnaires, documents, records and information ('Documents') if you have signed up for Paperless Policy and/or billing statements and invoices ('Invoices') if you have signed up for Paperless Invoice until such time as either party modifies or cancels this Agreement. You will receive these electronic Documents and/or Invoices instead of paper documents; however, USLI reserves the right to mail your documents in place of electronic delivery.</li>
+      <li>You can view the Documents and/or Invoices by logging into the website: <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a> with your email and password.</li>
+      <li>At any time while this Agreement is effective, you may obtain a paper copy of a particular Document or Invoice at no charge by calling USLI at 1-855-ASK-USLI (1-855-275-8754) and requesting a copy.</li>
+      <li>You may update your information, such as changing your email address, at any time by accessing the Edit Profile feature of our USLI Online Policyholder Services System at <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a>.</li>
+      <li>You may terminate this Agreement at any time by changing your delivery preferences within our USLI Online Policyholder Services System at <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a>. After the termination is processed by us, which may take up to ten (10) days, all future Documents or Invoices, as the case may be, will be provided to you in paper form. Termination of this Agreement shall not affect the legal enforceability of Documents or Invoices provided to you before the effective date of the cancellation.</li>
+      <li>To access the site and obtain Documents or Invoices electronically, you need access to the World Wide Web (Internet) and a security-enabled web browser, with 128-bit encryption installed, such as Microsoft Internet Explorer (9.x or higher), Mozilla Firefox (latest), Google Chrome or other similarly enabled browser. The information you send to us is encrypted. We use an industry standard Transport Layer Security (TLS) to allow for encryption of sensitive personal information such as payment information you have been requested to provide online. You also need an email address, as well as Adobe Acrobat Reader that can be downloaded directly from Adobe's website, <a href="https://www.adobe.com" title="Click here to download Adobe Acrobat Reader">www.adobe.com</a>. You need a printer to print out necessary documents.</li>
+      <li>You are responsible for accessing, opening and reading your Documents or Invoices. Electronic Documents and Invoices have the same legal effect as printed ones. If you cannot access or read any Documents or Invoices, you must contact USLI.</li>
+      <li>USLI may amend the terms of this Agreement at any time by providing notice to you of the amendments. If you do not agree with the terms of the amendment, you can terminate this Agreement as described in section 5.</li>
+      <li>We will update you if there are any changes to the hardware or software requirements that could impact your receipt or ability to review electronic correspondence from USLI. USLI does not warrant that the delivery of electronic Documents and Invoices will be uninterrupted or error free. We are not liable for: any loss or damage arising from problems with your equipment or your telecommunications provider; your failure to meet your responsibilities as outlined herein; or any equipment problems or other occurrences beyond our reasonable control.</li>
+      <li>This Agreement is effective when we electronically receive your acceptance.</li>
+    </ol>
+  </div>
+  <div class="d-flex flex-row modal-footer justify-content-center">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-secondary"><i class="fas fa-print"></i> Print</button>
+  </div>
+</ng-template>

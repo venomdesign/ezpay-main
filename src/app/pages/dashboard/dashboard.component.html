@@ -1,0 +1,137 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-12">
+      <h1 class="page-header">Policy Dashboard</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-3">
+
+      <div class="card border-danger">
+        <h4 class="card-header mt-0 bg-danger__light border-danger">Attention Needed (2)</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">GL 1040086B <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14 cursor-pointer">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-danger w-100">Make Payment</a>
+          <!-- <div class="status-divider"></div>
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-warning w-100">Make Payment</a> -->
+          <div class="status-divider"></div>
+          <h4 class="card-title mt-0">Material Information Form</h4> 
+          <a [routerLink]="['/policy/documents/mif']" class="btn btn-danger w-100">Complete</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14 cursor-pointer">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      
+      <div class="row d-flex flex-wrap">
+          <div class="col-sm-12 col-md-6">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary">Active</button>
+              <button type="button" class="btn btn-secondary">Cancelled</button>
+              <button type="button" class="btn btn-secondary">Expired</button>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 text-right">
+              <p class="fw-medium">Don't see the policy number below? <button type="button" class="btn btn-success ml-2" (click)="openModal(content)">Add Policy</button></p>
+          </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0 border-0">Policy Information</h4>
+
+          <div class="table-responsive">
+            <table class="table table-centered">
+              <thead class="thead-light">
+                <tr>
+                  <th class="border-0">Policy Number</th>
+                  <th class="border-0">Policy Term</th>
+                  <th class="border-0">Status</th>
+                  <th class="border-0">AutoPay</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of transactions|filter:term">
+                  <td><a [routerLink]="['policy']" title="Click to see Policy {{item.orderid}}">{{item.orderid}}</a></td>
+                  <td>{{item.date}}</td>
+                  <td>{{item.billingname}}</td>
+                  <td>{{item.paymentstatus}} 
+                    <!-- <a href="javascript:void()">{{item.paymentlink}}</a> -->
+
+                    <a class="cursor-pointer" [routerLink]="item.paymenthref" title="Click here to {{item.paymentlink != 'Enroll' ? 'Manage Autopay' : 'Enroll in AutoPay'}}">{{item.paymentlink}}</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+    <!-- <privacy-card></privacy-card> -->
+    <calling-card></calling-card>
+  <!-- end row -->
+  </div>
+</div>
+
+
+<!-- Standard Modal -->
+<ng-template #content role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Add Policy</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+      <p>Enter the Policy Number and Policy Mailing Address Zip Code from your invoice for the policy that you wish to add.</p>
+      <div class="form-group row">
+        <div class="col-12">
+          <label for="contact-name" class="col-form-label">Policy Number<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter the policy number" id="contact-name">
+          <!--<sub class="col-6">Hint text</sub>-->
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <label for="contact-name" class="col-form-label">Policy Mailing Address Zip/Postal Code<sup>*</sup></label>
+          <input class="form-control w-50" type="text" value="" placeholder="Enter Zip/Postal Code" id="contact-name">
+          <!--<sub class="col-6">Hint text</sub>-->
+        </div>
+      </div>
+  </div>
+  <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-text" (click)="modal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-success" (click)="modal.close('Close click'); openModal(submitSuccessModal)">Add Policy</button>
+  </div>
+</ng-template>
+
+<!-- Standard Modal -->
+<ng-template #submitSuccessModal role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Add Policy Confirmation</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+    Policy Number GL 1040086B has been added to the account.
+  </div>
+  <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-primary flex-grow-1" (click)="modal.close('Close click')">Continue</button>
+  </div>
+</ng-template>

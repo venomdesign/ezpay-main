@@ -1,0 +1,31 @@
+// 
+// _table.scss
+// 
+
+.table {
+  .thead-light th, th {
+      font-weight: $fw-medium;
+      color: $text-color;
+      border-bottom: 1px solid #485E9024;
+  }
+  .thead-light th { background-color: #F1F5F6; }
+}
+
+//Table centered
+.table-centered {
+  td,th {
+      vertical-align: middle !important;
+  }
+}
+
+.table-nowrap {
+  th, td {
+    white-space: nowrap;
+  }
+}
+
+.table th, .table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #485E9024;
+}

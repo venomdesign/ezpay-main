@@ -1,0 +1,101 @@
+<h1 class="covid-19">
+  COVID-19 UPDATES: <a href="https://mailchi.mp/usli/covid-19-updates" class="underlined">Learn More&gt;&gt;</a>
+</h1>
+
+<!-- <div class="home-btn d-none d-sm-block">
+  <a href="javascript:void()"><i class="mdi mdi-home-variant h2 text-white"></i></a>
+</div> -->
+  <div id="top-bar">
+    <div class="container clearfix">
+        <div class="col_half nobottommargin">
+            <div class="top-links"></div>
+        </div>
+
+        <div class="col_half fright col_last nobottommargin"></div>
+    </div>
+  </div>
+
+  <header id="header" class="sticky-style-2">
+
+    <div class="container header-row clearfix header d-flex align-items-center">
+      <div id="logo">
+        <a href="/" data-dark-logo="https://www.usli.com/media/ahopues0/usli-logo-2x.png"><span class="standard-logo"><img src="https://www.usli.com/media/ahopues0/usli-logo-2x.png" alt="USLI Logo"></span></a>
+      </div>
+      <div class="header-extras header-extras-phone d-flex align-items-center">
+        <div class="header-phone">888-523-5545</div>
+      </div>
+      <div class="header-extras d-flex align-items-center">
+        <a href="https://customers.usli.com/sites/snap/USLI-SNAP.html" class="button button-rounded button-reveal button-broker button-green tright"><i class="icon-circle-arrow-right"></i><span>BROKER / AGENT LOGIN</span></a>
+      </div>
+    </div>
+
+    <div id="header-wrap">
+
+        <!-- Primary Navigation
+        ============================================= -->
+        <nav id="primary-menu" class="style-2">
+          <div class="container clearfix">
+            <div id="primary-menu-trigger">
+                <i class="fa fa-bars"></i> 
+                <span>Navigation</span>
+            </div>
+          <ul class="sf-js-enabled" style="touch-action: pan-y;">
+            <li class="sub-nav sub-menu"><a href="#" class="sf-with-ul"><div>Policy Services</div></a></li>
+            <li class="sub-nav sub-menu"><a href="/products" class="sf-with-ul"><div>Products</div></a></li>
+            <li class=""><a href="https://www.bizresourcecenter.com/"><div>Business Resource Center</div></a></li>
+            <li class=""><a href="/support/"><div>Support</div></a></li>
+            <li class="sub-nav sub-menu"><a href="/about-us" class="sf-with-ul"><div>About Us</div></a></li>
+            <li class="sub-nav sub-menu"><a href="#" class="sf-with-ul"><div><i class="icon-line-menu"></i>Menu</div></a></li>
+          </ul>
+        </div>
+      </nav><!-- #primary-menu end -->
+
+    </div>
+
+</header>
+
+<div class="row placeholder">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mt-3 d-flex justify-content-end">
+        <form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="card border-primary" style="width:300px;">
+            <h4 class="card-header mt-0 text-center bg-primary text-white">Pay Online Now</h4>
+            <div class="card-notice text-center">(no login/account required)</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <label for="contact-name" class="col-form-label">Account Number</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Account Number" id="contact-name">
+                  <!-- <sub class="col-md-4">This field only accepts numbers</sub> -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label for="contact-name" class="col-form-label">Zip/Postal Code</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Zip/Postal Code" id="contact-name">
+                  <!-- <sub class="col-md-4">This field only accepts numbers</sub> -->
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-md-12 d-flex flex-column">
+                  <button type="button" class="btn btn-success flex-fill" [routerLink]="['/payonline']">Continue</button>
+                  <div class="line-through mt-3 mb-3">OR</div>
+                  <button class="btn btn-primary flex-fill" type="submit">Login / Create Account</button> <!-- [routerLink]="['/']" -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row placeholder">
+  <div class="container">&nbsp;</div>
+</div>
+<div class="row placeholder">
+  <div class="container">&nbsp;</div>
+</div>
+<!-- end page -->

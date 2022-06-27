@@ -1,0 +1,21 @@
+<!-- 
+  breadcrumb item 
+  location: src\app\shared\ui\breadcrumb\breadcrumb.component.html
+-->
+<div class="row">
+  <div class="col-12">
+    <div class="page-title-box d-flex align-items-center">
+      <h4 class="mb-0">{{ title }}</h4>
+      <div class="page-title-left">
+        <ol class="breadcrumb m-0">
+          <ng-container *ngFor="let item of breadcrumbItems; let first = first;">
+            <li class="breadcrumb-item" *ngIf="!item.active">
+              <a href="{{item.link}}" title="{{ item.label }}"><i class="fa fa-home" *ngIf="first"></i> {{ item.label }}</a>
+            </li>
+            <li class="breadcrumb-item active" *ngIf="item.active"><i class="fa fa-home" *ngIf="first"></i> {{ item.label }}</li>
+          </ng-container>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

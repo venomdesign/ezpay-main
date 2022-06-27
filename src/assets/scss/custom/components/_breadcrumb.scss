@@ -1,0 +1,33 @@
+
+// 
+// breadcrumb.scss
+//
+
+// Breadcrumb item arrow
+
+.breadcrumbs { 
+    background-color: #E0E7F1; 
+    color: $text-color; 
+    height: 3rem; 
+    
+    @media (max-width: 600px) {
+        display: none;
+    } 
+}
+
+.breadcrumb-item {
+    font-weight: $fw-medium;
+    line-height: 3rem;
+
+    > a {
+        color: $blue-500;
+        // text-decoration: none;
+        &:hover { text-decoration: underline; }
+    }
+    +.breadcrumb-item {
+        &::before {
+            //font-family: "Material Design Icons";
+            content: "/";
+        }
+    }
+}

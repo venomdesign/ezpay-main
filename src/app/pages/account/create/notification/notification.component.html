@@ -1,0 +1,73 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+  
+          <h1 class="page-header">Create Account</h1>
+  
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+      <chat-card></chat-card>
+    </div>
+    <div class="col-xl-9">
+      <div class="card">
+        <div class="d-flex flex-row">
+          <h4 class="card-header create mt-0 flex-fill"><span class="mr-2">1</span> Notifications</h4><span class="arrow-right d-none d-lg-block gray-dark"></span>
+          <h4 class="card-header create mt-0 flex-fill"><span class="mr-2">2</span> PaperLess Options</h4><span class="arrow-right d-none d-lg-block gray-light"></span>
+          <h4 class="card-header create mt-0 flex-fill"><span class="mr-2">3</span> Setup Account Wallet</h4>
+        </div>
+        <div class="card-notice">Notifications for payment reminders and late payments will default to your email address unless indicated otherwise, here:</div>
+        <div class="card-body">
+          <div class="form-group row">
+            <div class="col-md-12">
+              <div class="custom-control custom-checkbox pt-2 pb-2 border-bottom border-light">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Email</label>
+              </div>
+              <div class="custom-control custom-checkbox pt-2 pb-2 border-bottom border-light">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">Text</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-4">
+              <label for="contact-name" class="col-form-label">Mobile Number<sup>*</sup></label>
+              <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+              <sub class="col-md-4">This field only accepts numbers</sub>
+            </div>
+          </div>
+
+          <p class="card-text fw-medium fs-12 mt-4">You will always receive notifications for payment enrollment &#38; approval/rejection, credit card expiration, and changes to your wallet.</p>
+          <div class="row mt-4">
+            <div class="col-md-12 d-flex justify-content-between">
+              <div>
+                <button type="button" class="btn btn-link" [routerLink]="['/']">Cancel</button>
+                <button type="button" class="btn btn-success ml-2" [routerLink]="['/create/paperless']">Continue</button>
+              </div>
+              <div>
+                <button type="button" class="btn btn-cancel" [routerLink]="['/']">Skip Setup</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+      <privacy-card></privacy-card>
+    </div>
+
+  </div>
+</div>

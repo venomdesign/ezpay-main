@@ -1,0 +1,32 @@
+//
+// alerts.scss
+//
+
+.alert {
+  font-weight: $fw-bold;
+  color: $text-color;
+
+  i { font-size: 1.25rem; margin-right: 0.5rem; }
+
+  &-info {
+    background-color: $blue-50;
+    border-color: $blue-500;
+    i { color: $blue-500; }
+  }
+
+  &-success {
+    background-color: #E6F0E2;
+    border-color: $success;
+    i { color: $success; }
+  }
+  &-danger, &-error {
+    background-color: #FEF6F7;
+    border-color: $red;
+    i { color: $red; }
+  }
+  &-warning {
+    background-color: #F8F1D2;
+    border-color: $warning;
+  }
+
+}

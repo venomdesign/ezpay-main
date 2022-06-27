@@ -1,0 +1,73 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span><span class="badge badge-danger">Cancelled (03/17/2022)</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" [routerLink]="['/policy']" class="btn btn-secondary active">Policy Information</button>
+          <button type="button" [routerLink]="['/policy/coverages']" class="btn btn-secondary">Insurance Coverage</button>
+          <button type="button" [routerLink]="['/policy/documents']" class="btn btn-secondary">Policy Documents</button>
+          <button type="button" [routerLink]="['/policy/history']" class="btn btn-secondary">Policy History</button>
+          <button type="button" [routerLink]="['/policy/activity']" class="btn btn-secondary">Billing &#38; Payment Activity</button>
+          <button type="button" [routerLink]="['/policy/claims']" class="btn btn-secondary">Claims Activity</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">GL 1040086B - ACTIVE</h4>
+        <!-- <div class="card-notice">Please complete the necessary fields below</div> -->
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Policy Holder Information</strong> (<a [routerLink]="['/policy/holder']" title="Click to edit policy holder information">edit information</a>)
+          </p>
+          <p class="card-text">
+            test Main Street<br>Inspection Override<br>Exton, PA 19341
+          </p>
+          <p class="card-text">
+            Home Phone: (XXX) XXX-XXXX<br>Work Phone: (XXX) XXX-XXXX
+          </p>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>    
+
+  </div>
+</div>

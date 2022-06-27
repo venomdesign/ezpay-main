@@ -1,0 +1,101 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy']">Policy Information</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/coverages']">Insurance Coverage</button>
+          <button type="button" class="btn btn-secondary active">Policy Documents</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/history']">Policy History</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/activity']">Billing &#38; Payment Activity</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/claims']">Claims Activity</button>
+        </div>
+      </div>
+      <div class="card">
+        <h4 class="card-header mt-0">Policy Forms and Endorsements</h4>
+        <div class="card-notice">Policy Documents not available</div>
+      </div>
+      <div class="card">
+        <h4 class="card-header mt-0">Individual Policy Forms and Endorsements</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Form</th>
+                <th class="border-0">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="javascript:void(0);" title="prof-001_(06-01)">prof-001_(06-01)</a></td>
+                <td>Absolute Pollution Exclusion - Professional</td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" title="prof-002_(06-01)">prof-002_(06-01)</a></td>
+                <td>Mold, Fungus, Bacteria, Virus And Organic Pathogen Exclusion - Professional</td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" title="sp_(07-09)">sp_(07-09)</a></td>
+                <td>Specified Professions Professional Liability Coverage Form</td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" title="sp-212_(07-09)">sp-212_(07-09)</a></td>
+                <td>Amendment Of Definition Of Insured Endorsement</td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" title="sp-il_(03-10)">sp-il_(03-10)</a></td>
+                <td>Illinois State Amendatory Endorsement</td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" title="sp_jacket_(09-10)">sp_jacket_(09-10)</a></td>
+                <td>Specified Professions Professional Liability Policy Jacket</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <calling-card></calling-card>
+    </div>    
+
+  </div>
+</div>

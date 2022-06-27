@@ -1,0 +1,28 @@
+// 
+// _modal.scss
+// 
+
+.modal {
+
+    &-dialog { 
+        box-shadow: $box-shadow;  
+    }
+
+    &-header { 
+        background: $white; 
+        height: 3rem;
+        padding: 0.95rem 1rem;
+        h5, .close { font: $fw-bold 1rem $font-family-base; color: $text-color; }
+    }
+
+    &-title { text-transform: uppercase; }
+
+    &-content { border: 1px solid #D3D9E5; }
+
+    &-footer { 
+        border-top: 0px solid #D3D9E5;
+    }
+}
+
+.border-danger .modal-content { border: 1px solid #b10505; } 
+

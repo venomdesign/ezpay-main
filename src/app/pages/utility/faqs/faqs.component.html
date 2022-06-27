@@ -1,0 +1,465 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Faqs" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+    <div class="row">
+    <div class="col-12">
+      <h1 class="page-header">Help</h1>
+      </div>
+  </div>
+  <div class="row">
+    
+    <div class="col-lg-3">
+      <chat-card></chat-card>
+    </div>
+    
+    <div class="col-lg-9">
+
+<!-- Emulate this 
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-primary">FAQs</button>
+  <button type="button" class="btn btn-secondary">Glossary</button>
+  <button type="button" class="btn btn-secondary">How to read my invoice</button>
+  <button type="button" class="btn btn-secondary">Business Resource Center <i class="fa fa-external-link-alt ml-2"></i></button>
+</div> 
+-->
+      <div ngbNav #nav="ngbNav" [activeId]="1">
+        <div [ngbNavItem]="1">
+        
+          <a ngbNavLink class="btn btn-secondary faq">FAQs</a>
+
+          <ng-template ngbNavContent>
+            <div class="card">
+              <h4 class="card-header mt-0">FAQs</h4>
+              <div class="card-body">
+                <p class="card-title"><sup>*</sup> For policyholders that have received an invoice directly from USLI</p>
+              <!-- <div class="text-center mb-5">
+                <h5>General Questions</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit</p>
+              </div> -->
+
+              <details>
+                <summary>What are my policy limits?</summary>
+                <p>You can see your policy limits on the Insurance Coverage screen. You must log in to the web site in order to access this screen. You may also call "Your local agent" to discuss your coverages.</p>
+              </details>
+
+              <details>
+                <summary>What does my policy cover?</summary>
+                <p>For specific questions regarding coverage, you can contact "Your local agent". You can also review your policy on the Policy Forms screen. You must log in to the web site in order to access this screen.</p>
+              </details>
+
+              <details>
+                <summary>Who is my agent? What is their phone number?</summary>
+                <p>"Your local agent" is displayed on most screens on the web site. Your agent may change from policy to policy, so your agent is listed on each screen displaying specific policy information. These screens are &ndash; Insurance Coverage; Policy Forms; Policy History; Billing & Payment Activity; Claims Activity; and Policyholder Information</p>
+              </details>
+              <details>
+                <summary>What was last year's premium?</summary>
+                <p>You can see this information by selecting the Insurance Coverage screen and then selecting the policy that you wish to review on the left panel of the screen. In addition, you can contact "Your local agent" to discuss this information.</p>
+              </details>
+              <details>
+                <summary>What do I do if I receive a Material Information Form?</summary>
+                <p>We periodically request information to update our files as part of the renewal process; we call this form a Material Information Form. If you receive a Material Information Form please complete the form and return it to us as soon as possible. You can return the form to us in the postage paid return envelope or complete it on-line; you must log in to the website in order to access the form on-line.</p>
+              </details>
+              <details>
+                <summary>Where can I find an overview of my proposed renewal limits and coverages before I pay?<sup>*</sup></summary>
+                <p>Once you receive a renewal invoice, you can view your proposed coverages by logging into the website and selecting the Insurance Coverage Screen. Coverage is not renewed unless payment of your renewal invoice is made by the due date. Payment is due by the expiration date.</p>
+              </details>
+              <details>
+                <summary>What is the interest rate?<sup>*</sup></summary>
+                <p>We do not charge interest or set-up charges.</p>
+              </details>
+              <details>
+                <summary>Is there a fee for paying in installments?<sup>*</sup></summary>
+                <p>There is generally an installment fee ($5 or less) applicable to all installments after the first installment.</p>
+              </details>
+              <details>
+                <summary>Can I change the number of installments?<sup>*</sup></summary>
+                <p>Please call our Customer Service number for assistance. In certain circumstances your installment plan can be changed and they can help you with this. You can always pre-pay installments and avoid an installment fee without changing the installment plan and we will adjust your future billing accordingly.</p>
+              </details>
+              <details>
+                <summary>Can I pay my bill in full if it is installments? Do I get a discount if I do?<sup>*</sup></summary>
+                <p>Yes, you can pay your policy premium in full at any time and avoid any future installment fees.</p>
+              </details>
+              <details>
+                <summary>Is there a charge for paying over the phone?<sup>*</sup></summary>
+                <p>No. You can call us at the below numbers Monday through Friday between 8am and 8pm ET and we can take your payment using MasterCard, Visa, American Express, debit card (Not Available in Canada), or electronic ACH (checking or savings). When calling, you also have the option to pay using our automated system, available 24/7.</p>
+              </details>
+
+
+              <!-- <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="static-1"
+                class="custom-accordion-arrow">
+                <ngb-panel id="static-1">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> What are my policy limits?
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>You can see your policy limits on the Insurance Coverage screen. You must log in to the web site in order to access this screen. You may also call "Your local agent" to discuss your coverages.</ng-template>
+                </ngb-panel>
+                <ngb-panel id="static-2">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> What does my policy cover?
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>For specific questions regarding coverage, you can contact "Your local agent". You can also review your policy on the Policy Forms screen. You must log in to the web site in order to access this screen.</ng-template>
+                </ngb-panel>
+                <ngb-panel id="static-3">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> Who is my agent? What is their phone number?
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>"Your local agent" is displayed on most screens on the web site. Your agent may change from policy to policy, so your agent is listed on each screen displaying specific policy information. These screens are – Insurance Coverage; Policy Forms; Policy History; Billing & Payment Activity; Claims Activity; and Policyholder Information</ng-template>
+                </ngb-panel>
+                <ngb-panel id="static-4">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> What was last year's premium?
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>You can see this information by selecting the Insurance Coverage screen and then selecting the policy that you wish to review on the left panel of the screen. In addition, you can contact "Your local agent" to discuss this information.</ng-template>
+                </ngb-panel>
+                <ngb-panel id="static-5">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> What do I do if I receive a Material Information Form?
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>We periodically request information to update our files as part of the renewal process; we call this form a Material Information Form. If you receive a Material Information Form please complete the form and return it to us as soon as possible. You can return the form to us in the postage paid return envelope or complete it on-line; you must log in to the website in order to access the form on-line.
+                  </ng-template>
+                </ngb-panel>
+
+                <ngb-panel id="static-6">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> Where can I find an overview of my proposed renewal limits and coverages before I pay?<sup>*</sup>
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>Once you receive a renewal invoice, you can view your proposed coverages by logging into the website and selecting the Insurance Coverage Screen. Coverage is not renewed unless payment of your renewal invoice is made by the due date. Payment is due by the expiration date.</ng-template>
+                </ngb-panel>
+
+                <ngb-panel id="static-7">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> What is the interest rate?<sup>*</sup>
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>We do not charge interest or set-up charges.</ng-template>
+                </ngb-panel>
+
+                <ngb-panel id="static-8">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> Is there a fee for paying in installments?<sup>*</sup>
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>There is generally an installment fee ($5 or less) applicable to all installments after the first installment.</ng-template>
+                </ngb-panel>
+
+                <ngb-panel id="static-9">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> Can I change the number of installments?<sup>*</sup>
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>Please call our Customer Service number for assistance. In certain circumstances your installment plan can be changed and they can help you with this. You can always pre-pay installments and avoid an installment fee without changing the installment plan and we will adjust your future billing accordingly.</ng-template>
+                </ngb-panel>
+
+                <ngb-panel id="static-10">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> Can I pay my bill in full if it is installments? Do I get a discount if I do?<sup>*</sup>
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>Yes, you can pay your policy premium in full at any time and avoid any future installment fees.</ng-template>
+                </ngb-panel>
+
+                <ngb-panel id="static-11">
+                  <ng-template ngbPanelTitle>
+                    <h5 class="fs-14 m-0">
+                      <i class="mdi mdi-chevron-up accor-arrow-icon"></i> Is there a charge for paying over the phone?<sup>*</sup>
+                    </h5>
+                  </ng-template>
+                  <ng-template ngbPanelContent>No. You can call us at the below numbers Monday through Friday between 8am and 8pm ET and we can take your payment using MasterCard, Visa, American Express, debit card (Not Available in Canada), or electronic ACH (checking or savings). When calling, you also have the option to pay using our automated system, available 24/7.</ng-template>
+                </ngb-panel>
+
+
+              </ngb-accordion> -->
+              <p class="fw-medium">US Policyholders: <a href="tel:866-632-2003" title="For US Policyholders Click to call 866-632-2003">866-632-2003</a><br>
+                Canada Policyholders: <a href="tel:866-539-2150" title="For Canadien Policyholders Click to call 866-539-2150">866-539-2150</a></p>
+            </div>
+            </div>
+          </ng-template>
+        </div>
+        <div [ngbNavItem]="2">
+          <a ngbNavLink class="btn btn-secondary glossary">Glossary</a>
+          <ng-template ngbNavContent>
+            <div class="card">
+              <h4 class="card-header mt-0 d-flex justify-content-between">
+                <div>Glossary</div>
+                <ul class="glossary-list m-0">
+                  <li><a [routerLink]="['pages/faqs#A']" title="A">A</a></li>
+                  <li><a [routerLink]="['pages/faqs#B']" title="B">B</a></li>
+                  <li><a [routerLink]="['pages/faqs#C']" title="C">C</a></li>
+                  <li><a [routerLink]="['pages/faqs#D']" title="D">D</a></li>
+                  <li><a [routerLink]="['pages/faqs#E']" title="E">E</a></li>
+                  <li><a [routerLink]="['pages/faqs#F']" title="F">F</a></li>
+                  <li><a [routerLink]="['pages/faqs#G']" title="G">G</a></li>
+                  <li><a [routerLink]="['pages/faqs#H']" title="H">H</a></li>
+                  <li><a [routerLink]="['pages/faqs#I']" title="I">I</a></li>
+                  <li><a [routerLink]="['pages/faqs#J']" title="J">J</a></li>
+                  <!-- <li><a [routerLink]="['pages/faqs#K']" title="K">K</a></li> -->
+                  <li><a [routerLink]="['pages/faqs#L']" title="L">L</a></li>
+                  <li><a [routerLink]="['pages/faqs#M']" title="M">M</a></li>
+                  <li><a [routerLink]="['pages/faqs#N']" title="N">N</a></li>
+                  <li><a [routerLink]="['pages/faqs#O']" title="O">O</a></li>
+                  <li><a [routerLink]="['pages/faqs#P']" title="P">P</a></li>
+                  <!-- <li><a [routerLink]="['pages/faqs#Q']" title="Q">Q</a></li> -->
+                  <li><a [routerLink]="['pages/faqs#R']" title="R">R</a></li>
+                  <li><a [routerLink]="['pages/faqs#S']" title="S">S</a></li>
+                  <li><a [routerLink]="['pages/faqs#T']" title="T">T</a></li>
+                  <li><a [routerLink]="['pages/faqs#U']" title="U">U</a></li>
+                  <li><a [routerLink]="['pages/faqs#V']" title="V">V</a></li>
+                  <li><a [routerLink]="['pages/faqs#W']" title="W">W</a></li>
+                  <!-- <li><a[routerLink]="['pages/faqs#X']" title="X">X</a></li>
+                  <li><a [routerLink]="['pages/faqs#Y']" title="Y">Y</a></li>
+                  <li><a [routerLink]="['pages/faqs#Z']" title="Z">Z</a></li> -->
+                </ul>
+              </h4>
+              
+              <div class="card-body">
+                <a name="A"></a>
+                <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="glossary-a">
+                  <ngb-panel id="glossary-a">
+                    <ng-template ngbPanelTitle>
+                      <h5 class="card-title">
+                        A
+                      </h5>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+
+                      <p class="card-title">A.M. Best</p>
+
+                      <p class="card-text">A.M. Best is a rating agency that issues financial strength ratings measuring insurance companies' ability to pay claims. It also rates financial instruments issued by insurance companies, such as bonds. See "About Us" on www.usli.com/ezpay to review our A.M. Best rating.</p>
+                      
+                      <p class="card-title">Accident</p>
+                      
+                      <p class="card-text">An event or occurrence that is unintended, unforeseen, and unexpected; something which could not be considered as a foreseeable occurrence and consequence of an undertaking; a casualty or mishap.</p>
+                      
+                      <p class="card-title">Act of God</p>
+                      
+                      <p class="card-text">An event beyond human origin or control. Lightning, windstorms, and earthquakes are examples, the damage from which would not be the responsibility of an insured, although the insured might be responsible for many other calamities. Acts of God are excluded under certain liability insurance policies.</p>
+                      
+                      <p class="card-title">Actual Cash Value (ACV)</p>
+                      
+                      <p class="card-text">The cost to repair or replace damaged property, less a deduction for depreciation based on the property's age and condition at the time the damage occurred</p>
+                      
+                      <p class="card-title">Additional Insured (A/I)</p>
+                      
+                      <p class="card-text">An entity or individual that has a business relationship with a Policyholder's operation or property, and is named by the Insurance Company to receive limited coverage under the Policyholder's insurance policy.</p>
+                      
+                      <p class="card-title">Additional Named Insured</p>
+                      
+                      <p class="card-text">A party, other than the first named insured, that has been shown as an insured in the policy Declarations or in an addendum to the policy Declarations or by endorsement once the policy has been issued. This party has the status of named insured.</p>
+                      
+                      <p class="card-title">Additional Premium (AP)</p>
+                      
+                      <p class="card-text">A premium payable by the Policyholder as a result of a policy change that occurred after the policy was issued.</p>
+                      
+                      <p class="card-title">Adjuster</p>
+                      
+                      <p class="card-text">One who determines the amount of loss suffered. A "company" adjuster represents the company. A "public" adjuster represents the policyholder. An "independent" adjuster may be hired by either.</p>
+                      
+                      <p class="card-title">Adverse Selection</p>
+                      
+                      <p class="card-text">The insuring of one or more risks with a higher chance of loss than that contemplated by the applicable insurance rate. The selection of such risks is adverse because the rate is inadequate. Also called anti-selection.</p>
+                      
+                      <p class="card-title">Agent</p>
+                      
+                      <p class="card-text">The business entity or person that is authorized by an individual to secure insurance coverage on their behalf. Most commonly, the Agent is the individual or company (seen on our web site as "Your Local Agent") who secures insurance coverage for the Policyholder.</p>
+                      
+                      <p class="card-title">Agent of Record</p>
+                      
+                      <p class="card-text">The agent who has been recognized by the insured or customer as his or her authorized representative for handling the specified insurance transactions.</p>
+                      
+                      <p class="card-title">Aggregate (Limit)</p>
+                      
+                      <p class="card-text">The limit that designates the most an insurance company will pay during a policy term, regardless of the number of claims that occur during the policy term.</p>
+                      
+                      <p class="card-title">All-Risk Policy</p>
+                      
+                      <p class="card-text">A policy that covers loss caused by any cause of loss which is not excluded, as contrasted to "named peril" policies which protect against certain perils named in the policies. Usual to certain types of property and marine insurance contracts, the term "all risk" frequently appears in quotes, since such coverage includes "almost" all risks (i.e., all but those excluded).</p>
+                      
+                      <p class="card-title">Alternative Dispute Resolution (ADR)</p>
+                      
+                      <p class="card-text">Refers to alternative methods used to settle claims that avoid litigation. Mediation and arbitration are two frequently used methods.</p>
+                      
+                      <p class="card-title">Anniversary Date</p>
+                      
+                      <p class="card-text">The anniversary date of policy inception as listed in the policy Declarations, and each subsequent expiration and renewal.</p>
+                      
+                      <p class="card-title">Appellate Courts</p>
+                      
+                      <p class="card-text">These courts hear cases in which one party to a dispute wants to challenge the decision of a trial court. Appellate courts hear no new evidence. They base their decision on evidence presented at the trial court.</p>
+                      
+                      <p class="card-title">Application</p>
+                      
+                      <p class="card-text">An insurance form a potential policyholder fills out. Based on the form, the insurance company decides whether or not to insure the applicant, modify the coverage offered, or decline to cover the applicant.</p>
+                      
+                      <p class="card-title">Appointment</p>
+                      
+                      <p class="card-text">The process by which an insurance company authorizes an agent to act on that company's behalf.</p>
+                      
+                      <p class="card-title">Arbitration</p>
+                      
+                      <p class="card-text">A process in which the parties in a dispute agree to submit their controversy to a private body that will make a decision that can be final and binding. One of the methods used in Alternative Dispute Resolution.</p>
+                      
+                      <p class="card-title">At-Will Employment</p>
+                      
+                      <p class="card-text">Describes a common situation in which a worker is employed at the will of the employer and the employee may be fired for any reason unless the reason would violate state or federal law (such as the Americans with Disabilities Act).</p>
+                      
+                      <p class="card-title">Audit Policies</p>
+                      
+                      <p class="card-text">These are the types of policies that the insurer has the right to audit or examine at the end of each policy term, to determine if the premium charged was adequate based on the actual final exposure experienced by that insured.</p>
+                      
+                      <p class="card-title">Audits</p>
+                      
+                      <p class="card-text">An audit is an accounting report that verifies information upon which the price of certain types of policies are based. They can occur before the policy is issued or at the expiration of a policy.</p>
+
+                    </ng-template>
+                  </ngb-panel>
+                </ngb-accordion>
+
+                <a name="B"></a>
+                <p class="card-title">B</p>
+                <p></p>
+                <a name="C"></a>
+                <p class="card-title">C</p>
+                <p></p>
+                <a name="D"></a>
+                <p class="card-title">D</p>
+                <p></p>
+                <a name="E"></a>
+                <p class="card-title">E</p>
+                <p></p>
+                <a name="F"></a>
+                <p class="card-title">F</p>
+                <p></p>
+                <a name="G"></a>
+                <p class="card-title">G</p>
+                <p></p>
+                <a name="H"></a>
+                <p class="card-title">H</p>
+                <p></p>
+                <a name="I"></a>
+                <p class="card-title">I</p>
+                <p></p>
+                <a name="J"></a>
+                <p class="card-title">J</p>
+                <p></p>
+                <!-- <a name="K"></a>
+                <p class="card-title">K</p>
+                <p></p> -->
+                <a name="L"></a>
+                <p class="card-title">L</p>
+                <p></p>
+                <a name="M"></a>
+                <p class="card-title">M</p>
+                <p></p>
+                <a name="N"></a>
+                <p class="card-title">N</p>
+                <p></p>
+                <a name="O"></a>
+                <p class="card-title">O</p>
+                <p></p>
+                <a name="P"></a>
+                <p class="card-title">P</p>
+                <p></p>
+                <!-- <a name="Q"></a>
+                <p class="card-title">Q</p>
+                <p></p> -->
+                <a name="R"></a>
+                <p class="card-title">R</p>
+                <p></p>
+                <a name="S"></a>
+                <p class="card-title">S</p>
+                <p></p>
+                <a name="T"></a>
+                <p class="card-title">T</p>
+                <p></p>
+                <a name="U"></a>
+                <p class="card-title">U</p>
+                <p></p>
+                <a name="V"></a>
+                <p class="card-title">V</p>
+                <p></p>
+                <a name="W"></a>
+                <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="glossary-w">
+                  <ngb-panel id="glossary-w">
+                    <ng-template ngbPanelTitle>
+                      <h5 class="card-title">
+                        W
+                      </h5>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+
+                      <p class="card-title">Waiver</p>
+
+                      <p class="card-text">The voluntary relinquishment of a known right by a person that results in estoppel.</p>
+                      
+                      <p class="card-title">Waiver of Subrogation</p>
+                      
+                      <p class="card-text">A condition of an insurance policy which states that the coverage will not be prejudiced if the insured has waived in writing prior to a loss any rights of recovery from a party responsible for the loss.</p>
+                      
+                      <p class="card-title">Workers' Compensation Insurance</p>
+                      
+                      <p class="card-text">Protection which provides benefits to employees for any injury or contracted disease arising out of and in the course of employment. All states have laws which require such protection for workers and prescribe the length and amount of such benefits provided.</p>
+                      
+                      <p class="card-title">Wrongful Act</p>
+                      
+                      <p class="card-text">Any actual or alleged act, error, omission, misstatement, misleading statement, neglect, or breach of duties. This may be a specifically defined term in some Professional Liability policies.</p>
+                      
+                      <p class="card-title">Wrongful Death Statute</p>
+                      
+                      <p class="card-text">Allows decedent's family to receive compensation for monetary losses suffered as a result of their family member's death. Provides compensation for those who depended upon decedent for some type of economic benefit. Damages include loss of support from reasonably expected earnings capacity of the decedent, loss of decedent's contributions to the estate, loss of inheritance, etc.</p>
+
+                    </ng-template>
+                  </ngb-panel>
+                </ngb-accordion>
+
+              </div>
+            </div>
+          </ng-template>
+        </div>
+        <div [ngbNavItem]="3">
+          <a ngbNavLink class="btn btn-secondary invoice">How To Read My Invoice</a>
+          <ng-template ngbNavContent>
+            <div class="card">
+              <h4 class="card-header mt-0">How to read my invoice<sup><sup>*</sup></sup></h4>
+              <div class="card-notice">To see an explanation of certain terms, hold your mouse over the icon below. The explanation or definition will appear in a dialogue box.</div>
+              <div class="card-body">
+                <img src="assets/images/howto-invoice.png" alt="invoice-read" class="img-fluid">
+              </div>
+            </div>
+          </ng-template>
+        </div>
+        <a href="https://bizresourcecenter.com" target="_blank" class="btn btn-secondary brc">Business Resource Center <i class="fa fa-external-link-alt ml-2"></i></a>
+      </div>
+      <div [ngbNavOutlet]="nav" class="pt-4"></div>
+
+      <!-- Contact Us -->
+      <calling-card></calling-card>
+      <!-- /.card - Contact Us -->    
+
+    </div>
+
+  </div>
+
+</div>

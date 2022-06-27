@@ -1,0 +1,191 @@
+@import url('//fonts.googleapis.com/css?family=Lato:300,400,400i,700%7CRaleway:300,400,500,600,700,800,900%7CRoboto:700%2C500%2C400');
+
+.covid-19 {
+    display: block;
+    box-sizing: border-box;
+    padding: 2px 15px;
+    background-color: #f89728;
+    color: #00549B;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 44px;
+    margin: 0px;
+  }
+
+  #top-bar {
+    position: relative;
+    border-bottom: 1px solid #EEE;
+    height: 45px;
+    line-height: 44px;
+    font-size: 13px;
+  }
+
+  #header, #header-wrap, #logo img {
+    height: 100px;
+    -webkit-transition: height .4s ease, opacity .3s ease;
+    -o-transition: height .4s ease, opacity .3s ease;
+    transition: height .4s ease, opacity .3s ease;
+  }
+  #header {
+    height: 161px;
+    position: relative;
+    background-color: #FFF;
+    border-bottom: 1px solid #F5F5F5;
+  }
+
+  #header {
+    position: relative;
+    background-color: #FFF;
+    border-bottom: 1px solid #F5F5F5;
+  }
+
+  #primary-menu.style-2 > div > ul {
+    float: left;
+  }
+  #primary-menu ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  #primary-menu-trigger, #page-submenu-trigger {
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+  }
+
+  .header-extras .header-phone {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #00338e;
+  }
+  #header .header-row {
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+  }
+  #logo {
+    position: relative;
+    flex-grow: 1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    line-height: 100%;
+    margin-right: 40px;
+  }
+  @media (min-width: 768px) {
+  .button.button-broker {
+    padding: 0 32px;
+    font-size: 16px;
+    height: 46px;
+    line-height: 46px;
+  }
+}
+  .button.button-reveal {
+    padding: 0 28px;
+    overflow: hidden;
+  }
+  .button.button-rounded {
+    border-radius: 3px;
+  }
+  .header-extras .button {
+    margin: 0;
+  }
+  .button-green {
+    background-color: #14661A;
+  }
+  .button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    margin: 5px;
+    padding: 0 22px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    // background-color: #00338E;
+    color: #FFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+  .tright {
+    text-align: right !important;
+  }
+  a {
+    text-decoration: none !important;
+    color: #00338E;
+  }
+
+  #primary-menu ul li > a {
+    line-height: 22px;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+  }
+  #primary-menu.style-2 > div > ul {
+    float: left;
+  }
+  #primary-menu ul {
+    list-style: none;
+    margin: 0;
+  }
+  #primary-menu ul > li {
+    float: left;
+    margin-left: 2px;
+  }
+  #primary-menu ul li {
+    position: relative;
+  }
+
+#primary-menu.style-2 > div > ul > li > a {
+
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+}
+#primary-menu ul li > a {
+
+    display: block;
+    line-height: 22px;
+    padding: 39px 15px;
+        padding-top: 39px;
+        padding-bottom: 39px;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    -webkit-transition: margin .4s ease, padding .4s ease;
+    -o-transition: margin .4s ease, padding .4s ease;
+    transition: margin .4s ease, padding .4s ease;
+
+}
+
+dl, dt, dd, ol, ul, li {
+    margin: 0;
+      margin-left: 0px;
+    padding: 0;
+  }
+
+  .placeholder { height: 480px; background: url(../../../../assets/images/placeholder.png) no-repeat; background-size:auto; background-position: center; }

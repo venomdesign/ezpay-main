@@ -1,0 +1,314 @@
+<header id="page-topbar">
+  <div class="auxnav">
+    <div class="d-flex container-fluid justify-content-between">
+      <div><!--Back to USLI.com--></div>
+      <div>1-866-632-2003 (USA: 24/7 Canada: M-F 8am-8pm ET)</div>
+    </div>
+  </div>
+  <div class="navbar-header">
+    <div class="d-flex">
+      <!-- LOGO -->
+      <div class="navbar-brand-box">
+        <a [routerLink]="['/']" class="logo logo-dark">
+          <span class="logo-sm">
+            <img src="assets/images/logo-sm-dark.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="assets/images/usli-logo.png" alt="" height="64">
+          </span>
+        </a>
+
+        <a [routerLink]="['/']" class="logo logo-light">
+          <span class="logo-sm">
+            <img src="assets/images/logo-sm-light.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="assets/images/usli-logo.png" alt="" height="64">
+          </span>
+        </a>
+      </div>
+
+      <button type="button" class="btn px-3 fs-24 d-lg-none header-item" (click)="toggleMenubar()">
+        <i class="ri-menu-2-line align-middle"></i>
+      </button>
+
+      <!-- App Search-->
+      <!-- <form class="app-search d-none d-lg-block">
+        <div class="position-relative">
+          <input type="text" class="form-control" placeholder="{{'HEADER.SEARCH' | translate}}">
+          <span class="ri-search-line"></span>
+        </div>
+      </form> -->
+      <button type="button" [routerLink]="['/']" class="btn header-item waves-effect d-none d-lg-block" aria-haspopup="false" aria-expanded="false">
+        {{ 'HEADER.HOME' | translate}}
+      </button>
+
+      <div class="dropdown d-inline-block" ngbDropdown>
+        <button ngbDropdownToggle type="button" class="btn header-item waves-effect d-none d-lg-block" data-toggle="dropdown"
+          aria-haspopup="false" aria-expanded="false">
+          {{ 'HEADER.POLICIES' | translate}}
+          <i class="mdi mdi-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+            <ul class="list-unstyled megamenu-list mb-0">
+              <li><a [routerLink]="['/policy']" class="dropdown-item" title="Click to see policy PL 123456">PL 123456</a></li>
+              <li><a [routerLink]="['/policy']" class="dropdown-item" title="Click to see policy GL 1040086B">GL 1040086B</a></li>
+              <li><a [routerLink]="['/policy']" class="dropdown-item" title="Click to see policy PL 10654654">PL 10654654</a></li>
+              <li><a [routerLink]="['/policy']" class="dropdown-item" title="Click to see policy PL 3213123">PL 3213123</a></li>
+              <li><a [routerLink]="['/policy']" class="dropdown-item" title="Click to see policy PL 879879">PL 879879</a></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><a [routerLink]="['/']" class="dropdown-item" title="Click to go to policy dashboard">Go to dashboard for more policies</a></li>              
+            </ul>
+        </div>
+      </div>
+
+      <button type="button" routerLink="claim" class="btn header-item waves-effect d-none d-lg-block" aria-haspopup="false" aria-expanded="false">
+        {{ 'HEADER.REPORT_A_CLAIM' | translate}}
+      </button>
+
+      <div class="dropdown d-inline-block" ngbDropdown>
+        <button ngbDropdownToggle type="button" class="btn header-item waves-effect d-none d-lg-block" data-toggle="dropdown"
+          aria-haspopup="false" aria-expanded="false">
+          {{ 'HEADER.GET_HELP' | translate}}
+          <i class="mdi mdi-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+            <ul class="list-unstyled megamenu-list mb-0">
+              <li>
+                <a [routerLink]="['pages/faqs']" title="Click here to go to FAQs" class="dropdown-item">FAQs</a>
+              </li>
+              <li>
+                <a [routerLink]="['pages/faqs']" title="Click here to go to Glossary" class="dropdown-item">Glossary</a>
+              </li>
+              <li>
+                <a [routerLink]="['pages/faqs']" title="Click here to go to How to read my invoice" class="dropdown-item">How to read my invoice</a>
+              </li>
+              <li>
+                <a href="https://bizresourcecenter.com" title="Click here to go to Business Resource Center(external link)" target="_blank" class="dropdown-item">Business Resource Center <i class="fa fa-external-link-alt ml-2"></i></a>
+              </li>
+            </ul>
+        </div>
+      </div>
+
+
+
+      <button type="button" routerLink="contact" class="btn header-item waves-effect d-none d-lg-block" aria-haspopup="false" aria-expanded="false">
+        {{ 'HEADER.CONTACT_US' | translate}}
+      </button>
+    </div>
+
+    <div class="d-flex">
+
+      <!-- <div class="dropdown d-inline-block d-lg-none ml-2" ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn header-item noti-icon waves-effect"
+          id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="ri-search-line"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+          aria-labelledby="page-header-search-dropdown" ngbDropdownMenu>
+
+          <form class="p-3">
+            <div class="form-group m-0">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search ...">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit"><i class="ri-search-line"></i></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div> -->
+
+      <!-- <div class="dropdown d-inline-block" ngbDropdown>
+        <button type="button" class="btn header-item" id="page-header-user-dropdown" ngbDropdownToggle>
+          <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" alt="Header Language" height="16"> <span
+            class="ml-1">{{countryName}}</span>
+          <img *ngIf="flagvalue === undefined" src="{{valueset}}" alt="Header Language" height="16">
+          <span *ngIf="flagvalue === undefined" class="ml-1">English</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+          
+          <a href="javascript:void(0);" class="dropdown-item notify-item" *ngFor="let item of listLang"
+            (click)="setLanguage(item.text, item.lang, item.flag)" [ngClass]="{'active': cookieValue === item.lang}">
+            <img src="{{item.flag}}" alt="user-image" class="mr-1" height="12"> <span
+              class="align-middle">{{item.text}}</span>
+          </a>
+          
+        </div>
+      </div> -->
+
+      <!-- <div class="dropdown d-none d-lg-inline-block ml-1" ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn header-item noti-icon waves-effect" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="ri-apps-2-line"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" ngbDropdownMenu>
+          <div class="px-lg-2">
+            <div class="row no-gutters">
+              <div class="col">
+                <a class="dropdown-icon-item" href="javascript:void()">
+                  <img src="assets/images/brands/github.png" alt="Github">
+                  <span>GitHub</span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="dropdown-icon-item" href="javascript:void()">
+                  <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                  <span>Bitbucket</span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="dropdown-icon-item" href="javascript:void()">
+                  <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                  <span>Dribbble</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row no-gutters">
+              <div class="col">
+                <a class="dropdown-icon-item" href="javascript:void()">
+                  <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                  <span>Dropbox</span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="dropdown-icon-item" href="javascript:void()">
+                  <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                  <span>Mail Chimp</span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="dropdown-icon-item" href="javascript:void()">
+                  <img src="assets/images/brands/slack.png" alt="slack">
+                  <span>Slack</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="dropdown d-none d-lg-inline-block ml-1">
+        <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen"
+          (click)="fullscreen()">
+          <i class="ri-fullscreen-line"></i>
+        </button>
+      </div> -->
+
+      <!-- <div class="dropdown d-inline-block d-none" ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn header-item noti-icon waves-effect"
+          id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="ri-notification-3-line"></i>
+          <span class="noti-dot"></span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0" ngbDropdownMenu
+          aria-labelledby="page-header-notifications-dropdown">
+          <div class="p-3">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="m-0">{{ 'HEADER.NOTIFICATIONS.TITLE' | translate}} </h6>
+              </div>
+              <div class="col-auto">
+                <a href="javascript: void(0);" class="small">{{ 'HEADER.NOTIFICATIONS.VIEW_ALL' | translate}}</a>
+              </div>
+            </div>
+          </div>
+          <perfect-scrollbar style="position: relative; height: 230px;" [config]="configData">
+            <a href="#" class="text-reset notification-item">
+              <div class="media">
+                <div class="avatar-xs mr-3">
+                  <span class="avatar-title bg-primary rounded-circle fs-16">
+                    <i class="ri-shopping-cart-line"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <h6 class="mt-0 mb-1">{{ 'HEADER.NOTIFICATIONS.FIRST.TITLE' | translate}}</h6>
+                  <div class="fs-12 text-muted">
+                    <p class="mb-1">{{ 'HEADER.NOTIFICATIONS.FIRST.TEXT' | translate}}</p>
+                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i>
+                      {{ 'HEADER.NOTIFICATIONS.FIRST.TIME' | translate}}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="text-reset notification-item">
+              <div class="media">
+                <img src="assets/images/users/avatar-3.jpg" class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                <div class="media-body">
+                  <h6 class="mt-0 mb-1">{{ 'HEADER.NOTIFICATIONS.SECOND.TITLE' | translate}}</h6>
+                  <div class="fs-12 text-muted">
+                    <p class="mb-1">{{ 'HEADER.NOTIFICATIONS.SECOND.TEXT' | translate}}</p>
+                    <p class="mb-0"><i
+                        class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.SECOND.TIME' | translate}}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="text-reset notification-item">
+              <div class="media">
+                <div class="avatar-xs mr-3">
+                  <span class="avatar-title bg-success rounded-circle fs-16">
+                    <i class="ri-checkbox-circle-line"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <h6 class="mt-0 mb-1">{{ 'HEADER.NOTIFICATIONS.THIRD.TITLE' | translate}}</h6>
+                  <div class="fs-12 text-muted">
+                    <p class="mb-1">{{ 'HEADER.NOTIFICATIONS.THIRD.TEXT' | translate}}</p>
+                    <p class="mb-0"><i
+                        class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.THIRD.TIME' | translate}}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="text-reset notification-item">
+              <div class="media">
+                <img src="assets/images/users/avatar-4.jpg" class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                <div class="media-body">
+                  <h6 class="mt-0 mb-1">{{ 'HEADER.NOTIFICATIONS.FOUR.TITLE' | translate}}</h6>
+                  <div class="fs-12 text-muted">
+                    <p class="mb-1">{{ 'HEADER.NOTIFICATIONS.FOUR.TEXT' | translate}}</p>
+                    <p class="mb-0"><i
+                        class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.FOUR.TIME' | translate}}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </perfect-scrollbar>
+          <div class="p-2 border-top">
+            <a class="btn btn-sm btn-link fs-14 btn-block text-center" href="javascript:void(0)">
+              <i class="mdi mdi-arrow-right-circle mr-1"></i> {{ 'HEADER.NOTIFICATIONS.LOAD_MORE' | translate}}
+            </a>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="dropdown d-inline-block user-dropdown" ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn header-item waves-effect" id="page-header-user-dropdown"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <!-- <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg" alt="Header Avatar"> -->
+          <span class="ml-1">Welcome, Kevin</span><!--d-none d-md-inline-block -->
+          <i class="mdi mdi-chevron-down"></i><!-- d-none d-md-inline-block-->
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+          <!-- item-->
+          <!-- <a class="dropdown-item" href="javascript: void(0);"><i class="ri-user-line align-middle mr-1"></i>
+            {{ 'HEADER.LOGIN.PROFILE' | translate}}</a> -->
+          <a class="dropdown-item" [routerLink]="['account/wallet']"><i 
+            class="ri-wallet-2-line align-middle mr-1"></i>{{ 'HEADER.LOGIN.MY_WALLET' | translate}}</a>
+          <a class="dropdown-item" [routerLink]="['account/paperless']"><i 
+            class="ri-wallet-2-line align-middle mr-1"></i>{{ 'HEADER.LOGIN.PAPERLESS' | translate}}</a>
+          <a class="dropdown-item" [routerLink]="['account/notifications']"><i class="ri-lock-unlock-line align-middle mr-1"></i>
+            {{ 'HEADER.LOGIN.NOTIFICATIONS' | translate}}</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item bg-danger__light text-danger" href="javascript: void(0);" (click)="logout()">
+            <i class="mdi mdi-logout-variant align-middle mr-1 text-danger"></i>
+            {{ 'HEADER.LOGIN.LOGOUT' | translate}}</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</header>

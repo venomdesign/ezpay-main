@@ -1,0 +1,138 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+          <h1 class="page-header">Create Account</h1>
+ 
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+    
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card">
+        <div class="d-flex flex-md-row flex-column">
+          <h4 class="card-header create mt-0 flex-fill"><span class="mr-2">1</span> Notifications</h4><span class="arrow-right d-none d-lg-block"></span>
+          <h4 class="card-header create mt-0 flex-fill"><span class="mr-2">2</span> PaperLess Options</h4><span class="arrow-right white d-none d-lg-block"></span>
+          <h4 class="card-header create mt-0 flex-fill"><span class="mr-2">3</span> Setup Account Wallet</h4>
+        </div>
+        <div class="card-notice">For the paperless options you selected you will no longer receive the invoices through the mail.</div>
+        <div class="card-body">
+          <!-- <div class="alert alert-success text-uppercase" role="alert">
+            <i class="fas fa-check-circle mr-2 success"></i> Your preferences have been updated
+          </div> -->
+          <div class="form-group row">
+            <div class="col-md-12">
+              <div class="custom-control custom-checkbox pb-2 pt-2 border-bottom border-light">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">I would like to go paperless for my Mid-Year Questionnaire.<sup>* 1</sup><a href="#" data-tooltip="When you enroll in Paperless Mid-Year Questionnaire, you will receive a courtesy email whenever a Mid-Year Questionnaire is available online for completion. You will no longer receive a Mid-Year Questionnaire through the mail."><i class="fas fa-question-circle blue-500 ml-1"></i></a></label>
+              </div>
+              <div class="custom-control custom-checkbox pb-2 pt-2 border-bottom border-light">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">I would like to go paperless for my Invoices.<sup>* 1</sup> <a href="#" data-tooltip="When you enroll in Paperless Invoices, you will receive a courtesy email whenever your new paperless invoices are available on www.usli.com/ezpay. You will no longer receive the invoices through the mail."><i class="fas fa-question-circle blue-500 ml-1"></i></a></label>
+              </div>
+              <div class="custom-control custom-checkbox pb-2 pt-2 border-bottom border-light">
+                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">I would like to go paperless for my Policies.<sup>1</sup> <a href="#" data-tooltip="When you enroll in Paperless Policies, you will receive a courtesy email whenever your new paperless policy is available on www.usli.com/ezpay. You will no longer receive the policy through the mail."><i class="fas fa-question-circle blue-500 ml-1"></i></a></label>
+              </div>              
+              <p class="card-text fw-medium fs-12 mt-4">
+                <sup>*</sup> For policyholders that have received an invoice directly from USLI<br>
+                <sup class="fs-10">1</sup> By signing up for Paperless, you agree to the following <a (click)="openModal(paperlessTermsAccept)" title="CLick here to read the Paperless terms">terms</a>.
+              </p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-12 d-flex justify-content-between">
+              <div>
+                <button type="button" class="btn btn-link" [routerLink]="['/']">Cancel</button>
+                <button type="button" class="btn btn-secondary ml-2" [routerLink]="['/create/notification']">Previous</button>
+                <button type="button" class="btn btn-success ml-2" [routerLink]="['/create/wallet']">Continue</button>
+              </div>
+              <div>
+                <button type="button" class="btn btn-cancel" [routerLink]="['/']">Skip Setup</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+      <privacy-card></privacy-card>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Standard Modal -->
+<ng-template #paperlessTerms role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Terms and Conditions for Electronic (Paperless) Delivery</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+    <p>Chat client will be used, this is just for demonstration purposes when you click the chat button</p>
+    <ol class="m-0 pl-3 pr-3">
+      <li>You agree to have USLI electronically deliver policies, endorsements, mid-year questionnaires, documents, records and information ('Documents') if you have signed up for Paperless Policy and/or billing statements and invoices ('Invoices') if you have signed up for Paperless Invoice until such time as either party modifies or cancels this Agreement. You will receive these electronic Documents and/or Invoices instead of paper documents; however, USLI reserves the right to mail your documents in place of electronic delivery.</li>
+      <li>You can view the Documents and/or Invoices by logging into the website: <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a> with your email and password.</li>
+      <li>At any time while this Agreement is effective, you may obtain a paper copy of a particular Document or Invoice at no charge by calling USLI at 1-855-ASK-USLI (1-855-275-8754) and requesting a copy.</li>
+      <li>You may update your information, such as changing your email address, at any time by accessing the Edit Profile feature of our USLI Online Policyholder Services System at <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a>.</li>
+      <li>You may terminate this Agreement at any time by changing your delivery preferences within our USLI Online Policyholder Services System at <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a>. After the termination is processed by us, which may take up to ten (10) days, all future Documents or Invoices, as the case may be, will be provided to you in paper form. Termination of this Agreement shall not affect the legal enforceability of Documents or Invoices provided to you before the effective date of the cancellation.</li>
+      <li>To access the site and obtain Documents or Invoices electronically, you need access to the World Wide Web (Internet) and a security-enabled web browser, with 128-bit encryption installed, such as Microsoft Internet Explorer (9.x or higher), Mozilla Firefox (latest), Google Chrome or other similarly enabled browser. The information you send to us is encrypted. We use an industry standard Transport Layer Security (TLS) to allow for encryption of sensitive personal information such as payment information you have been requested to provide online. You also need an email address, as well as Adobe Acrobat Reader that can be downloaded directly from Adobe's website, <a href="https://www.adobe.com" title="Click here to download Adobe Acrobat Reader">www.adobe.com</a>. You need a printer to print out necessary documents.</li>
+      <li>You are responsible for accessing, opening and reading your Documents or Invoices. Electronic Documents and Invoices have the same legal effect as printed ones. If you cannot access or read any Documents or Invoices, you must contact USLI.</li>
+      <li>USLI may amend the terms of this Agreement at any time by providing notice to you of the amendments. If you do not agree with the terms of the amendment, you can terminate this Agreement as described in section 5.</li>
+      <li>We will update you if there are any changes to the hardware or software requirements that could impact your receipt or ability to review electronic correspondence from USLI. USLI does not warrant that the delivery of electronic Documents and Invoices will be uninterrupted or error free. We are not liable for: any loss or damage arising from problems with your equipment or your telecommunications provider; your failure to meet your responsibilities as outlined herein; or any equipment problems or other occurrences beyond our reasonable control.</li>
+      <li>This Agreement is effective when we electronically receive your acceptance.</li>
+    </ol>
+  </div>
+  <div class="d-flex flex-row modal-footer justify-content-center">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-secondary"><i class="fas fa-print"></i> Print</button>
+  </div>
+</ng-template>
+
+
+<!-- Standard Modal -->
+<ng-template #paperlessTermsAccept role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Terms and Conditions for Electronic (Paperless) Delivery</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+    <p>Chat client will be used, this is just for demonstration purposes when you click the chat button</p>
+    <ol class="m-0 pl-4 pr-4">
+      <li>You agree to have USLI electronically deliver policies, endorsements, mid-year questionnaires, documents, records and information ('Documents') if you have signed up for Paperless Policy and/or billing statements and invoices ('Invoices') if you have signed up for Paperless Invoice until such time as either party modifies or cancels this Agreement. You will receive these electronic Documents and/or Invoices instead of paper documents; however, USLI reserves the right to mail your documents in place of electronic delivery.</li>
+      <li>You can view the Documents and/or Invoices by logging into the website: <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a> with your email and password.</li>
+      <li>At any time while this Agreement is effective, you may obtain a paper copy of a particular Document or Invoice at no charge by calling USLI at 1-855-ASK-USLI (1-855-275-8754) and requesting a copy.</li>
+      <li>You may update your information, such as changing your email address, at any time by accessing the Edit Profile feature of our USLI Online Policyholder Services System at <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a>.</li>
+      <li>You may terminate this Agreement at any time by changing your delivery preferences within our USLI Online Policyholder Services System at <a href="https://www.usli.com/ezpay" title="Click here to go to USLI EzPay">https://www.usli.com/ezpay</a>. After the termination is processed by us, which may take up to ten (10) days, all future Documents or Invoices, as the case may be, will be provided to you in paper form. Termination of this Agreement shall not affect the legal enforceability of Documents or Invoices provided to you before the effective date of the cancellation.</li>
+      <li>To access the site and obtain Documents or Invoices electronically, you need access to the World Wide Web (Internet) and a security-enabled web browser, with 128-bit encryption installed, such as Microsoft Internet Explorer (9.x or higher), Mozilla Firefox (latest), Google Chrome or other similarly enabled browser. The information you send to us is encrypted. We use an industry standard Transport Layer Security (TLS) to allow for encryption of sensitive personal information such as payment information you have been requested to provide online. You also need an email address, as well as Adobe Acrobat Reader that can be downloaded directly from Adobe's website, <a href="https://www.adobe.com" title="Click here to download Adobe Acrobat Reader">www.adobe.com</a>. You need a printer to print out necessary documents.</li>
+      <li>You are responsible for accessing, opening and reading your Documents or Invoices. Electronic Documents and Invoices have the same legal effect as printed ones. If you cannot access or read any Documents or Invoices, you must contact USLI.</li>
+      <li>USLI may amend the terms of this Agreement at any time by providing notice to you of the amendments. If you do not agree with the terms of the amendment, you can terminate this Agreement as described in section 5.</li>
+      <li>We will update you if there are any changes to the hardware or software requirements that could impact your receipt or ability to review electronic correspondence from USLI. USLI does not warrant that the delivery of electronic Documents and Invoices will be uninterrupted or error free. We are not liable for: any loss or damage arising from problems with your equipment or your telecommunications provider; your failure to meet your responsibilities as outlined herein; or any equipment problems or other occurrences beyond our reasonable control.</li>
+      <li>This Agreement is effective when we electronically receive your acceptance.</li>
+    </ol>
+    <h5 class="font-family-base mt-4">ACCEPTANCE</h5>
+    <p>Submit this Agreement by clicking "Accept".</p>
+    <p>By clicking "Accept", you (a) agree that you are authorized to accept these terms and conditions for and on behalf of the Named Insured or Applicant, (b) have read and agree to the terms and conditions of electronic (paperless) delivery and (c) are able to receive and view the electronic documents pursuant to the hardware and software requirements noted above.</p>
+    <p>Thank you for your business.<br>USLI</p>
+  </div>
+  <div class="d-flex flex-row modal-footer justify-content-center">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">I Do Not Accept</button>
+    <button type="button" class="btn btn-secondary"><i class="fas fa-print"></i> Print</button>
+    <button type="button" class="btn btn-success">Accept Terms</button>
+  </div>
+</ng-template>

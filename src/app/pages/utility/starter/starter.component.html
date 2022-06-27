@@ -1,0 +1,68 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <h1 class="page-header">Page Title</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+      <chat-card></chat-card>
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card">
+        <h4 class="card-header mt-0">Card Title</h4>
+        <div class="card-notice">Please complete the necessary fields below</div>
+        <div class="card-body">
+          <p class="card-text">Card-Text</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Table Card</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th>Th</th>
+                <th>Th</th>
+                <th>Th</th>
+                <th>Th</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="javascript:void()">Link</a></td>
+                <td>Td</td>
+                <td>Td</td>
+                <td>Td</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <h4 class="card-header mt-0">FAQs</h4>
+        <div class="card-body">
+          <p class="card-text">For billing, user registration and payment assistance, please call 1-866-632-2003 (USA: 24/7 Canada: M-F 8am-8pm ET)<br>For non-billing questions and assistance, please contact your local agent</p>
+        </div>
+      </div>
+
+
+      <calling-card></calling-card>
+    </div>    
+
+  </div>
+</div>

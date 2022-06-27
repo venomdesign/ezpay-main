@@ -1,0 +1,27 @@
+<!-- 
+  Chat Card 
+  location: src\app\shared\ui\overlays\chat\chat.component.html
+-->
+<div class="card">
+  <h4 class="card-header mt-0">Need Help?</h4>
+  <div class="card-body">
+    
+    <p class="card-text">Have questions or concerns regarding your account?</p>
+    <a (click)="openModal(chatModal)" title="Click to open the Chat and speak to a representative" class="btn btn-secondary w-100 cursor-pointer">Chat now</a>
+  </div>
+</div>
+
+<!-- Standard Modal -->
+<ng-template #chatModal role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Chat Now</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+    Chat client will be used, this is just for demonstration purposes when you click the chat button
+  </div>
+  <!-- <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-text" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-success">Submit changes</button>
+  </div> -->
+</ng-template>

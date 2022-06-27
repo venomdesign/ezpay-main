@@ -1,0 +1,139 @@
+// 
+// _buttons.scss
+// 
+
+.btn, a.btn {
+  height: 40px;
+  box-sizing: border-box;
+  font: 500 0.875rem/1.5 $font-family-base;
+  padding: 0.54rem 1.5rem;
+  text-decoration: none !important;
+
+  &.btn-sm { height: 32px; padding: 0 1rem; font-size: 0.75rem; }
+  &.btn-lg { height: 48px }
+
+  &-light {
+    border: 1px solid $gray-500;
+    color: $text-color;
+    background: $gray-500;
+
+    &:hover, &:focus {
+      border: 1px solid $gray-900;
+      background: $gray-200;
+      color: $text-color;
+    }
+  }
+
+  // Rounded Buttons
+  &-rounded {
+    border-radius: 30px;
+  }
+
+  &-dark {
+    color: $gray-200 !important;
+  }
+
+  &-outline-light{
+    color: $gray-900;
+  }
+
+  &-primary { 
+    background-color: $primary; 
+    border-color: $primary;
+  
+    &:hover, &:focus {
+      background-color: $white;
+      border-color: $primary;
+      color: $primary;
+    }
+    &:active { background-color: darken($primary, 80%); }
+  }
+
+  &-secondary { 
+    background-color: $white; 
+    border-color: $primary;
+    color: $primary;
+  
+    &:hover, &:focus {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+
+    &:not(:disabled):not(.disabled):active, 
+    &:not(:disabled):not(.disabled).active, 
+    .show > &.dropdown-toggle {
+      border-color: $primary;
+      background-color: $primary;
+    }
+  }
+
+  &-success { 
+    background-color: $success; 
+    border-color: $success;
+  
+    &:hover, &:focus {
+      background-color: $white;
+      border-color: $success;
+      color: $success;
+    }
+    &:active { background-color: darken($success, 80%); }
+  }
+
+  &-info { 
+    background-color: $info; 
+    border-color: $info;
+  
+    &:hover, &:focus {
+      background-color: $white;
+      border-color: $info;
+      color: $info;
+    }
+    &:active { background-color: darken($info, 80%); }
+  }
+
+  &-warning { 
+    background-color: $warning; 
+    border-color: $warning;
+    color: $text-color;
+  
+    &:hover, &:focus {
+      background-color: $white;
+      border-color: $warning;
+      color: $warning;
+      color: $text-color;
+    }
+    &:active { background-color: darken($warning, 80%); }
+  }
+
+  &-danger { 
+    background-color: $danger; 
+    border-color: $danger;
+  
+    &:hover, &:focus {
+      background-color: $white;
+      border-color: $danger;
+      color: $danger;
+    }
+    &:active { background-color: darken($danger, 80%); }
+  }
+
+  &-link, &-text, &-txt { 
+    color: $text-color;
+  
+    &:hover, &:focus, &:active {
+      background-color: $blue-50;
+      text-decoration: none;
+    }
+  }
+  &-cancel { 
+    color: $text-color;
+    background-color: $gray-500;
+  
+    &:hover, &:focus, &:active {
+      border-color: $text-color;
+      background-color: $gray-200;
+      text-decoration: none;
+    }
+  }
+}

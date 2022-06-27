@@ -1,0 +1,99 @@
+// 
+// _dropdown.scss
+// 
+
+.dropdown {
+
+  &-item { 
+    text-decoration: none; 
+    padding: 0.6rem 1.5rem; 
+    font-weight: $fw-medium;
+    // border-bottom: 1px solid #485E9024;
+    // margin-bottom: 1px;
+    // &:last-child { border-bottom: 0px solid #485E9024; margin-bottom: 0px; 
+    color: $text-color; 
+    text-decoration: none !important;
+    
+    &:hover {
+      background-color: #edf2fc;
+    }
+  }
+
+  &-menu {
+    box-shadow: $box-shadow-lg;
+    animation-name: DropDownSlide;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    margin: 0;
+    position: absolute;
+    z-index: 1000; 
+    padding: 0;
+    border: 1px solid #485E9024;
+
+    &.show {
+      top: 100%!important;
+    }
+  }
+
+  &-divider { margin: 0; }
+
+  &-menu-right {
+    right: 0!important;
+    left: auto!important;
+  }
+
+  &-menu[x-placement^=right],
+  &-menu[x-placement^=top],
+  &-menu[x-placement^=left]{
+    top: auto !important;
+    animation: none !important;
+  }
+
+  &-divider{
+    border-top-color: $border-color;
+  }
+  
+  // Dropdown Mega Menu
+  
+  &-mega {
+    position: static!important;
+
+    &menu {
+      padding: 20px;
+      left: 20px !important;
+      right: 20px !important;
+    }
+  }
+  
+  // Dropdown size
+  &-mega-menu {
+    &-xl{
+      width: 40rem;
+    }
+    &-lg{
+      width: 26rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    &-menu-lg {
+      width: 320px;
+    }
+  
+    &-menu-md {
+      width: 240px;
+    }
+  }
+
+}
+
+@keyframes DropDownSlide {
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+  }
+  0% {
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px)
+  }
+}

@@ -1,0 +1,147 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy']">Policy Information</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/coverages']">Insurance Coverage</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/documents']">Policy Documents</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/history']">Policy History</button>
+          <button type="button" class="btn btn-secondary active">Billing &#38; Payment Activity</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/claims']">Claims Activity</button>
+        </div>
+      </div>
+      <div class="alert alert-success text-uppercase" role="alert">
+        <i class="fas fa-check-circle mr-2 success fs-20 success-500"></i> Current Balance Due: $0.00
+      </div>
+      <div class="card">
+        <h4 class="card-header mt-0">Installment Schedule</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Invoice</th>
+                <th class="border-0">Invoice Mail Date</th>
+                <th class="border-0">Due Date</th>
+                <th class="border-0 text-right">Installment Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pl-2">-</td>
+                <td>11/1/2021</td>
+                <td>12/1/2021</td>
+                <td class="text-right">$1120.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Billing History</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Invoice Type</th>
+                <th class="border-0">Activity</th>
+                <th class="border-0">Invoice</th>
+                <th class="border-0">Bill Date</th>
+                <th class="border-0 text-right">Amount</th>
+                <th class="border-0 text-right">Current Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>11/1/2021</td>
+                <td>-</td>
+                <td>12/1/2021</td>
+                <td class="text-right">-$1,213.55</td>
+                <td class="text-right">-$1,213.55</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="card-text fw-semibold error-500">
+        This information may not reflect payments received within the last 24 hours.<br>
+        This information does not reflect future installments to be invoiced (see installment schedule above).
+      </p>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Billing/Payment Summary</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0 text-right">Premium</th>
+                <th class="border-0 text-right">Fees &#38; Surcharges</th>
+                <th class="border-0 text-right">Total</th>
+                <th class="border-0 text-right">Total Payments Received</th>
+                <th class="border-0 text-right">Remaining Policy Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-right">$1,213.55</td>
+                <td class="text-right">$0.00</td>
+                <td class="text-right">$1,213.55</td>
+                <td class="text-right">$0.00</td>
+                <td class="text-right">-$1,213.55</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="alert alert-success text-uppercase" role="alert">
+        <i class="fas fa-check-circle mr-2 success fs-20"></i> Current Balance Due: $0.00
+      </div>
+      
+      <calling-card></calling-card>
+    </div>    
+
+  </div>
+</div>

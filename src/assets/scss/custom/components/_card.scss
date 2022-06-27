@@ -1,0 +1,82 @@
+// 
+// _card.scss
+// 
+.accordion > .card {
+    margin-bottom: $grid-gutter-width;
+    box-shadow: $box-shadow;
+    border: 1px solid #485E9024;
+    border-radius: 0.25rem;
+
+    &:not(:last-of-type){ border: 1px solid #485E9024; }
+
+    &:not(:first-of-type) {
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+    }
+}
+
+
+.card {
+    margin-bottom: $grid-gutter-width;
+    box-shadow: $box-shadow;
+    border: 1px solid #485E9024;
+
+    &-drop {
+        font-size: 1.25rem;
+        line-height: 0;
+        color: inherit;
+    }
+
+    &-header {
+        margin-bottom: 0;
+        padding: 0.856rem 1rem;
+        font: $fw-bold 1rem $font-family-base;
+        background-color: $white;
+        border-bottom: 1px solid #485E9024;
+        text-transform: uppercase;
+
+        @media (max-width: 500px) {
+            font-size: .875rem;
+        }
+
+
+        h5 { font: $fw-bold 1rem $font-family-base; text-transform: uppercase; }
+
+        &-text {
+            font-weight: $fw-bold;
+            text-transform: uppercase;
+        }
+    }
+
+    &-title {
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+        font-weight: $fw-bold;
+        color: $text-color;
+    }
+
+    &-title-desc {
+        color: $text-color;
+        margin-bottom: 1.5rem;
+    }
+
+    &-notice {
+        font-size: 0.875rem;
+        background: #deeefc;
+        font-weight: $fw-semibold;
+        color: $text-color;
+        padding: 0.5rem 1rem;
+
+        @media (max-width: 500px) {
+            font-size: 0.75rem;
+        }
+    }
+
+    &-body {
+        padding: 1rem;
+    }
+
+    &-footer {
+        background-color: #c2c2c224; 
+    }
+}

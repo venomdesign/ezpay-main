@@ -1,0 +1,180 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Get Documents</h4>
+        <div class="card-body">
+          <a [routerLink]="['/policy/documents/certificate']" title="Click to fill out Certificate of Insurance" class="btn btn-secondary w-100 mb-3">Certificate of Insurance</a>
+          <a [routerLink]="['/policy/documents/evidence']" title="Click to fill out Evidence of Property form" class="btn btn-secondary w-100">Evidence of Property</a>
+        </div>
+      </div>
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy']">Policy Information</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/coverages']">Insurance Coverage</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/documents']">Policy Documents</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/history']">Policy History</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/activity']">Billing &#38; Payment Activity</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/claims']">Claims Activity</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Certificate of Insurance</h4>
+        <div class="card-body">
+          <div class="card border-primary shadow-none">
+            <h4 class="card-header bg-primary__light border-primary mt-0">Certificate Holder Information</h4>
+            <div class="card-body">
+
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="contact-name" class="col-form-label">Name</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Name" id="contact-name">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="contact-name" class="col-form-label">DBA</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the DBA" id="contact-name">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="contact-name" class="col-form-label">Address</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Address" id="contact-name">
+                </div>
+                <div class="col-md-6">
+                  <label for="contact-name" class="col-form-label">Address 2</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Address 2" id="contact-name">
+                </div>
+              </div>
+              <div class="form-group row">
+
+                <div class="col-md-6">
+                  <label for="contact-name" class="col-form-label">City</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the City" id="contact-name">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="contact-name" class="col-form-label">State/Region/Province</label>
+                  <select class="form-control">
+                    <option>Please Select</option>
+                    <option>United States</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="contact-name" class="col-form-label">Zip/Postal Code</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Zip/Postal Code" id="contact-name">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card border-primary shadow-none">
+            <h4 class="card-header bg-primary__light border-primary mt-0">Contact Information</h4>
+            <div class="card-body">
+
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="contact-name" class="col-form-label">Name</label>
+                  <input type="text" class="form-control is-invalid" value="" placeholder="Enter name" id="contact-name" required>
+                  <!-- <sub class="col-6">Hint text</sub> -->
+                  <!-- <div class="invalid-feedback">Please enter your name.</div> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="contact-email" class="col-form-label">Phone</label>
+                  <input class="form-control is-valid" value="" placeholder="Enter phone" id="contact-email" required>
+                  <!-- <sub class="col-6">Hint text</sub> -->
+                  <!-- <div class="valid-feedback">Looks good!</div> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="contact-policynumber" class="col-form-label">Fax</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter fax" id="contact-policynumber" required>
+                  <!-- <sub class="col-6">Hint text</sub> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="contact-phonenumber" class="col-form-label">Email</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter email" id="contact-phonenumber">
+                  <!-- <sub class="col-6">Hint text</sub> -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card border-primary shadow-none">
+            <h4 class="card-header bg-primary__light border-primary mt-0">Description of Operations</h4>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="contact-inquirydesc" class="col-form-label">Description of Operations</label>
+                <textarea class="form-control" type="text" value="" placeholder="Please enter any information that would be able to help us appropriately address your question or issue." id="contact-inquirydesc"></textarea>
+                <!--<sub class="col-6">Hint text</sub>-->
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12">
+              <button type="button" class="btn btn-link" [routerLink]="['/policy/coverages']">Cancel</button>
+              <!-- <button type="button" class="btn btn-secondary ml-2">Clear</button> -->
+              <button type="button" class="btn btn-success ml-2">Get Certificate of Insurance</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>    
+
+  </div>
+</div>

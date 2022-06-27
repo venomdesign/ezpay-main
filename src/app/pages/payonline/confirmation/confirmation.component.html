@@ -1,0 +1,115 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <h1>Payment Confirmation</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    
+    <div class="col-xl-12">
+      <div class="alert alert-success" role="alert">
+        <i class="fas fa-check-circle mr-2 success"></i> Thank You! Your payment has been processed successfully.
+      </div>
+      <div class="alert alert-success" role="alert">
+        <i class="fas fa-check-circle mr-2 success"></i> Thank You!
+        <ul class="mb-0">
+          <li>Your payment has been processed successfully.</li>
+          <li>This account is successfully signed-up for paperless invoices.</li>
+        </ul>
+      </div>
+      <div class="alert alert-success" role="alert">
+        <i class="fas fa-check-circle mr-2 success"></i> Thank You!
+        <ul class="mb-0">
+          <li>Your payment has been processed successfully.</li>
+          <li>This account is successfully signed-up for paperless invoices.</li>
+          <li>This account is successfully signed-up for autopay.</li>
+        </ul>
+      </div>
+      <div class="alert alert-warning" role="alert">
+        <i class="fas fas fa-bell mr-2 success"></i> This policy is already registered for autopay.
+      </div>
+      <div class="alert alert-info" role="alert">
+        <i class="fas fas fa-bell mr-2 success"></i> To enroll in autopay, please complete your account registration and click the “Enroll” link for the specific policy on the Policy Dashboard.
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Payment Confirmation</h4>
+        <div class="card-body">
+          <p class="card-text">
+            This transaction will be shown as <strong>U.S. Liability Insurance</strong> on your account statement.<br><br>
+            An email confirmation has been sent to <strong>test@usli.com</strong> for your records. You may also want to print this screen and retain it for your records. 
+          </p>
+          <div class="card w-50">
+            <h4 class="card-header">Payment Details</h4>
+            <div class="card-body">
+              <dl class="mb-0">
+                <dt class="d-flex justify-content-between border-bottom border-light p-2">
+                  <span>Policy Number</span>
+                  <span class="blue-500">AH 155922</span>
+                </dt>
+                <dt class="d-flex justify-content-between border-bottom border-light p-2">
+                  <span>Payment Amount</span>
+                  <span class="blue-500">$22.00</span>
+                </dt>
+                <dt class="d-flex justify-content-between border-bottom border-light p-2">
+                  <span>Paid By</span>
+                  <span class="blue-500">VISA ***********1111</span>
+                </dt>
+                <dt class="d-flex justify-content-between border-bottom border-light p-2">
+                  <span>Paid By</span>
+                  <span class="blue-500">Bank account ending in  1111</span>
+                </dt>
+                <dt class="d-flex justify-content-between border-bottom border-light p-2">
+                  <span>Payment Date</span>
+                  <span class="blue-500">02/22/2022</span>
+                </dt>
+                <dt class="d-flex justify-content-between p-2 pb-0">
+                  <span>Confirmation Number</span>
+                  <span class="blue-500">tst702</span>
+                </dt>
+              </dl>
+            </div>
+          </div>
+          <p class="fw-medium error-500">Please allow 24-48 hours for your payment to post to your account and reflect on your billing/payment history.</p>
+          <p>To finish the registration process and create your on-line profile, click <strong>"Create Account"</strong> with the payment details to the right and a validation code will be sent to your email address to continue. You will need to be registered to make future changes to your invoice delivery and payment settings. If you have already set up an on-line profile with USLI, no additional actions are needed.</p>
+          <div class="d-flex flex-row flex-wrap">
+            <button type="button" class="btn btn-cancel" [routerLink]="['/payonline']">Done</button>
+            <button type="button" class="btn btn-secondary ml-2"><i class="fas fa-print"></i> Print Page</button>
+            <button type="button" class="btn btn-success ml-2" [routerLink]="['/create/verify']">Create Account</button>
+          </div>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+      
+    </div>
+
+    <!-- <div class="col-xl-4">
+      <div class="card">
+        <h4 class="card-header">Policy Number: NDO1556838G</h4>
+        <div class="card-body">
+          <p class="card-text">This transaction will be shown as U.S. Liability Insurance on your account statement and an email confirmation will be sent to the address provided.</p>
+          <div class="d-flex flex-row flex-wrap">
+            <button type="button" class="btn btn-secondary flex-fill" [routerLink]="['/payonline']">Back</button>
+            <button type="button" class="btn btn-success ml-2 flex-fill">Pay Now</button>
+          </div>
+        </div>
+      </div>
+
+      <chat-card></chat-card>
+      <privacy-card></privacy-card>
+
+    </div> -->
+  </div>
+</div>

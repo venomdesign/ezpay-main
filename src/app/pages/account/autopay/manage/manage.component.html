@@ -1,0 +1,251 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <h1 class="page-header">Manage Autopay for Account ACCT_NUMBER</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card">
+        <h4 class="card-header d-flex mt-0 align-items-center justify-content-between">Select Payment Method <!--button type="button" class="btn btn-sm btn-secondary" (click)="openModal(CCARD)">Add Credit/Debit Card</button--></h4>
+        <div class="card-notice"><i class="fas fa-bell mr-2"></i> Your Automatic Payment of AMOUNT will be processed on the next business day.</div>
+        <div class="card-notice"><i class="fas fa-bell mr-2"></i> Your Automatic Payment of AMOUNT is scheduled to be processed on DUEDATE.</div>
+        <div class="card-body">
+          <form name="manageautopay">
+            <div class="card">
+              <h4 class="card-header d-flex mt-0 align-items-center justify-content-between">Credit/Debit Cards <button type="button" class="btn btn-sm btn-secondary" (click)="openModal(CCARD)">Add Credit/Debit Card</button></h4>
+              <div class="card-body card-text">
+
+                <div class="wallet-account-item">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <input type="radio" name="ap_account" class="check-radio" id="customRadio1" class="mr-3" checked="checked">
+                    <div class="wallet-account-item-icon">
+                      <i class="fab fa-cc-mastercard mr-3"></i>
+                    </div>
+                    <label for="customRadio1" class="cursor-pointer fw-regular">
+                      Card number ending in 4008<br>
+                      Exp Date: 05/2023
+                    </label>
+                    <div class="ml-4 fw-semibold">AutoPay Enabled</div>
+                  </div>
+                </div>
+
+                <div class="wallet-account-item">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <input type="radio" name="ap_account" class="check-radio" id="customRadio2" class="mr-3">
+                    <div class="wallet-account-item-icon">
+                      <i class="fab fa-cc-visa mr-3"></i>
+                    </div>
+                    <label for="customRadio2" class="cursor-pointer fw-regular">
+                      Card number ending in 9464<br>
+                      Exp Date: 05/2024
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card">
+              <h4 class="card-header mt-0 d-flex align-items-center justify-content-between">ACH/Bank Accounts <button type="button" class="btn btn-sm btn-secondary" (click)="openModal(ACH)">Add ACH/Bank Account</button></h4>
+              <div class="card-body card-text">
+      
+                <div class="wallet-account-item">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <input type="radio" name="ap_account" class="check-radio" id="customRadio3" class="mr-3">
+                    <label for="customRadio3" class="cursor-pointer fw-regular">
+                      Checking account ending in 1111<br>
+                      Routing number: 021000021
+                    </label>
+                  </div>
+                </div>
+      
+                <div class="wallet-account-item">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <input type="radio" name="ap_account" class="check-radio" id="customRadio4" class="mr-3">
+                    <label for="customRadio4" class="cursor-pointer fw-regular">
+                      ACH account ending in 7890<br>
+                      Routing number: 033000021
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+          <!-- <div class="alert alert-warning"><i class="fas fa-exclamation-triangle"></i> Your Automatic Payment of AMOUNT will be processed on the next business day.</div>
+          <div class="alert alert-warning"><i class="fas fa-exclamation-triangle"></i> Your Automatic Payment of AMOUNT is scheduled to be processed on DUEDATE.</div> -->
+
+          <div class="d-flex flex-row flex-wrap">
+            <button type="button" class="btn btn-text" [routerLink]="['/']">Cancel</button>
+            <button type="button" class="btn btn-secondary ml-2" [routerLink]="['/']">Turn Off AutoPay</button>
+            <button type="button" class="btn btn-success ml-2">Update Payment Method</button>
+          </div>
+
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Standard Modal -->
+<ng-template #CCARD role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Add a Debit/Credit Card</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">x</button>
+  </div>
+  <div class="modal-body">
+      <div class="form-group row">
+        <div class="col-md-12">
+          <label for="contact-name" class="col-form-label">Cardholder Name<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter name on front of credit card" id="contact-name">
+          <sub class="col-6">(only letters and numbers)</sub>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-12">
+          <label for="contact-name" class="col-form-label">Cardholder Number<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter the cardholder's card number" id="contact-name">
+          <sub class="col-6">(no spaces or dashes)</sub>
+        </div>
+      </div>      
+      <div class="form-group row">
+        <div class="col-md-6">
+          <label for="contact-name" class="col-form-label">Expiration Date<sup>*</sup></label>
+          <div class="d-flex flex-row">
+            <input class="form-control mr-2" type="text" value="" placeholder="MM" id="contact-name">
+            <input class="form-control" type="text" value="" placeholder="YYYY" id="contact-name">
+          </div>
+          <!--<sub class="col-6">Hint text</sub>-->
+        </div>
+        <div class="col-md-4">
+          <label for="contact-name" class="col-form-label">CVV/CVC Number<sup>*</sup> <a href="#" data-tooltip="For Visa/MC, the 3 digit CVV number is printed on the signature panel on the back of the card immediately after the card's account number. For AMEX, the 4 digit CVV number is printed on the front of the card above the card account number."><i class="fas fa-question-circle blue-500 ml-1"></i></a></label>
+          <input class="form-control" type="text" value="" placeholder="CVV" id="contact-name">
+          <!--<sub class="col-6">Hint text</sub>-->
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-6">
+          <label for="contact-name" class="col-form-label">Zip/Postal Code<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter Zip/Postal Code" id="contact-name">
+          <!-- <sub class="col-6">(no spaces or dashes)</sub> -->
+        </div>
+      </div> 
+
+  </div>
+  <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-text flex-fill" (click)="modal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-success flex-fill">Add Account</button>
+  </div>
+</ng-template>
+
+
+<!-- Standard Modal -->
+<ng-template #ACH role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Add aCH/BANK Account</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">x</button>
+  </div>
+  <div class="modal-body">
+      <div class="form-group row">
+        <div class="col-md-12">
+          <label for="contact-name" class="col-form-label">Account Type<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Select Account Type" id="contact-name">
+          <!-- <sub class="col-6">(only letters and numbers)</sub> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-12">
+          <label for="contact-name" class="col-form-label">Account Holder's Name<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter Account Holder's Name" id="contact-name">
+          <!-- <sub class="col-6">(no spaces or dashes)</sub> -->
+        </div>
+      </div>      
+      <div class="form-group row">
+        <div class="col-md-12">
+          <label for="contact-name" class="col-form-label">Routing Number<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter Routing Number" id="contact-name">
+          <!-- <sub class="col-6">(no spaces or dashes)</sub> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-12">
+          <label for="contact-name" class="col-form-label">Account Number<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter Account Number" id="contact-name">
+          <!-- <sub class="col-6">(no spaces or dashes)</sub> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-12">
+          <label for="contact-name" class="col-form-label">Confirm Account Number<sup>*</sup></label>
+          <input class="form-control" type="text" value="" placeholder="Enter Confirm Account Number" id="contact-name">
+          <!-- <sub class="col-6">(no spaces or dashes)</sub> -->
+        </div>
+      </div>       
+  </div>
+  <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-text flex-fill" (click)="modal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-success flex-fill">Add Account</button>
+  </div>
+</ng-template>
+
+
+<!-- Standard Modal -->
+<ng-template #DELETE_ACCOUNT_NAP role="document" let-modal>
+  <div class="modal-header bg-danger__light border-danger">
+    <h5 class="modal-title mt-0">Warning - Deleting Acccount</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">x</button>
+  </div>
+  <div class="modal-body">
+    <p class="fw-semibold">You are about to delete this account, are you sure you want to continue?</p>
+  </div>
+  <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-text flex-fill" (click)="modal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-danger flex-fill">Confirm Delete</button>
+  </div>
+</ng-template>
+
+<!-- Standard Modal -->
+<ng-template #DELETE_ACCOUNT_AP role="document" let-modal>
+  <div class="modal-header bg-danger__light border-danger">
+    <h5 class="modal-title mt-0">Warning - Deleting Acccount</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">x</button>
+  </div>
+  <div class="modal-body">
+    <p class="fw-semibold">This account can not be deleted, it is currently used for the following auto-pay plans:</p>
+    <ul class="list-unstyled">
+      <li><a href="javascript:void();" title="Click here to manage autopay for SP 155019">SP 155019</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-light flex-fill" (click)="modal.close('Close click')">Close</button>
+    <!-- <button type="button" class="btn btn-error flex-fill">Confirm Delete</button> -->
+  </div>
+</ng-template>

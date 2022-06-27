@@ -1,0 +1,24 @@
+.wallet-account-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8rem 0;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid #485E9024;
+    }
+
+    &-icon { 
+        font-size: 2.5rem; 
+        line-height: normal; 
+    }
+}

@@ -1,0 +1,201 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy']">Policy Information</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/coverages']">Insurance Coverage</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/documents']">Policy Documents</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/history']">Policy History</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/activity']">Billing &#38; Payment Activity</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/claims']">Claims Activity</button>
+        </div>
+      </div>
+      <div class="card">
+        <h4 class="card-header mt-0">Policyholder Information</h4>
+        <div class="card-notice">To change any policyholder information, enter the change in the appropriate text box below.<br>To change items <u class="fw-bold">not</u> shown above, please contact "Your Local Agent".</div>
+        <div class="card-body">
+          <p class="card-text error-500 fw-semibold"><sup>*</sup> Required Field</p>
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="example-date-input" class="col-form-label">Effective Date of Change<sup>*</sup></label>
+              <input class="form-control" type="date" value="2019-08-19" id="example-date-input">
+              <sub>Select or enter (mm/dd/yyyy)</sub>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label class="col-form-label">Country</label>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>United States</option>
+              </select>
+            <!-- <sub>We promise to get back to you within 1 business day</sub> -->
+            </div>
+          </div>
+
+          <div class="form-group row">
+            
+            <div class="col-md-6">
+              
+              <label for="contact-name" class="col-form-label">Mailing Address<sup>*</sup></label>
+              <input class="form-control" type="text" value="" placeholder="Enter the mailing address" id="contact-name">
+            </div>
+            <div class="col-md-6">
+              
+              <label for="contact-name" class="col-form-label">Mailing Address 2</label>
+              <input class="form-control" type="text" value="" placeholder="Enter the mailing address 2" id="contact-name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+        
+            <div class="col-md-6">
+              
+              <label for="contact-name" class="col-form-label">City<sup>*</sup></label>
+              <input class="form-control" type="text" value="" placeholder="Enter the City" id="contact-name">
+            </div>
+
+            <div class="col-md-3">
+              
+              <label for="contact-name" class="col-form-label">State/Region/Province<sup>*</sup></label>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>United States</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              
+              <label for="contact-name" class="col-form-label">Zip/Postal Code<sup>*</sup></label>
+              <input class="form-control" type="text" value="" placeholder="Enter the Zip/Postal Code" id="contact-name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+          
+            <div class="col-md-6">
+              
+              <label for="contact-name" class="col-form-label">Policyholder Email Address</label>
+              <input class="form-control" type="text" value="" placeholder="Enter Email" id="contact-name">
+              <sub>(Not User Email)</sub>
+            </div>
+
+            <div class="col-md-6">
+              
+              <label for="contact-name" class="col-form-label">Confirm Policyholder Email Address</label>
+              <input class="form-control" type="text" value="" placeholder="Confim Email" id="contact-name">
+              <sub>(Not User Email)</sub>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="contact-name" class="col-form-label">Home Phone Number</label>
+              <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+              <!--<sub class="col-6">Hint text</sub>-->
+            </div>
+            <div class="col-md-6">
+              <label for="contact-name" class="col-form-label">Work/Business Phone Number</label>
+              <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+              <!--<sub class="col-6">Hint text</sub>-->
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="contact-name" class="col-form-label">Does this mailing address change also change the primary location?</label>
+              <div class="col-md-6">
+                <div class="custom-control custom-radio mb-2">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input pl-0">
+                  <label class="custom-control-label" for="customRadio1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input pl-0">
+                  <label class="custom-control-label" for="customRadio2">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="contact-name" class="col-form-label">Would you like to apply the above changes to other active policies?</label>
+              <div class="col-md-6">
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">REA1015313</label>
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2">PCL1739767</label>
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3">PCL1737106</label>
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type="checkbox" class="custom-control-input" id="customCheck4">
+                  <label class="custom-control-label" for="customCheck4">PCL1579305B</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck5">
+                  <label class="custom-control-label" for="customCheck5">REA1015313</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-link" [routerLink]="['/policy']">Cancel</button>
+              <button type="button" class="btn btn-secondary ml-2">Clear</button>
+              <button type="button" class="btn btn-success ml-2">Save Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>
+
+  </div>
+</div>

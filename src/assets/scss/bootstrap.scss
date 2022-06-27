@@ -1,0 +1,32 @@
+/*
+Template Name: ezpay
+File: Custom Bootstrap Css File
+*/
+
+
+//Core files
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "variables";
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "custom/mixins/background-variant";
+@import "custom/utilities/borders";
+
+@import "custom/components/reboot";
+@import "custom/components/backgrounds";
+@import "custom/components/badge";
+@import "custom/components/buttons";
+@import "custom/components/button-group";
+@import "custom/components/breadcrumb";
+@import "custom/components/card";
+@import "custom/components/close";
+@import "custom/components/dropdown";
+@import "custom/components/nav";
+@import "custom/components/table";
+@import "custom/components/pagination";
+@import "custom/components/progress";
+@import "custom/components/accordion";
+@import "custom/components/alerts";
+@import "custom/components/tables";
+@import "custom/components/custom-forms";
+

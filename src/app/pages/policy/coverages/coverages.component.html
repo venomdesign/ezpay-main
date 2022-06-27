@@ -1,0 +1,223 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <getdocuments-card></getdocuments-card>
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy']">Policy Information</button>
+          <button type="button" class="btn btn-secondary active">Insurance Coverage</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/documents']">Policy Documents</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/history']">Policy History</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/activity']">Billing &#38; Payment Activity</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/claims']">Claims Activity</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Policy History</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Transaction Date</th>
+                <th class="border-0">Activity</th>
+                <th class="border-0">Effective Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3/18/2013</td>
+                <td>Policy Issued</td>
+                <td>3/22/2013</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="alert alert-info text-uppercase" role="alert">
+        <i class="fas fa-bell mr-2 info fs-20"></i> Summary Only - this reflects the most recent changes to this policy processed by us.
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">
+          <ul class="list-unstyled justify-content-between m-0 p-0">
+            <li class="float-left">Commercial General Liability</li>
+            <li class="float-right">Premium: $1,339.55</li>
+          </ul>
+        </h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Limits of Insurance</th>
+                <th class="border-0 text-right">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Each Occurrence Limit</td>
+                <td class="text-right">$1,000,000</td>
+              </tr>
+              <tr>
+                <td>Personal & Advertising Injury Limit (Any One Person/Organization)</td>
+                <td class="text-right">$1,000,000</td>
+              </tr>
+              <tr>
+                <td>Medical Expense (Any One Person)</td>
+                <td class="text-right">$5,000</td>
+              </tr>
+              <tr>
+                <td>Damages To Premises Rented To You (Any One Premises)</td>
+                <td class="text-right">$100,000</td>
+              </tr>
+              <tr>
+                <td>Products/Completed Operations Aggregate Limit</td>
+                <td class="text-right">$2,000,000</td>
+              </tr>
+              <tr>
+                <td>General Aggregate Limit</td>
+                <td class="text-right">$2,000,000</td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <h4 class="card-header mt-0">Location of All Premises You Own, Rent or Occupy</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Loc.</th>
+                <th class="border-0">Street</th>
+                <th class="border-0">City</th>
+                <th class="border-0">State/Province/Region</th>
+                <th class="border-0">Zip/Postal Code</th>
+                <th class="border-0">Territory</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>Exton</td>
+                <td>PA</td>
+                <td>19341</td>
+                <td>013</td>
+              </tr>          
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Underlying or Primary Policy Limit Requirements</h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Coverage</th>
+                <th class="border-0">Dual Limit</th>
+                <th class="border-0">Single Limit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Automobile Liability</td>
+                <td>
+                  $1,000,000.00 per person<br>
+                  $1,000,000.00 per accident<br>
+                  $100,000.00 property
+                </td>
+                <td>1M CSL</td>
+              </tr>
+              <tr>
+                <td>Comprehensive Personal Liability & Rental Property Liability</td>
+                <td>
+                  $300,000.00 per person<br>
+                  $300,000.00 per accident<br>
+                  $100,000.00 property
+                </td>
+                <td>300 CSL</td>
+              </tr>
+              <tr>
+                <td>Recreational Vehicle Liability</td>
+                <td>
+                  $250,000.00 per person<br>
+                  $500,000.00 per accident<br>
+                  $100,000.00 property
+                </td>
+                <td>300 CSL</td>
+              </tr>
+              <tr>
+                <td>Watercraft Liability</td>
+                <td>
+                  $1,000,000.00 per person<br>
+                  $1,000,000.00 per accident<br>
+                  $100,000.00 property
+                </td>
+                <td>1M CSL</td>
+              </tr>
+              <tr>
+                <td>Uninsured/Underinsured Motorist Liability</td>
+                <td>
+                  $1,000,000.00 per person<br>
+                  $1,000,000.00 per accident<br>
+                  $0.00 property
+                </td>
+                <td>1M CSL</td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>    
+
+  </div>
+</div>

@@ -1,0 +1,62 @@
+.card-header.create {
+    background: #fff; color: #00388e;
+
+    span { 
+        width: 1.5rem; 
+        height: 1.5rem; 
+        border-radius: 100%; 
+        box-sizing: content-box; 
+        padding: 4px 10px; 
+        background-color: #00388e; 
+        color: #fff;
+    }
+
+    &:first-child { 
+        border-radius: 4px 0 0 0; 
+        background: #4D586F; 
+        color: #fff; 
+    
+        & span { 
+            background-color: #fff; 
+            color: #4D586F; 
+        }
+    }
+    &:last-child { 
+        border-radius: 0 4px 0 0; 
+        background: #9FA8BC; 
+        color: #ECEEF2;
+        
+        & span { 
+            background-color: #ECEEF2; 
+            color: #9FA8BC; 
+        }
+    }
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-left: 24px solid #4D586F;
+    
+    &.white {
+        background: #9FA8BC;
+        border-left: 24px solid #fff;
+
+        &-inverse {
+            background: #fff;
+            border-left: 24px solid #9FA8BC;  
+        }
+    }
+    &.gray { 
+        &-dark {
+            background: #4D586F;
+            border-left: 24px solid #fff;
+        }
+        &-light {
+            background: #9FA8BC;
+            border-left: 24px solid #4D586F;
+        }
+    }
+}

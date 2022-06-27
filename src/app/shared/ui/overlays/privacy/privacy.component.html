@@ -1,0 +1,45 @@
+<!-- 
+  Privacy Card 
+  Location: src\app\shared\ui\overlays\privacy\privacy.component.html
+-->
+<div class="card">
+  <h4 class="card-header mt-0">We Value Your Privacy</h4>
+  <div class="card-body">
+    <p class="card-text">By providing the following information, you will be able to access information regarding your policies with us.<br><strong>Note:</strong> We do not sell your Policyholder information. See our <a (click)="openModal(privacyModal)" title="Click here to view the Privacy Policy">Privacy Policy</a> for more information.</p>
+    <!-- <p>We will not sell or distribute your information. Read our <a href="javascript:void()" title="Click here to view the Privacy Policy">Privacy Policy</a> and <a href="javascript:void()" title="Click here to view the Terms &#38; Conditions">Terms &#38; Conditions</a>.</p> -->
+  </div>
+</div>
+<!--// Privacy Card -->
+
+<!-- Standard Modal -->
+<ng-template #privacyModal role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Privacy Policy</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="card-notice d-flex flex-row fw-bold border-light border-bottom">
+    <div class="pr-3">on behalf of:</div>
+    <div>
+      United States Liability Insurance Company<br>
+      Mount Vernon Fire Insurance Company<br>
+      U.S. Underwriters Insurance Company<br>
+      Mount Vernon Specialty Insurance Company            
+    </div>
+  </div>
+  <div class="modal-body">
+    <dl>
+      <dt>What information we collect about you?</dt>
+      <dd>We collect non-public personal financial information from your application or other requests for insurance or products we offer. We may also collect information from other sources such as your prior insurance provider and consumer reporting agencies. This information can include prior loss history, credit or inspection and motor vehicle reports.</dd>
+
+      <dt>What information about you do we disclose and to whom is it disclosed?</dt>
+      <dd>United States Liability Insurance Company, Mount Vernon Fire Insurance Company, U.S. Underwriters Insurance Company and Mount Vernon Specialty Insurance Company are an affiliated family of companies under common ownership, sharing employees, data processing systems and office space. Therefore all of the non-public personal information collected about you in connection with the insurance policy you have with one of these three companies may be disclosed to these affiliates by virtue of this commonality of employees and systems. We will not otherwise disclose non-public personal financial information except as permitted by law.</dd>
+
+      <dt>How do we protect your non-public personal information?</dt>
+      <dd>Information about you is protected physically, electronically and administratively by procedures we have implemented to ensure its safeguard. Information about you is generally available only within the United States Liability Group, but where made available to others for purposes relating to the services we provide to you, such disclosure is limited to that needed to satisfy the purpose in question. Anyone who is given access to your information by us will be informed of the need to protect and safeguard its confidentiality, and is not authorized to use or further disclose your non&ndash;public personal information except in furtherance of the purpose for which such person was given the information. </dd>
+    </dl>
+  </div>
+  <div class="d-flex flex-row modal-footer justify-content-center align-items-center">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <!-- <button type="button" class="btn btn-success">Submit changes</button> -->
+  </div>
+</ng-template>

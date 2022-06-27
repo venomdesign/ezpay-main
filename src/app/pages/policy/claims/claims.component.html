@@ -1,0 +1,106 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy']">Policy Information</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/coverages']">Insurance Coverage</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/documents']">Policy Documents</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/history']">Policy History</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/activity']">Billing &#38; Payment Activity</button>
+          <button type="button" class="btn btn-secondary active">Claims Activity</button>
+        </div>
+      </div>
+      <div class="card">
+        <h4 class="card-header mt-0 d-flex mt-0 align-items-center justify-content-between">Claims Activity <button type="button" class="btn btn-sm btn-success" (click)="openModal(ClaimActivityModal)">Request a Claims Activitiy Report</button></h4>
+        <div class="table-responsive">
+          <table class="table table-centered">
+            <thead class="thead-light">
+              <tr>
+                <th class="border-0">Policy Period</th>
+                <th class="border-0">Claim Number</th>
+                <th class="border-0">Date of Loss</th>
+                <th class="border-0">Loss Description</th>
+                <th class="border-0 text-right">Incurred Amount</th>
+                <th class="border-0 text-right">Paid Loss</th>
+                <th class="border-0 text-right">Paid Expense</th>
+                <th class="border-0">Status</th>                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3/22/2013 - 3/22/2014</td>
+                <td>K074777</td>
+                <td>9/5/2013</td>
+                <td></td>
+                <td class="text-right">$0.00</td>
+                <td class="text-right">$0.00</td>
+                <td class="text-right">$0.00</td>
+                <td>C</td>                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>    
+
+  </div>
+</div>
+
+
+
+<!-- Standard Modal -->
+<ng-template #ClaimActivityModal role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Claim Activity Request</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body fw-medium">
+    Your claims activity request has been sent to USLI. The claims activity report for [Policy Number] will be sent to user@usli.com. Thank you.
+  </div>
+  <div class="d-flex modal-footer">
+    <button type="button" class="btn btn-light flex-grow-1 text-color" (click)="modal.dismiss('Cross click')">Close</button>
+  </div>
+</ng-template>

@@ -1,0 +1,540 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+
+  <!-- Page title -->
+  <div class="row">
+    <div class="col-12">
+      <h1 class="page-header">Report a Claim</h1>
+    </div>
+  </div>
+  <!-- Page title -->
+  <div class="row">
+    <div class="col-xl-3">
+      <chat-card></chat-card>
+    </div>
+
+    <div class="col-xl-9">
+
+      <div class="card border-warning">
+        <h4 class="card-header bg-warning__light border-warning mt-0"><i class="fa fa-bell mr-2"></i> Fraud Warning</h4>
+        <div class="card-body">
+          <!--form action="/Policy/FraudWarning/SP 1550194A?a=Claims&amp;c=Policy" method="post"-->
+
+            <p>This Online Reporting System allows you to report a claim to <b>United States Liability Insurance Company, Mount Vernon Fire Insurance Company or U.S. Underwriters Insurance Company d/b/a United States Liability Insurance Group</b> ("Group") and to <b>Mount Vernon Specialty Insurance Company or Radnor Specialty Insurance Company d/b/a Devon Park Insurance</b> at your convenience twenty-four hours a day seven days a week.  You will be guided through a screen that will enable us to collect your claim information.  Please do not proceed with this loss  report unless you intend to report a claim under your policy.</p>
+              
+            <p>Before you begin the reporting process, please make sure that you have all of your claim information available.  We cannot act on your claim report if it does not include a valid policy number, telephone number, or other information that would allow us to contact you.</p>
+
+            <p>Once you have completed your online claim report, click on the "Submit" button at the bottom of the "Report a Claim" (next) page. You will receive an e-mail confirming that your report was received by us.  A claims representative will contact you (either by e-mail or by phone) after your report is submitted. If you cannot complete your report or elect to discontinue your reporting, please click the "Cancel" button at the bottom of the "Report a Claim" (next) page and contact "Your local agent" to report your claim.</p>
+            
+            <p>Once you submit a report, we will set up a file and conduct an investigation of your claim.</p>
+            
+            <p>Accepting an on-line report does not commit Group to provide coverage for the claim or operate as a waiver of any rights or defenses that Group may have under the terms of your policy.  Any information that you submit regarding a claim is subject to our review and verification. We reserve the right to request additional information as needed to complete our investigation.</p>
+            
+            <p>Arizona: For your protection Arizona law requires the following statement to appear on this form. Any person who knowingly presents a false or fraudulent claim for payment of a loss is subject to criminal and civil penalties.</p>
+            
+            <p>California: For your protection California law requires the following to appear on this form. Any person who knowingly presents false or fraudulent information to obtain or amend insurance coverage or to make a claim for payment of a loss is guilty of a crime and may be subject to fines and confinement in state prison.</p>
+
+            <p>District of Columbia: WARNING: It is a crime to provide false or misleading information to an insurer for the purpose of defrauding the insurer or any other person. Penalties include imprisonment and/or fines. In addition, an insurer may deny insurance benefits if false information materially related to a claim was provided by the applicant.</p>
+
+            <p>Kentucky: Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance containing any materially false information or conceals, for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime.</p>
+
+            <p>Minnesota: A person who files a claim with intent to defraud or helps commit a fraud against an insurer is guilty of a crime.</p>
+
+            <p>New Hampshire: Any person who, with a purpose to injure, defraud, or deceive any insurance company, files a statement of claim containing any false, incomplete, or misleading information is subject to prosecution and punishment for insurance fraud, as provided in <a href="http://www.gencourt.state.nh.us/rsa/html/lxii/638/638-20.htm">RSA 638:20.</a></p>
+
+            <p>New Jersey: Any person who knowingly files a statement of claim containing any false or misleading information is subject to criminal and civil penalties.</p>
+
+            <p>New Mexico: ANY PERSON WHO KNOWINGLY PRESENTS A FALSE OR FRAUDULENT CLAIM FOR PAYMENT OF A LOSS OR BENEFIT OR KNOWINGLY PRESENTS FALSE INFORMATION IN AN APPLICATION FOR INSURANCE IS GUILTY OF A CRIME AND MAY BE SUBJECT TO CIVIL FINES AND CRIMINAL PENALTIES.</p>
+
+            <p>New York: Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance or statement of claim containing any materially false information, or conceals for the purpose of misleading, information concerning any fact material thereto, commits a fraudulent insurance act, which is a crime, and shall also be subject to a civil penalty not to exceed five thousand dollars and the stated value of the claim for each such violation. </p>
+
+            <p>Oklahoma: WARNING: Any person who knowingly, and with intent to injure, defraud or deceive any insurer, makes any claim for the proceeds of an insurance policy containing any false, incomplete or misleading information is guilty of a felony.</p>
+
+            <p>All Other States: Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance or statement of claim containing any materially false information or conceals, for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties.</p>
+            
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <button type="button" class="btn btn-cancel" [routerLink]="['/']">I do not accept</button> <!--/Policy/Claims/-->
+                <button type="button" class="btn btn-success ml-2" [routerLink]="['/']">I accept &amp; want to report a claim</button> <!--/Policy/ReportClaim/-->
+              </div>
+            </div>
+          <!-- </form> -->
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Report a Claim</h4>
+        <div class="card-notice">Please complete the necessary fields below</div>
+        <div class="card-body">
+          <p class="card-text error-500 fw-semibold"><sup>*</sup> Required Field</p>
+          
+          <div class="card">
+            <h4 class="card-header mt-0">Policy Number</h4>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Policy Number<sup>*</sup></label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the policy number" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h4 class="card-header mt-0">Insured Information</h4>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Name Insured(Policyholder's Name)</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the name insured" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+
+              <div class="form-group row">
+            
+                <div class="col-md-4">
+                  
+                  <label class="col-form-label">Country<sup>*</sup></label>
+                  <select class="form-control">
+                    <option>Please Select</option>
+                    <option>United States</option>
+                  </select>
+                  <!-- <sub>We promise to get back to you within 1 business day</sub> -->
+                </div>
+              </div>
+
+              <div class="form-group row">
+            
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">Address</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the address" id="contact-name">
+                </div>
+
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">Address 2</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the address 2" id="contact-name">
+                </div>
+              </div>
+    
+              <div class="form-group row">
+            
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">City</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the city" id="contact-name">
+                </div>
+
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">State/Region/Province</label>
+                  <select class="form-control">
+                    <option>Please Select</option>
+                    <option>United States</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">Zip/Postal Code</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Zip/Postal Code" id="contact-name">
+                </div>
+              </div>
+
+
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Insured Contact Name</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the insured contact name" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Phone 1</label>
+                  <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-2">
+                  <label for="contact-name" class="col-form-label">Ext</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter Ext" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Phone 2</label>
+                  <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-2">
+                  <label for="contact-name" class="col-form-label">Ext</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter Ext" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+
+              <div class="form-group row">
+              
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">Email</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter Email" id="contact-name">
+                </div>
+
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">Confirm Email</label>
+                  <input class="form-control" type="text" value="" placeholder="Confim Email" id="contact-name">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-header mt-0">Date and Time of Loss</h4>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="example-date-input" class="col-form-label">Date</label>
+                  <input class="form-control" type="date" value="2019-08-19" id="example-date-input">
+                  <sub>Select or enter (mm/dd/yyyy)</sub>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-header mt-0">Location of Loss</h4>
+            <div class="card-body">
+              <div class="form-group row">
+            
+                <div class="col-md-4">
+                  
+                  <label class="col-form-label">Country<sup>*</sup></label>
+                  <select class="form-control">
+                    <option>Please Select</option>
+                    <option>United States</option>
+                  </select>
+                  <!-- <sub>We promise to get back to you within 1 business day</sub> -->
+                </div>
+              </div>
+
+              <div class="form-group row">
+            
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">Address</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the address" id="contact-name">
+                </div>
+
+              </div>
+    
+              <div class="form-group row">
+            
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">City<sup>*</sup></label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the City" id="contact-name">
+                </div>
+
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">State/Region/Province<sup>*</sup></label>
+                  <select class="form-control">
+                    <option>Please Select</option>
+                    <option>United States</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  
+                  <label for="contact-name" class="col-form-label">Zip/Postal Code<sup>*</sup></label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the Zip/Postal Code" id="contact-name">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-header mt-0">Loss Description</h4>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="contact-inquirydesc" class="col-form-label">Describe what happened<sup>*</sup></label>
+                  <textarea class="form-control" type="text" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna eu lectus tellus vitae mattis velit, nec. Elit elementum iaculis ultricies ultrices a nibh ultrices. Faucibus aliquam ac ac rutrum vitae. Tincidunt orci mi amet ac." placeholder="Please enter any information that would be able to help us appropriately address your question or issue." id="contact-inquirydesc"></textarea>
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="contact-inquirydesc" class="col-form-label">Comment</label>
+                  <textarea class="form-control" type="text" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna eu lectus tellus vitae mattis velit, nec. Elit elementum iaculis ultricies ultrices a nibh ultrices. Faucibus aliquam ac ac rutrum vitae. Tincidunt orci mi amet ac." placeholder="Please enter any information that would be able to help us appropriately address your question or issue." id="contact-inquirydesc"></textarea>
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-header mt-0">Witness Information</h4>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Witness 1</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter your name" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Phone 2</label>
+                  <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-2">
+                  <label for="contact-name" class="col-form-label">Ext</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter Ext" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Witness 2</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter your name" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Phone 2</label>
+                  <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-2">
+                  <label for="contact-name" class="col-form-label">Ext</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter Ext" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h4 class="card-header mt-0">Injured/Damaged Party Information</h4>
+            <div class="card-body fw-semibold d-flex align-items-center">
+              <span (click)="openModal(addParty)">
+                <i class="fa fa-plus mr-2"></i> Add Injured/Damaged Party
+              </span>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-centered">
+                <thead class="thead-light">
+                  <tr class="border-top border-light">
+                    <th class="w-25">Injured/Damaged Parties</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Madelyn Botosh</td>
+                    <td><a href="javascript:void()">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td>Skylar Geidt</td>
+                    <td><a href="javascript:void()">Edit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-header mt-0">Reporter Information</h4>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Reported By<sup>*</sup></label>
+                  <input class="form-control" type="text" value="" placeholder="Enter your name" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Reported Relationship<sup>*</sup></label>
+                  <select class="form-control">
+                    <option>Please Select</option>
+                    <option>United States</option>
+                  </select>
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Contact Phone Number<sup>*</sup></label>
+                  <input class="form-control" type="text" value="" placeholder="(XXX) XXX-XXXX" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Contact Email Address<sup>*</sup></label>
+                  <input class="form-control" type="text" value="" placeholder="Enter contact email address" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+                <div class="col-md-4">
+                  <label for="contact-name" class="col-form-label">Confirm Email Address<sup>*</sup></label>
+                  <input class="form-control" type="text" value="" placeholder="Re-enter email address" id="contact-name">
+                  <!--<sub class="col-6">Hint text</sub>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-header mt-0">Attachment</h4>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <!-- <label for="contact-name" class="col-form-label">Date</label>
+                  <input class="form-control" type="text" value="" placeholder="Enter the name insured" id="contact-name"> -->
+                  <!-- <sub class="col-6">Select or enter (mm/dd/yyyy)</sub> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <button type="button" class="btn btn-link" [routerLink]="['']">Cancel</button>
+              <button type="button" class="btn btn-secondary ml-2">Clear</button>
+              <button type="button" class="btn btn-success ml-2">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>
+</div>
+
+
+<!-- Standard Modal -->
+<ng-template #addParty role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Injured/Damaged Party Information</h5>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+      <p class="fw-semibold">Please complete all necessary fields below.<br>
+        Required fields are either First or Last Name<br>
+        If name is not known, please enter "Unknown"</p>
+      
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="contact-name" class="col-form-label">First Name<sup>*</sup></label>
+            <input type="text" class="form-control is-invalid" value="" placeholder="Enter First Name" id="contact-name" required>
+            <!-- <sub class="col-6">Hint text</sub> -->
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="contact-email" class="col-form-label">Last Name (Company name goes here)<sup>*</sup></label>
+            <input class="form-control is-valid" value="" placeholder="Enter Last Name (Company name goes here)" id="contact-email" required>
+            <!-- <sub class="col-6">Hint text</sub> -->
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-4">
+            <label for="contact-name" class="col-form-label">Home Phone Number</label>
+            <input type="text" class="form-control" value="" placeholder="(XXX) XXX-XXXX" id="contact-name" required>
+            <!-- <sub class="col-6">Hint text</sub> -->
+            <!-- <div class="invalid-feedback">Please enter your name.</div> -->
+          </div>
+
+          <div class="col-md-4">
+            <label for="contact-email" class="col-form-label">Work Phone Number</label>
+            <input class="form-control" value="" placeholder="(XXX) XXX-XXXX" id="contact-email" required>
+            <!-- <sub class="col-6">Hint text</sub> -->
+            <!-- <div class="valid-feedback">Looks good!</div> -->
+          </div>
+
+          <div class="col-md-4">
+            <label for="contact-email" class="col-form-label">Cell Phone Number</label>
+            <input class="form-control" value="" placeholder="(XXX) XXX-XXXX" id="contact-email" required>
+            <!-- <sub class="col-6">Hint text</sub> -->
+            <!-- <div class="valid-feedback">Looks good!</div> -->
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="contact-name" class="col-form-label">Email Address</label>
+            <input type="text" class="form-control" value="" placeholder="Enter Email Address" id="contact-name" required>
+            <!-- <sub class="col-6">Hint text</sub> -->
+            <!-- <div class="invalid-feedback">Please enter your name.</div> -->
+          </div>
+
+          <div class="col-md-6">
+            <label for="contact-email" class="col-form-label">Confirm Email Address</label>
+            <input class="form-control" value="" placeholder="Enter Confirm Email Address" id="contact-email" required>
+            <!-- <sub class="col-6">Hint text</sub> -->
+            <!-- <div class="valid-feedback">Looks good!</div> -->
+          </div>
+        </div>
+      
+
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label class="col-form-label">Country</label>
+            <select class="form-control">
+              <option>Please Select</option>
+              <option>United States</option>
+            </select>
+            <!-- <sub>We promise to get back to you within 1 business day</sub> -->
+          </div>
+        </div>
+        <div class="form-group row">
+            
+          <div class="col-md-6">
+            
+            <label for="contact-name" class="col-form-label">Street Address</label>
+            <input class="form-control" type="text" value="" placeholder="Enter the Street Address" id="contact-name">
+          </div>
+          <div class="col-md-6">
+            
+            <label for="contact-name" class="col-form-label">Street Address 2</label>
+            <input class="form-control" type="text" value="" placeholder="Enter the Street Address 2" id="contact-name">
+          </div>
+        </div>
+        <div class="form-group row">
+      
+          <div class="col-md-6">
+            
+            <label for="contact-name" class="col-form-label">City</label>
+            <input class="form-control" type="text" value="" placeholder="Enter the City" id="contact-name">
+          </div>
+
+          <div class="col-md-4">
+            
+            <label for="contact-name" class="col-form-label">State/Region/Province</label>
+            <select class="form-control">
+              <option>Please Select</option>
+              <option>United States</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            
+            <label for="contact-name" class="col-form-label">Zip/Postal Code</label>
+            <input class="form-control" type="text" value="" placeholder="Enter the Zip/Postal Code" id="contact-name">
+          </div>
+        </div>
+      
+  </div>
+  <div class="d-flex flex-row modal-footer">
+    <button type="button" class="btn btn-text flex-fill" (click)="modal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-success flex-fill">Add Party Information</button>
+  </div>
+</ng-template>

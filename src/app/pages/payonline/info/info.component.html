@@ -1,0 +1,115 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <h1>Pay Online</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    
+    <div class="col-xl-8">
+      
+      <div class="card">
+        <h4 class="card-header mt-0">Policy Number: NDO1556838G</h4>
+        <div class="card-body">
+          <dl class="card-text">
+            <dt>Account Number:</dt>
+            <dd>NDO1556838</dd>
+
+            <dt>Term:</dt>
+            <dd>02/05/2020 - 02/05/2021</dd>
+
+            <dt>Insurance Company:</dt>
+            <dd>United States Liability Insurance Company</dd>
+
+            <dt>Your Retail Agent:</dt>
+            <dd>YORK-JERSEY UNDERWRITERS AGENCY, INC.</dd>
+
+            <dt>Policyholder:</dt>
+            <dd>
+              <strong>Jewish Renaissance Community Development Corp.</strong><br>
+              Attn Thomas Hudanish<br>
+              275 Hobart St<br>
+              Perth Amboy, NJ 08861
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+      <privacy-card></privacy-card>
+    </div>
+
+    <div class="col-xl-4">
+      <div class="card">
+        <h4 class="card-header">Payments Due</h4>
+        <div class="card-body">
+          <p class="card-text">Select payments you wish to make - the current amount due has been selected for you</p>
+          <dl>
+            <dt class="d-flex justify-content-between border-bottom border-light p-2">
+              <span class="fw-bold text-uppercase">Due Date</span>
+              <span class="fw-bold text-uppercase blue-500">Amount Due</span>
+            </dt>
+
+            <dd class="d-flex justify-content-between border-bottom border-light p-2 mb-0">
+              <span class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">05/03/2021</label>
+              </span>
+              <span>$2,213.55</span>
+            </dd>
+            <dd class="d-flex justify-content-between border-bottom border-light p-2 mb-0">
+              <span class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">09/20/2021</label>
+              </span>
+              <span>$1,245.90</span>
+            </dd>
+            <dd class="d-flex justify-content-between border-bottom border-light p-2 mb-0">
+              <span class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">12/19/2021</label>
+              </span>
+              <span>$1,245.90</span>
+            </dd>
+            <dd class="d-flex justify-content-between align-items-center border-bottom border-light p-2 mb-1">
+              <span class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                <label class="custom-control-label" for="customCheck4">Custom Amount</label>
+              </span>              
+              <div class="input-group" style="width: 124px;">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount">
+              </div>
+            </dd>
+
+            <dt class="d-flex justify-content-between p-2">
+              <span class="fw-bold text-uppercase">Total Current Payment</span>
+              <span class="fw-bold blue-500">$2,213.55</span>
+            </dt>
+          </dl>
+
+
+          <div class="d-flex flex-row flex-wrap">
+              <button type="button" class="btn btn-link flex-fill" [routerLink]="['payonline']">Cancel</button>
+              <button type="button" class="btn btn-success ml-2 flex-fill" [routerLink]="['payment']">Continue</button>
+          </div>
+        </div>
+      </div>
+      <chat-card></chat-card>
+
+    </div>
+  </div>
+</div>

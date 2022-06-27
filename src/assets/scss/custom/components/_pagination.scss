@@ -1,0 +1,28 @@
+// 
+// _pagination.scss
+// 
+
+.pagination {
+    // Pagination rounded (Custom)
+    &-rounded {
+        .page-link {
+            border-radius: 30px !important;
+            margin: 0 3px;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+}
+
+.page-item.disabled .page-link { cursor: not-allowed !important; }
+
+.page-link { 
+    text-decoration: none !important;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+        border-color: $primary;
+    }
+}

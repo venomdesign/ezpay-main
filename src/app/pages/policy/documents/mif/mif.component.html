@@ -1,0 +1,272 @@
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <div class="container-fluid">
+      <app-pagetitle [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <app-pagetitle title="Starter Page" [breadcrumbItems]="breadCrumbItems"></app-pagetitle> -->
+  <div class="row">
+    <div class="col-12">
+      <div class="policy-header">
+        <div> 
+          <h1>Policy Information: GL 1040086B</h1>
+          <h3>Status: <span class="badge badge-success">Active</span></h3>
+        </div>
+        <div>
+          <h2>Total: $3,565.55</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-3">
+
+      <div class="card">
+        <h4 class="card-header mt-0">Actionable Items</h4>
+        <div class="card-body">
+          <h4 class="card-title mt-0">PL 10654654 <a [routerLink]="['/policy/activity']" title="View Invoice" class="fw-regular fs-14">(View Invoice)</a></h4> 
+          <a href="javascript: void(0);" class="btn btn-success w-100">Make Payment</a>
+        </div>
+      </div>
+
+      <!-- <getdocuments-card></getdocuments-card> -->
+
+      <localagent-card></localagent-card>
+
+      <chat-card></chat-card>
+
+    </div>
+
+    <div class="col-xl-9">
+      <div class="card border-0 shadow-none">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy']">Policy Information</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/coverages']">Insurance Coverage</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/documents']">Policy Documents</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/history']">Policy History</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/activity']">Billing &#38; Payment Activity</button>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/policy/claims']">Claims Activity</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Material Information Form</h4>
+        <div class="card-body">
+
+          <div class="row border-bottom border-light pb-3 align-items-center">
+            <div class="col-md-9 fw-medium fs14">This account was underwritten based on xyz, if it has changed enter the correct numbers below<br><span class="fs-12">If 'Yes', please provide the actual number of current employees</span></div>
+            <div class="col-md-3">
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>    
+            </div>
+          </div>
+
+          <div class="row border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="col-md-9 fw-medium fs14">No swimming pool(s) or wading pool(s) deeper than 24 inches on premises</div>
+            <div class="col-md-3">
+              <select class="form-control flex-fill">
+                <option>Please Select</option>
+                <option>True</option>
+                <option>False</option>
+              </select>    
+            </div>
+          </div>
+
+          <div class="row border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="col-md-9 fw-medium fs14">Has the insured opened any new locations in the past 12 months?<br><span class="fs-12">If 'Yes', please provide details below</span></div>
+            <div class="col-md-3">
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="col-md-9 fw-medium fs14">Has there been or is there any anticipated reduction of employees greater than 10% in the past/next 12 months?<br><span class="fs-12">If 'Yes', please provide details below</span></div>
+            <div class="col-md-3">
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="col-md-9 fw-medium fs14">Has the insured been involved in a merger or acquisition in the past 12 months or anticipated in the next 12 months?<br><span class="fs-12">If 'Yes', please provide details below</span></div>
+            <div class="col-md-3">
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row border-bottom border-light pt-3 pb-3 mb-3 align-items-center">
+            <div class="col-md-9 fw-medium fs14">Has your mailing or location address changed during the last year?<br><span class="fs-12">If 'Yes', please provide updated an address(es)</span></div>
+            <div class="col-md-3">
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- <div class="d-flex flex-row flex-wrap justify-content-between border-bottom border-light pb-3 align-items-center">
+            <div class="fw-medium fs14">This account was underwritten based on xyz, if it has changed enter the correct numbers below<br><span class="fs-12">If 'Yes', please provide the actual number of current employees</span></div>
+            <div>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex flex-row flex-wrap justify-content-between border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="fw-medium fs14 ">No swimming pool(s) or wading pool(s) deeper than 24 inches on premises</div>
+            <div>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>True</option>
+                <option>False</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row flex-wrap justify-content-between border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="fw-medium fs14">Has the insured opened any new locations in the past 12 months?<br><span class="fs-12">If 'Yes', please provide details below</span></div>
+            <div>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div> 
+
+          <div class="d-flex flex-row flex-wrap justify-content-between border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="fw-medium fs14">Has there been or is there any anticipated reduction of employees greater than 10% in the past/next 12 months?<br><span class="fs-12">If 'Yes', please provide details below</span></div>
+            <div>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row flex-wrap justify-content-between border-bottom border-light pt-3 pb-3 align-items-center">
+            <div class="fw-medium fs14">Has the insured been involved in a merger or acquisition in the past 12 months or anticipated in the next 12 months?<br><span class="fs-12">If 'Yes', please provide details below</span></div>
+            <div>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row flex-wrap justify-content-between border-bottom border-light pt-3 pb-3 mb-3 align-items-center">
+            <div class="fw-medium fs14">Has your mailing or location address changed during the last year?<br><span class="fs-12">If 'Yes', please provide updated an address(es)</span></div>
+            <div>
+              <select class="form-control">
+                <option>Please Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>-->
+
+          <div class="alert alert-danger d-flex flex-row justify-content-start align-items-center" role="alert">
+            <div class="pr-2"><i class="fas fa-exclamation-circle fs-20 error-500"></i></div>
+            <div>You must answer questions to submit form</div>
+          </div>
+
+          <div class="alert alert-info d-flex flex-row justify-content-start align-items-center" role="alert">
+            <div class="pr-2"><i class="fas fa-bell fs-20 blue-500"></i></div>
+            <div>By clicking "Submit" you are certifying the above is true and representative to the best of your knowledge.</div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <button type="button" class="btn btn-link" [routerLink]="['/policy/coverages']">Cancel</button>
+              <button type="button" class="btn btn-secondary ml-2">Clear</button>
+              <button type="button" class="btn btn-success ml-2">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-header mt-0">Fraud Statements</h4>
+        <div class="card-body card-text">
+          <dl> 
+            <dt>Alabama, Arkansas, District of Columbia, New Mexico, Rhode Island and West Virginia:</dt>
+            <dd class="mb-3">Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit or knowingly presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison.</dd>
+            <dt>Arizona Notice:</dt>
+            <dd class="mb-3">Misrepresentations, omissions, concealment of facts and incorrect statements shall prevent recovery under the policy only if the misrepresentations, omissions, concealment of facts or incorrect statements are; fraudulent or material either to the acceptance of the risk, or to the hazard assumed by the insurer or the insurer in good faith would either not have issued the policy, or would not have issued a policy in as large an amount, or would not have provided coverage with respect to the hazard resulting in the loss, if the true facts had been made known to the insurer as required either by the application for the policy or otherwise.</dd>
+            <dt>California:</dt>
+            <dd class="mb-3">For your protection California law requires the following to appear on this application. Fraud Statement: Any person who knowingly presents false or fraudulent information to obtain or amend insurance coverage or to make a claim for the payment of a loss is guilty of a crime and may be subject to fines and confinement in state prison.</dd>
+            
+            <dt>Colorado:</dt>
+            <dd class="mb-3">It is unlawful to knowingly provide false, incomplete, or misleading facts or information to an insurance company for the purpose of defrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policyholder or claimant for the purpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award payable from insurance proceeds shall be reported to the Colorado division of insurance within the department of regulatory agencies.</dd>
+            
+            <dt>Florida Fraud Statement:</dt>
+            <dd class="mb-3">Any person who knowingly and with intent to injure, defraud, or deceive any insurer files a statement of claim or an application containing any false, incomplete, or misleading information is guilty of a felony of the third degree.</dd>
+            
+            <dt>Kansas Fraud Statement:</dt>
+            <dd class="mb-3">Any person who, knowingly and with intent to defraud, presents, causes to be presented or prepares with knowledge or belief that it will be presented to or by an insurer, purported insurer, broker or any agent thereof, any written, electronic, electronic impulse, facsimile, magnetic, oral, or telephonic communication or statement as part of, or in support of, an application for the issuance of, or the rating of an insurance policy for personal or commercial insurance, or a claim for payment or other benefit pursuant to an insurance policy for commercial or personal insurance which such person knows to contain materially false information concerning any fact material thereto; or conceals, for the purpose of misleading, information concerning any fact material thereto; or conceals , for the purpose of misleading, information concerning any fact material thereto may be guilty of a crime and may be subject to fines and confinement in prison.</dd>
+            
+            <dt>Maine Fraud Statement:</dt>
+            <dd class="mb-3">It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose of defrauding the company. Penalties may include imprisonment, fines or a denial of insurance benefits.</dd>
+            
+            <dt>Maryland:</dt>
+            <dd class="mb-3">Any person who knowingly or willfully presents a false or fraudulent claim for payment of a loss or benefit or who knowingly or willfully presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison.</dd>
+            
+            <dt>New Jersey Fraud Statement:</dt>
+            <dd class="mb-3">Any person who includes any false or misleading information on an application for an insurance policy is subject to criminal and civil penalties.</dd>
+            
+            <dt>New York Fraud Statement:</dt>
+            <dd class="mb-3">Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance or statement of claim containing any materially false information, or conceals for the purpose of misleading, information concerning any fact material thereto, commits a fraudulent insurance act, which is a crime and shall also be subject to a civil penalty not to exceed five thousand dollars and the stated value of the claim for each such violation.</dd>
+            
+            <dt>Ohio Fraud Statement:</dt>
+            <dd class="mb-3">Any person who, with intent to defraud or knowing that he is facilitating a fraud against an insurer, submits an application or files a claim containing a false or deceptive statement is guilty of insurance fraud.
+            Ohio Representation Statement: By acceptance of this policy, the Insured agrees the statements in the application (new or renewal) submitted to the company are true and correct. It is understood and agreed that, to the extent permitted by law, the Company reserves the right to rescind this policy, or any coverage provided herein, for material misrepresentations made by the Insured. It is understood and agreed that the statements made in the insurance applications are incorporated into, and shall form part of, this policy. THE INSURED UNDERSTANDS AND AGREES THAT ANY MATERIAL MISREPRESENTATION OR OMISSION ON THIS APPLICATION WILL ACT TO RENDER ANY CONTRACT OF INSURANCE NULL AND WITHOUT EFFECT OR PROVIDE THE COMPANY THE RIGHT TO RESCIND IT.</dd>
+  
+            <dt>Oklahoma Fraud Statement: WARNING:</dt>
+            <dd class="mb-3">Any person who knowingly, and with intent to injure, defraud or deceive any insurer, makes any claim for the proceeds of an insurance policy containing any false, incomplete or misleading information is guilty of a felony.</dd>
+            
+            <dt>Oregon Fraud Statement:</dt>
+            <dd class="mb-3">Notice to Oregon applicants: Any person who, with intent to defraud or knowing that he is facilitation a fraud against an insurer, submits an application or files a claim containing a false or deceptive statement may be guilty of insurance fraud.</dd>
+            
+            <dt>Kentucky and Pennsylvania Fraud Statement:</dt>
+            <dd class="mb-3">Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime and subjects such person to criminal and civil penalties.</dd>
+  
+            <dt>Tennessee, Virginia and Washington Fraud Statement:</dt>
+            <dd class="mb-3">It is a crime to knowingly provide false, incomplete or misleading information to an insurance company for the purpose of defrauding the company. Penalties include imprisonment, fines and denial of insurance benefits.</dd>
+            
+            <dt>Fraud Statement (All Other States):</dt>
+            <dd class="mb-3">Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit or knowingly presents false information in an application for insurance may be guilty of a crime and may be subject to fines and confinement in prison.</dd>
+
+            <dd class="fw-medium">We may need to collect certain personal information to provide you with our services and products. For information on how we store, use and protect personal information, please see our Privacy Policy accessible on our website, <a href="https://www.usli.com/privacy-policy/" title="Click here to go to the Privacy Policy">https://www.usli.com/privacy-policy/</a>.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <calling-card></calling-card>
+    </div>
+
+  </div>
+</div>
