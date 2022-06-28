@@ -19,8 +19,8 @@ export class WalletComponent implements OnInit {
    * Modal Open
    * @param content modal content
    */
-   openModal(content: any) {
-    this.modalService.open(content, { centered: true, windowClass: 'border-danger' });
+   openModal(content: any, windowClass: any) {
+    this.modalService.open(content, { centered: true, windowClass: windowClass });
   }
 
   ngOnInit() {

@@ -12,6 +12,7 @@
         background: $white; 
         height: 3rem;
         padding: 0.95rem 1rem;
+        border-bottom: 1px solid #485E9024;
         h5, .close { font: $fw-bold 1rem $font-family-base; color: $text-color; }
     }
 
@@ -24,5 +25,8 @@
     }
 }
 
-.border-danger .modal-content { border: 1px solid #b10505; } 
 
+.border {
+    &-danger .modal-content { border: 1px solid #b10505; }
+    &-primary .modal-content { border: 1px solid #485E9024; }
+}
