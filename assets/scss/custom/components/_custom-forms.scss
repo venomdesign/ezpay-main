@@ -1,0 +1,24 @@
+//
+// Custom-Forms.scss
+//
+
+.custom-select {
+  height: calc(1.64em + 0.94rem + 2px);
+  padding: 0.61rem 1.75rem 0.61rem 0.75rem;
+  color: $gray-900;
+  border: 1px solid $gray-400;
+  
+  option { padding: 4px 0; }
+
+  &::placeholder {
+    color: $text-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+  &:focus {
+    color: $text-color;
+    border-color: $text-color;
+    // outline: 0; do not use outline 0, for accessibility reasons
+    box-shadow: none;
+  }
+}

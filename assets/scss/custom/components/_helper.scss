@@ -1,0 +1,139 @@
+//
+// _helper.scss
+//
+
+// Font Family
+.font-family-secondary {
+    font-family: $font-family-secondary;
+}
+
+.fs-10 {
+    font-size: 10px !important;
+}
+
+.fs-11 {
+    font-size: 11px !important;
+}
+
+.fs-12 {
+    font-size: 12px !important;
+}
+
+.fs-13 {
+    font-size: 13px !important;
+}
+
+.fs-14 {
+    font-size: 14px !important;
+}
+
+.fs-15 {
+    font-size: 15px !important;
+}
+
+.fs-16 {
+    font-size: 16px !important;
+}
+
+.fs-17 {
+    font-size: 17px !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-22 {
+    font-size: 22px !important;
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.fs-32 {
+    font-size: 32px !important;
+}
+
+.fs-40 {
+    font-size: 40px !important;
+}
+
+// Font weight help class
+.fw-regular { 
+    font-weight: $fw-regular; 
+}
+
+
+.fw-medium {
+    font-weight: $fw-medium;
+}
+
+.fw-semibold {
+    font-weight: $fw-semibold;
+}
+
+// Social
+
+.social-list-item {
+    height: 2rem;
+    width: 2rem;
+    line-height: calc(2rem - 2px);
+    display: block;
+    border: 1px solid $gray-500;
+    border-radius: 50%;
+    color: $gray-500;
+    text-align: center;
+    transition: all 0.4s;
+
+    &:hover {
+        color: $gray-600;
+        background-color: $gray-200;
+    }
+}
+
+
+.w-xs {
+    min-width: 80px;
+}
+
+.w-sm {
+    min-width: 95px;
+}
+
+.w-md {
+    min-width: 110px;
+}
+
+.w-lg {
+    min-width: 140px;
+}
+
+.w-xl {
+    min-width: 160px;
+}
+
+// overlay
+
+.bg-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    background-color: $black;
+}
+
+.status-divider {
+    height: 0;
+    margin: 1rem 0;
+    overflow: hidden;
+    border-top: 1px solid #d4d4d4;
+}

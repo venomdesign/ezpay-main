@@ -1,0 +1,119 @@
+//
+// Forms.scss
+//
+
+// checkbox input right
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.64em + 0.94rem + 2px);
+  padding: 0.61rem 0.75rem 0.61rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $gray-900;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $gray-400;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  // Placeholder
+  &::placeholder {
+    color: $text-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+  &:focus {
+    color: $text-color;
+    border-color: $text-color;
+    // outline: 0; do not use outline 0, for accessibility reasons
+    box-shadow: none;
+  }
+}
+
+.form-check-right {
+    padding-left: 0;
+    display: inline-block;
+    padding-right: 1.25rem;
+    .form-check-input{
+      right: 0;
+      margin-left: 0;
+    }
+  
+    .form-check-label{
+      display: block;
+    }
+  }
+  
+  .custom-control-right {
+    padding-left: 0;
+    padding-right: 1.5rem;  
+    display: inline-block;
+    .custom-control-label{
+      display: inline-block;
+      &:before, &:after{
+        left: auto;
+        right: -1.5rem;
+      }
+    }
+  
+    .custom-control-input {
+      left: auto;
+    }
+}
+
+.custom-control-label {
+  cursor: pointer;
+}
+
+select.form-control {
+  &:focus::-ms-value {
+    // Suppress the nested default white text on blue background highlight given to
+    // the selected option text when the (still closed) <select> receives focus
+    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // match the appearance of the native widget.
+    // See https://github.com/twbs/bootstrap/issues/19398.
+    color: $text-color;
+    background-color: $input-bg;
+  }
+}
+
+.invalid-tooltip { left: auto; } //top: 90%; need to work on something when there is a hint message
+
+input[type="radio"] {
+  appearance: none;
+  border: 1px solid $primary;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: none;
+  outline: none;
+  margin: 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+input[type="radio"]:checked {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  content: none;
+  border-radius: 4px;
+  border: 1px solid $primary;
+  background: $primary;
+}
+
+input[type="radio"]:checked::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $white !important;
+  content: "\00A0\2713\00A0" !important;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 4px;
+}

@@ -1,0 +1,44 @@
+// 
+// _badge.scss
+// 
+.badge {
+  //overwrite bootstrap here
+  padding: .25rem .5rem;
+  font-weight: $fw-medium;
+
+  &-success {
+      color: $success;
+      background-color: #E6F0E2;
+      border: 1px solid $success;
+  }
+  &-danger {
+    color: $danger;
+    background-color: #FEF6F7;
+    border: 1px solid $danger;
+  }
+}
+
+// Soft badge
+@mixin badge-variant-soft($bg) {
+  color: $text-color; //$bg
+  background-color: rgba($bg, 0.18);
+
+  &[href] {
+    @include hover-focus {
+      color: $bg;
+      text-decoration: none;
+      background-color: rgba($bg, 0.4);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-soft-#{$color} {
+      @include badge-variant-soft($value);
+  }
+}
+
+// Dark badge
+.badge-dark{
+  color: $light;
+}

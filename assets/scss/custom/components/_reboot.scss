@@ -1,0 +1,61 @@
+/* =============
+   General
+============= */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body { 
+    font-size: 0.875rem;
+    color: $text-color; 
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $text-color;
+    font-family: $font-family-secondary;
+}
+
+// Globally a tags show have underline, control individual links and other components(buttons, dropdowns items, etc) that dont have undeline via the `.text-decoration-none` bootstrap class, or target from parent element and cascade down to children  parent > child a { text-decoration: none; }
+a {
+    color: $primary;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+
+    &:not([href]):not([class]) {
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+// blockquote
+
+.blockquote {
+    padding: 10px 20px;
+    border-left: 4px solid $gray-300;
+}
+
+.blockquote-reverse {
+    border-left: 0;
+    border-right: 4px solid $gray-300;
+    text-align: right;
+}
+
+sub { font-size: 85%; }

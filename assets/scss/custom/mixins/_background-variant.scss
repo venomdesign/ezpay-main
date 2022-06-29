@@ -1,0 +1,43 @@
+// 
+// background-variant.scss
+//
+
+.bg-primary {
+    background-color: $blue-500;
+
+    &__light {
+        background-color: #00388e24 !important;
+    }
+}
+
+.bg-warning {
+    background-color: $warning-500;
+
+    &__light {
+        background-color: #fcb92c24 !important;
+    }
+}
+
+.bg-danger {
+    background-color: $error-500;
+
+    &__light {
+        background-color: #b1050524 !important;
+    }
+}
+
+.bg-success {
+    background-color: $success-500;
+
+    &__light {
+        background-color: #14661a24 !important;
+    }
+}
+
+.bg-info {
+    background-color: $info-500;
+
+    &__light {
+        background-color: #5aaafa24 !important;
+    }
+}

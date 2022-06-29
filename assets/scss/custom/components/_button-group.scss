@@ -1,0 +1,31 @@
+// 
+// _button-group.scss
+// 
+
+.btn-group { 
+  background: #485E9024; 
+  box-shadow: -1px 2px 4px 0px rgba(224,231,241,1);
+  -webkit-box-shadow: -1px 2px 4px 0px rgba(224,231,241,1);
+  -moz-box-shadow: -1px 2px 4px 0px rgba(224,231,241,1); 
+  height: 2.5rem;
+
+  flex-wrap: wrap;
+
+  button { 
+    border-color: #485E9024; 
+  
+    &.btn-primary {
+      border-color: $primary; 
+    }
+  }
+
+  & .btn { 
+    padding: 0.563rem 0.75rem;
+    font-weight: $fw-regular;
+    font-size: 0.813rem;
+
+    &.active {
+      font-weight: $fw-semibold;
+    }
+  }
+}
