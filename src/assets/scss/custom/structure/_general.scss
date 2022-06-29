@@ -34,7 +34,8 @@ details {
 
         &::before {
             float: right;
-            content:"Open 🠫"; 
+            font-family: 'Font Awesome 5 Free';
+            content: "\f107";
         }
     }
 
@@ -44,7 +45,8 @@ details {
 
         &::before {
             float: right;
-            content:"Close 🠩"; 
+            font-family: 'Font Awesome 5 Free';
+            content: "\f106";
         }
     }
 }
