@@ -46,6 +46,7 @@
     "ngx-mask": "^9.1.4",
     "ngx-perfect-scrollbar": "^9.0.0",
     "ngx-ui-switch": "^9.0.2",
+    "nth-check": "^2.1.1",
     "rxjs": "~6.5.4",
     "sweetalert2": "^9.17.2",
     "tslib": "^1.10.0",
