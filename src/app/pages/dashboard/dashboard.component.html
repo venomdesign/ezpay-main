@@ -57,16 +57,20 @@
           </div>
       </div>
 
-      <div class="alert alert-success" role="alert">
-        <i class="fas fa-check-circle mr-2 success"></i> You have been enrolled in autopay for policy: GL 1040086B 
+      <div class="alert alert-success" role="alert" *ngIf="showAddedPolicy">
+        <i class="fas fa-check-circle mr-2 success"></i> Policy GL 1040086B has been added to the account.
       </div>
 
-      <div class="alert alert-success" role="alert">
-        <i class="fas fa-check-circle mr-2 success"></i> Your autopay payment method for policy: PL 10654654 has been successfully updated!
+      <div class="alert alert-success" role="alert" *ngIf="showAutopayEnroll">
+        <i class="fas fa-check-circle mr-2 success"></i> You have been enrolled in autopay for policy GL 1040086B
       </div>
 
-      <div class="alert alert-warning" role="alert">
-        <i class="fas fa-bell mr-2 success"></i> Autopay has been removed for policy: PL 10654654, you will receive a bill by mail or email, "<a [routerLink]="['/account/paperless']">Go Paperless</a>".
+      <div class="alert alert-success" role="alert" *ngIf="showAutopayUpdated">
+        <i class="fas fa-check-circle mr-2 success"></i> Your autopay payment method for policy PL 10654654 has been successfully updated!
+      </div>
+
+      <div class="alert alert-warning" role="alert" *ngIf="showAutopayRemoved">
+        <i class="fas fa-bell mr-2 success"></i> Autopay has been removed for policy PL 10654654, you will receive a bill by mail or email, "<a [routerLink]="['/account/paperless']" title='Click here to "Go Paperless" and skip checking your mailbox'>Go Paperless</a>".
       </div>
 
       <div class="card">
@@ -109,7 +113,7 @@
 <ng-template #content role="document" let-modal>
   <div class="modal-header">
     <h5 class="modal-title mt-0">Add Policy</h5>
-    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')"><i class="fa fa-times"></i></button>
   </div>
   <div class="modal-body">
       <p>Enter the Policy Number and Policy Mailing Address Zip Code from your invoice for the policy that you wish to add.</p>
@@ -130,7 +134,7 @@
   </div>
   <div class="d-flex flex-row modal-footer">
     <button type="button" class="btn btn-text" (click)="modal.close('Close click')">Cancel</button>
-    <button type="button" class="btn btn-success" (click)="modal.close('Close click'); openModal(submitSuccessModal)">Add Policy</button>
+    <button type="button" class="btn btn-success" (click)="modal.close('Close click'); addedPolicy()">Add Policy</button>
   </div>
 </ng-template>
 
@@ -138,12 +142,12 @@
 <ng-template #submitSuccessModal role="document" let-modal>
   <div class="modal-header">
     <h5 class="modal-title mt-0">Add Policy Confirmation</h5>
-    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')"><i class="fa fa-times"></i></button>
   </div>
   <div class="modal-body">
     Policy Number GL 1040086B has been added to the account.
   </div>
   <div class="d-flex flex-row modal-footer">
-    <button type="button" class="btn btn-primary flex-grow-1" (click)="modal.close('Close click')">Continue</button>
+    <button type="button" class="btn btn-primary flex-grow-1" (click)="modal.close('Close click'); addedPolicy()">Continue</button>
   </div>
 </ng-template>

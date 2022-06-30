@@ -140,6 +140,9 @@
               "devServerTarget": "ezpay:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

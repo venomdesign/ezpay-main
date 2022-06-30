@@ -1,14 +1,58 @@
-.wallet-account-item {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+// .wallet-account-item {
+//     display: flex;
+//     justify-content: space-between;
+//     flex-direction: row;
+//     align-items: center;
+//     padding: 0.8rem 0;
+
+//     &:first-child {
+//         padding-top: 0;
+//     }
+
+//     &:last-child {
+//         padding-bottom: 0;
+//     }
+
+//     &-icon { 
+//         font-size: 2.5rem; 
+//         line-height: normal; 
+//     }
+// }
+
+/* Screen larger than 600px? 2 column */
+@media (max-width: 500px) {
+    .cards { grid-template-columns: repeat(1, auto); }
+  }
+  
+  /* Screen larger than 600px? 2 column */
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, auto 1fr); }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(4, auto auto 1fr auto); }
+  }
+
+
+
+.wallet-item {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    grid-template-areas: "account-icon account-info account-autopay account-actions";
+    grid-template-columns: auto auto 1fr auto;
     padding: 0.8rem 0;
+
+    &.no-icon {
+        grid-template-areas: "account-info account-autopay account-actions";
+        grid-template-columns: auto 1fr auto;
+    }
 
     &:first-child {
         padding-top: 0;
     }
-
     &:last-child {
         padding-bottom: 0;
     }
@@ -17,8 +61,27 @@
         border-top: 1px solid #485E9024;
     }
 
-    &-icon { 
-        font-size: 2.5rem; 
-        line-height: normal; 
+    /* .grid-container > div {
+    border: 1px dashed #888;
+    } */
+    &-icon {
+        grid-area: account-icon;
+    }
+    &-info {
+        grid-area: account-info;
+    }
+    &-autopay {
+        grid-area: account-autopay;
+    }
+    &-actions {
+        grid-area: account-actions;
+        display: flex;
+        align-items: center;  
+    
+        i { 
+            cursor: pointer;
+            color: #00388e;
+            font-size: 1.25rem;
+        }
     }
 }

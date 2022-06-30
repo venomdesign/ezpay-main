@@ -27,14 +27,18 @@ export class DashboardComponent implements OnInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
 
-  revenueChart: ChartType;
-  salesAnalytics: ChartType;
-  sparklineEarning: ChartType;
-  sparklineMonthly: ChartType;
+  revenueChart      : ChartType;
+  salesAnalytics    : ChartType;
+  sparklineEarning  : ChartType;
+  sparklineMonthly  : ChartType;
+
+  showAddedPolicy     : boolean;
+  showAutopayEnroll   : boolean;
+  showAutopayUpdated  : boolean;
+  showAutopayRemoved  : boolean;
 
   // Form submit
   chatSubmit: boolean;
-
   formData: FormGroup;
 
   ngOnInit(): void {
@@ -43,6 +47,11 @@ export class DashboardComponent implements OnInit {
       message: ['', [Validators.required]],
     });
     this._fetchData();
+
+    this.showAddedPolicy      = false;
+    this.showAutopayEnroll    = false;
+    this.showAutopayUpdated   = false;
+    this.showAutopayRemoved   = false;
   }
 
   private _fetchData() {
@@ -70,16 +79,6 @@ export class DashboardComponent implements OnInit {
     this.modalService.open(content, { centered: true });
   }
 
-  goPolicy() {
-    window.location.href = "policy";
-  }  
-  goActivity() {
-    window.location.href = "policy/activity";
-  }
-  goMif() {
-    window.location.href = "policy/documents/mif";
-  }
-
   /**
    * Save the message in chat
    */
@@ -103,4 +102,18 @@ export class DashboardComponent implements OnInit {
 
     this.chatSubmit = true;
   }
+
+  addedPolicy() {
+    this.showAddedPolicy = !this.showAddedPolicy;
+  }
+  autopayEnroll() {
+    this.showAutopayEnroll = !this.showAutopayEnroll;
+  }
+  autopayUpdated() {
+    this.showAutopayUpdated = !this.showAutopayUpdated;
+  }
+  autopayRemoved() {
+    this.showAutopayRemoved = !this.showAutopayRemoved;
+  }
+
 }
