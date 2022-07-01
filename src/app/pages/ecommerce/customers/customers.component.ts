@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { customersData } from './data';
@@ -19,9 +19,9 @@ export class CustomersComponent implements OnInit {
   submitted: boolean;
 
   customersData: Customers[];
-  validationform: FormGroup;
+  validationform: UntypedFormGroup;
 
-  constructor(private modalService: NgbModal, public formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.breadCrumbItems = [{ label: 'Ecommerce' }, { label: 'Customers', active: true }];

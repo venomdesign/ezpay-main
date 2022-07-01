@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ChartType, Stat, Chat, Transaction } from './dashboard.model';
 
@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
   transactions: Transaction[];
   statData: Stat[];
 
-  constructor(private modalService: NgbModal, public formBuilder: FormBuilder) {
+  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder) {
   }
 
   // bread crumb items
@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
 
   // Form submit
   chatSubmit: boolean;
-  formData: FormGroup;
+  formData: UntypedFormGroup;
 
   ngOnInit(): void {
     this.breadCrumbItems = [{ label: 'Home', link: '/', active: true }, { label: 'Policy Dashboard', active: true }];

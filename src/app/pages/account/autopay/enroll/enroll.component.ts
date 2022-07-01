@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-enroll',
@@ -15,7 +15,7 @@ export class EnrollAPComponent implements OnInit {
   isCollapsed: boolean;
   noselection: boolean;
   
-  constructor(private modalService: NgbModal, public formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder) { }
 
   /**
    * Modal Open

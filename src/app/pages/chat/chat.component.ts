@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 
 import { ChatUser, ChatMessage } from './chat.model';
 
@@ -18,7 +18,7 @@ export class ChatComponent implements OnInit {
   chatMessagesData: ChatMessage[];
   chatData: ChatUser[];
 
-  formData: FormGroup;
+  formData: UntypedFormGroup;
 
   // Form submit
   chatSubmit: boolean;
@@ -31,7 +31,7 @@ export class ChatComponent implements OnInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
 
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: UntypedFormBuilder) {
   }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
 
@@ -27,8 +27,8 @@ export class CalendarComponent implements OnInit {
   breadCrumbItems: Array<{}>;
 
   // event form
-  formData: FormGroup;
-  formEditData: FormGroup;
+  formData: UntypedFormGroup;
+  formEditData: UntypedFormGroup;
 
   // Form submition value
   submitted: boolean;
@@ -52,7 +52,7 @@ export class CalendarComponent implements OnInit {
   // calendar plugin
   calendarPlugins = [dayGridPlugin, bootstrapPlugin, timeGrigPlugin, interactionPlugin, listPlugin];
 
-  constructor(private modalService: NgbModal, private formBuilder: FormBuilder) { }
+  constructor(private modalService: NgbModal, private formBuilder: UntypedFormBuilder) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Calendar', active: true }];
