@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PaperlessComponent } from './paperless.component';
 
@@ -6,7 +6,7 @@ describe('PaperlessComponent', () => {
   let component: PaperlessComponent;
   let fixture: ComponentFixture<PaperlessComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PaperlessComponent ]
     })

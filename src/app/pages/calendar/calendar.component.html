@@ -40,7 +40,7 @@
 <ng-template #content let-modal>
   <div class="modal-header">
     <h5 class="modal-title">Add New Event</h5>
-    <button type="button" class="close" aria-hidden="true" (click)="closeEventModal()">×</button>
+    <button type="button" class="close" aria-hidden="true" (click)="closeEventModal()"><i class="fa fa-times"></i></button>
   </div>
   <div class="modal-body p-3">
     <form (ngSubmit)="saveEvent()" [formGroup]="formData">
@@ -80,7 +80,7 @@
 <ng-template #editcontent let-modal>
   <div class="modal-header">
     <h5 class="modal-title">Edit Event</h5>
-    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+    <button type="button" class="close" aria-hidden="true" (click)="modal.dismiss('Cross click')"><i class="fa fa-times"></i></button>
   </div>
   <div class="modal-body p-3">
     <form [formGroup]="formEditData" (ngSubmit)="editEventSave()">

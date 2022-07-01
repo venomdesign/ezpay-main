@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { EnrollAPComponent } from './enroll.component';
 
@@ -6,7 +6,7 @@ describe('EnrollAPComponent', () => {
   let component: EnrollAPComponent;
   let fixture: ComponentFixture<EnrollAPComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ EnrollAPComponent ]
     })
