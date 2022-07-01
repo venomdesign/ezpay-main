@@ -22,30 +22,32 @@
         <div class="card-body">
 
           <h4 class="card-title">Default Alerts</h4>
-          <p class="card-title-desc">Alerts are available for any length of
-            text, as well as an optional dismiss button. For proper styling, use one
-            of the four <strong>required</strong> contextual type (e.g., <code
-              class="highlighter-rouge">success</code>).</p>
+          <p class="card-title-desc">Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the four <strong>required</strong> contextual type (e.g., <code class="highlighter-rouge">success</code>).</p>
 
           <div class="">
 
-            <ngb-alert [dismissible]="false" type="primary">
-              A simple primary alert—check it out!
+            <ngb-alert [dismissible]="false" type="primary" class="d-flex flex-row">
+              <i class="fas fa-bell mr-2"></i>
+              <span>A simple primary alert—check it out!</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="secondary">
-              A simple secondary alert—check it out!
+            <ngb-alert [dismissible]="false" type="secondary" class="d-flex flex-row">
+              <i class="fas fa-question-circle mr-2"></i>
+              <span>A simple secondary alert—check it ou</span>t!
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="success">
-              A simple success alert—check it out!
+            <ngb-alert [dismissible]="false" type="success" class="d-flex flex-row">
+              <i class="fas fa-check-circle mr-2"> </i> A simple success alert—check it out!
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="danger">
-              A simple danger alert—check it out!
+            <ngb-alert [dismissible]="false" type="danger" class="d-flex flex-row">
+              <i class="fas fa-exclamation-triangle mr-2"></i>
+              <span>A simple danger alert—check it out!</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="warning">
-              A simple warning alert—check it out!
+            <ngb-alert [dismissible]="false" type="warning" class="d-flex flex-row">
+              <i class="fas fa-exclamation-circle mr-2"></i>
+              <span>A simple warning alert—check it out!</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="info">
-              A simple info alert—check it out!
+            <ngb-alert [dismissible]="false" type="info" class="d-flex flex-row">
+              <i class="fas fa-info-circle mr-2"></i> 
+              <span>A simple info alert—check it out!</span>
             </ngb-alert>
           </div>
         </div>
@@ -58,39 +60,33 @@
         <div class="card-body">
 
           <h4 class="card-title">Link color</h4>
-          <p class="card-title-desc">Use the <code class="highlighter-rouge">.alert-link</code> utility class to
-            quickly provide matching colored links within any alert.</p>
+          <p class="card-title-desc">Use the <code class="highlighter-rouge">.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
 
             
           <div class="">
-            <ngb-alert [dismissible]="false" type="primary">
-              A simple primary alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it
-              a click if you
-              like.
+            <ngb-alert [dismissible]="false" type="primary" class="d-flex flex-row">
+              <i class="fas fa-bell mr-2"></i> 
+              <span>A simple primary alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a click if you like.</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="secondary">
-              A simple secondary alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give
-              it a click if you
-              like.
+            <ngb-alert [dismissible]="false" type="secondary" class="d-flex flex-row">
+              <i class="fas fa-question-circle mr-2"></i> 
+              <span>A simple secondary alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a click if you like.</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="success">
-              A simple success alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it
-              a click if you
-              like.
+            <ngb-alert [dismissible]="false" type="success" class="d-flex flex-row">
+              <i class="fas fa-check-circle mr-2 success"></i>
+              <span>A simple success alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a click if you like.</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="danger">
-              A simple danger alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it
-              a click if you
-              like.
+            <ngb-alert [dismissible]="false" type="danger" class="d-flex flex-row">
+              <i class="fas fa-exclamation-triangle mr-2"></i>
+              <span>A simple danger alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a click if you like.</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="warning">
-              A simple warning alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it
-              a click if you
-              like.
+            <ngb-alert [dismissible]="false" type="warning" class="d-flex flex-row">
+              <i class="fas fa-exclamation-circle mr-2"></i> 
+              <span>A simple warning alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a click if you like.</span>
             </ngb-alert>
-            <ngb-alert [dismissible]="false" type="info">
-              A simple info alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a
-              click if you like.
+            <ngb-alert [dismissible]="false" type="info" class="d-flex flex-row">
+              <i class="fas fa-info-circle mr-2"></i> 
+              <span>A simple info alert with <a href="javascript: void(0);" class="alert-link">an example link</a>. Give it a click if you like.</span>
             </ngb-alert>
           </div>
         </div>
@@ -113,9 +109,24 @@
           </p>
 
           <div *ngFor="let color of alertData">
-            <ngb-alert type="{{color.color}}" (close)="close(color, alertData)">A simple
-              {{color.color}}
-              alert—check it out!</ngb-alert>
+            <ngb-alert type="{{color.color}}" (close)="close(color, alertData)">
+              <i class="fas fa-bell mr-2" *ngIf="color.color == 'primary'"></i>
+              <i class="fas fa-question-circle mr-2" *ngIf="color.color == 'secondary'"></i>
+              <i class="fas fa-check-circle mr-2" *ngIf="color.color == 'success'"></i>
+              <i class="fas fa-exclamation-triangle mr-2" *ngIf="color.color == 'danger'"></i>
+              <i class="fas fa-exclamation-circle mr-2" *ngIf="color.color == 'warning'"></i>
+              <i class="fas fa-info-circle mr-2" *ngIf="color.color == 'info'"></i>
+
+              <!-- color.color   if color.color class icon variable {{}}
+                primary bell
+                success check-circle
+                danger exclamation-triangle
+                warning exclamation-circle
+                info info-circle
+              -->
+
+
+              <span>A simple {{color.color}} alert—check it out!</span></ngb-alert>
           </div>
         </div>
       </div>
