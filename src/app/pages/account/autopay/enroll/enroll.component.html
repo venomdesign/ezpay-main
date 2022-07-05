@@ -42,7 +42,7 @@
 
                 <div class="wallet-account-item">
                   <div class="d-flex align-items-center justify-content-center">
-                    <input type="radio" name="ap_account" class="check-radio" id="customCheck1" class="mr-3" value="4008">
+                    <input class="check-radio mr-3" type="radio" value="4008" name="ap_account" id="customCheck1" [(ngModel)]="accountNumber">
                     <div class="wallet-account-item-icon">
                       <i class="fab fa-cc-mastercard mr-3"></i>
                     </div>
@@ -55,7 +55,7 @@
 
                 <div class="wallet-account-item">
                   <div class="d-flex align-items-center justify-content-center">
-                    <input type="radio" name="ap_account" class="check-radio" id="customCheck2" class="mr-3" value="9464">
+                    <input class="check-radio mr-3" type="radio" value="9464" name="ap_account" id="customCheck2" [(ngModel)]="accountNumber">
                     <div class="wallet-account-item-icon">
                       <i class="fab fa-cc-visa mr-3"></i>
                     </div>
@@ -75,7 +75,7 @@
       
                 <div class="wallet-account-item">
                   <div class="d-flex align-items-center justify-content-center">
-                    <input type="radio" name="ap_account" class="check-radio" id="customCheck3" value="1111">
+                    <input type="radio" name="ap_account" class="check-radio" id="customCheck3" value="1111" [(ngModel)]="accountNumber">
                     <label for="customCheck3" class="cursor-pointer ml-3 fw-regular">
                       Checking account ending in 1111<br>
                       Routing number: 021000021
@@ -85,7 +85,7 @@
       
                 <div class="wallet-account-item">
                   <div class="d-flex align-items-center justify-content-center">
-                    <input type="radio" name="ap_account" class="check-radio" id="customCheck4" value="7890">
+                    <input type="radio" name="ap_account" class="check-radio" id="customCheck4" value="7890" [(ngModel)]="accountNumber">
                     <label for="customCheck4" class="cursor-pointer ml-3 fw-regular">
                       ACH account ending in 7890<br>
                       Routing number: 033000021
@@ -97,12 +97,18 @@
             </div>
             <!-- <div class="alert alert-warning"><i class="fas fa-exclamation-triangle"></i> Your Automatic Payment of AMOUNT will be processed on the next business day.</div>
             <div class="alert alert-warning"><i class="fas fa-exclamation-triangle"></i> Your Automatic Payment of AMOUNT is scheduled to be processed on DUEDATE.</div> -->
-            <div class="alert alert-danger" *ngIf="noselection"><i class="fas fa-exclamation-triangle"></i> You must select a payment method to continue with autopay enrollment.</div>
+            <div class="alert alert-danger d-flex justify-content-between align-items-center" *ngIf="noselection">
+              <span><i class="fas fa-exclamation-triangle"></i> You must select a payment method to continue with autopay enrollment.</span>
+              <i class="fas fa-times" (click)="noselection=!noselection"></i>
+            </div>
 
 
             <div class="d-flex flex-row flex-wrap">
               <button type="button" class="btn btn-text" [routerLink]="['/']">Cancel</button>
               <button type="submit" class="btn btn-success ml-2" (click)="Errorselection()">Complete Enrollment</button>
+              <!-- <div>
+                Account Ending: {{accountNumber}}
+              </div> -->
             </div>
             <p class="card-text fs-14 mt-4">
               By signing up for automatic payments, all payments will be automatically withdrawn from your specified checking or savings account or charged to the designated credit or debit card on the payment due date. You must turn off Auto-Pay for the specified account in order to discontinue the Auto-Pay feature.

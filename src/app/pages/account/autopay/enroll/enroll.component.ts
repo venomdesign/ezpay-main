@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UntypedFormBuilder, Validators, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-enroll',
@@ -15,7 +16,7 @@ export class EnrollAPComponent implements OnInit {
   isCollapsed: boolean;
   noselection: boolean;
   
-  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder) { }
+  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder, public router: Router) { }
 
   /**
    * Modal Open
@@ -25,9 +26,17 @@ export class EnrollAPComponent implements OnInit {
     this.modalService.open(content, { centered: true });
   }
 
+  accountNumber: string;
+
   Errorselection() {
-    console.log("Autopay Off Clicked");
-    this.noselection = !this.noselection; 
+    if(!this.noselection && this.accountNumber === undefined) { 
+      this.noselection = !this.noselection; 
+    } else if(this.noselection && this.accountNumber != undefined) { 
+      this.noselection = !this.noselection; 
+      this.router.navigateByUrl('/', { state: { data:'showAutopayEnroll' } });
+    } else {
+      this.router.navigateByUrl('/', { state: { data:'showAutopayEnroll' } });
+    } 
     //manageautopay.controls['ap_account'].reset();
   }
 

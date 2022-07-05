@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ChartType, Stat, Chat, Transaction } from './dashboard.model';
@@ -21,7 +22,7 @@ export class DashboardComponent implements OnInit {
   transactions: Transaction[];
   statData: Stat[];
 
-  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder) {
+  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder, private location:Location) {
   }
 
   // bread crumb items
@@ -52,6 +53,14 @@ export class DashboardComponent implements OnInit {
     this.showAutopayEnroll    = false;
     this.showAutopayUpdated   = false;
     this.showAutopayRemoved   = false;
+
+    //console.log(this.location.getState());
+    //console.log(history.state.data);
+
+    if(history.state.data === 'showAutopayEnroll') {
+      this.autopayEnroll();
+    }
+
   }
 
   private _fetchData() {
@@ -104,7 +113,10 @@ export class DashboardComponent implements OnInit {
   }
 
   addedPolicy() {
-    this.showAddedPolicy = !this.showAddedPolicy;
+    if(this.showAddedPolicy) {
+    } else {
+      this.showAddedPolicy = !this.showAddedPolicy;
+    }
   }
   autopayEnroll() {
     this.showAutopayEnroll = !this.showAutopayEnroll;

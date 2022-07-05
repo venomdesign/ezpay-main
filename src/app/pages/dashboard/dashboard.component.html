@@ -57,20 +57,27 @@
           </div>
       </div>
 
-      <div class="alert alert-success" role="alert" *ngIf="showAddedPolicy">
-        <i class="fas fa-check-circle mr-2"></i> Policy GL 1040086B has been added to the account.
+      <div class="alert alert-success d-flex justify-content-between align-items-center" role="alert" *ngIf="showAddedPolicy">
+        <span><i class="fas fa-check-circle mr-2"></i> Policy GL 1040086B has been added to the account.</span>
+        <i class="fas fa-times" (click)="showAddedPolicy=!showAddedPolicy"></i>
       </div>
 
-      <div class="alert alert-success" role="alert" *ngIf="showAutopayEnroll">
-        <i class="fas fa-check-circle mr-2"></i> You have been enrolled in autopay for policy GL 1040086B
+      <div class="alert alert-success d-flex justify-content-between align-items-center" role="alert" *ngIf="showAutopayEnroll">
+        <span><i class="fas fa-check-circle mr-2"></i> You have been enrolled in autopay for policy GL 1040086B</span>
+        <i class="fas fa-times" (click)="showAutopayEnroll=!showAutopayEnroll"></i>
       </div>
 
-      <div class="alert alert-success" role="alert" *ngIf="showAutopayUpdated">
-        <i class="fas fa-check-circle mr-2"></i> Your autopay payment method for policy PL 10654654 has been successfully updated!
+      <div class="alert alert-success d-flex justify-content-between align-items-center" role="alert" *ngIf="showAutopayUpdated">
+        <span><i class="fas fa-check-circle mr-2"></i> Your autopay payment method for policy PL 10654654 has been successfully updated!</span>
+        <i class="fas fa-times" (click)="showAutopayUpdated=!showAutopayUpdated"></i>
       </div>
 
-      <div class="alert alert-warning" role="alert" *ngIf="showAutopayRemoved">
-        <i class="fas fa-bell mr-2"></i> Autopay has been removed for policy PL 10654654, you will receive a bill by mail or email, "<a [routerLink]="['/account/paperless']" title='Click here to "Go Paperless" and skip checking your mailbox'>Go Paperless</a>".
+      <div class="alert alert-warning d-flex justify-content-between" role="alert" *ngIf="showAutopayRemoved">
+        <span class="d-flex justify-content-start">
+          <i class="fas fa-bell mr-2"></i>
+          <span>Autopay has been removed for policy PL 10654654<br>You will receive a bill by mail or email, "<a [routerLink]="['/account/paperless']" title='Click here to "Go Paperless" and skip checking your mailbox'>Go Paperless</a>".</span>
+        </span>
+        <i class="fas fa-times d-flex align-items-center" (click)="showAutopayRemoved=!showAutopayRemoved"></i>
       </div>
 
       <div class="card">

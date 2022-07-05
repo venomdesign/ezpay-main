@@ -7,8 +7,6 @@
   color: $text-color;
   font-size: 1rem;
 
-  i { font-size: 1.25rem; margin-right: 0.5rem; }
-
   &-info {
     background-color: $blue-50;
     border-color: $blue-500;
@@ -30,4 +28,11 @@
     border-color: $warning;
   }
 
+  i { 
+    font-size: 1.25rem; 
+    margin-right: 0.5rem; 
+    cursor: pointer;
+
+    &.fa-times { color: $text-color; }
+  }
 }
