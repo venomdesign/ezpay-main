@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-manage',
   templateUrl: './manage.component.html',
@@ -12,9 +12,9 @@ export class ManageAPComponent implements OnInit {
 
   // Collapse declare
   isCollapsed: boolean;
-  AutopayOff: boolean;
+  //AutopayOff: boolean;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, public router: Router) { }
 
   /**
    * Modal Open
@@ -24,17 +24,28 @@ export class ManageAPComponent implements OnInit {
     this.modalService.open(content, { centered: true });
   }
 
+  // showUpdateAP() {
+  //   //console.log("Autopay Off Clicked");
+  //   //this.AutopayOff = !this.AutopayOff; 
+  //   this.router.navigateByUrl('/'); //, { state: { data:'showAutopayUpdated' } }
+  //   //manageautopay.controls['ap_account'].reset();
+  // }
+
+  // showAPOff() {
+  //   //console.log("Autopay Off Clicked");
+  //   //this.AutopayOff = !this.AutopayOff; 
+  //   this.router.navigateByUrl('/'); //, { state: { data:'showAutopayRemoved' } }
+  //   //manageautopay.controls['ap_account'].reset();
+  // }
+
   showUpdateAP() {
-    console.log("Autopay Off Clicked");
-    this.AutopayOff = !this.AutopayOff; 
-    //manageautopay.controls['ap_account'].reset();
+    this.router.navigateByUrl('/', { state: { data:'showAutopayUpdated' } });
+  }
+  showAPOff() {
+    this.router.navigateByUrl('/', { state: { data:'showAutopayRemoved' } });
   }
 
-  showAPOff() {
-    console.log("Autopay Off Clicked");
-    this.AutopayOff = !this.AutopayOff; 
-    //manageautopay.controls['ap_account'].reset();
-  }
+
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Manage Autopay', active: true }]; //{ label: 'Policy GL 1040086B', link: '/policy' }, 

@@ -28,7 +28,7 @@ export class EnrollAPComponent implements OnInit {
 
   accountNumber: string;
 
-  Errorselection() {
+  errorselection() {
     if(!this.noselection && this.accountNumber === undefined) { 
       this.noselection = !this.noselection; 
     } else if(this.noselection && this.accountNumber != undefined) { 

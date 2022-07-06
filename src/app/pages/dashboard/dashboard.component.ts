@@ -54,13 +54,18 @@ export class DashboardComponent implements OnInit {
     this.showAutopayUpdated   = false;
     this.showAutopayRemoved   = false;
 
-    //console.log(this.location.getState());
-    //console.log(history.state.data);
+    console.log(this.location.getState());
+    console.log(history.state.data);
 
     if(history.state.data === 'showAutopayEnroll') {
       this.autopayEnroll();
     }
-
+    if(history.state.data === 'showAutopayUpdated') {
+      this.autopayUpdated();
+    }
+    if(history.state.data === 'showAutopayRemoved') {
+      this.autopayRemoved();
+    }
   }
 
   private _fetchData() {
@@ -72,6 +77,23 @@ export class DashboardComponent implements OnInit {
     this.transactions = transactions;
     this.statData = statData;
   }
+
+  addedPolicy() {
+    if(this.showAddedPolicy) {
+    } else {
+      this.showAddedPolicy = !this.showAddedPolicy;
+    }
+  }
+  autopayEnroll() {
+    this.showAutopayEnroll = !this.showAutopayEnroll;
+  }
+  autopayUpdated() {
+    this.showAutopayUpdated = !this.showAutopayUpdated;
+  }
+  autopayRemoved() {
+    this.showAutopayRemoved = !this.showAutopayRemoved;
+  }
+
 
   /**
    * Returns form
@@ -111,21 +133,4 @@ export class DashboardComponent implements OnInit {
 
     this.chatSubmit = true;
   }
-
-  addedPolicy() {
-    if(this.showAddedPolicy) {
-    } else {
-      this.showAddedPolicy = !this.showAddedPolicy;
-    }
-  }
-  autopayEnroll() {
-    this.showAutopayEnroll = !this.showAutopayEnroll;
-  }
-  autopayUpdated() {
-    this.showAutopayUpdated = !this.showAutopayUpdated;
-  }
-  autopayRemoved() {
-    this.showAutopayRemoved = !this.showAutopayRemoved;
-  }
-
 }
