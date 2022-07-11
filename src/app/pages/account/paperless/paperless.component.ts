@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-paperless',
   templateUrl: './paperless.component.html',
@@ -13,7 +13,7 @@ export class PaperlessComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, public router: Router) { }
 
   /**
    * Modal Open
@@ -21,6 +21,27 @@ export class PaperlessComponent implements OnInit {
    */
    openModal(content: any) {
     this.modalService.open(content, { centered: true, size: 'xl' });
+  }
+
+  showPaperlessUpdated: boolean;
+  noselection: boolean;
+  paperlessMidyear: string;
+  paperlessInvoices: string;
+  paperlessPolicy: string;
+
+  errorselection() {
+    if(!this.noselection && (this.paperlessMidyear || this.paperlessInvoices || this.paperlessPolicy) === undefined) { 
+      this.noselection = !this.noselection; 
+    } else if(this.noselection && (this.paperlessMidyear || this.paperlessInvoices || this.paperlessPolicy) != undefined) { 
+      this.noselection = !this.noselection; 
+      this.showPaperlessUpdated = !this.showPaperlessUpdated; 
+      this.router.navigateByUrl('/account/paperless', { state: { data:'showPaperlessUpdated' } });
+    } else if(!this.showPaperlessUpdated && (this.paperlessMidyear || this.paperlessInvoices || this.paperlessPolicy) != undefined) {
+      this.showPaperlessUpdated = !this.showPaperlessUpdated; 
+    } else {
+      this.router.navigateByUrl('/account/paperless', { state: { data:'showPaperlessUpdated' } });
+    } 
+    //manageautopay.controls['ap_account'].reset();
   }
 
   ngOnInit() {

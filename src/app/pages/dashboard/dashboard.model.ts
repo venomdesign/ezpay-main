@@ -26,9 +26,12 @@ export interface Chat {
 }
 
 export interface Transaction {
+    type: string;
     orderid: string;
     date: string;
     billingname: string;
     total: string;
     paymentstatus: string;
+    paymentlink: string;
+    paymenthref: string;
 }

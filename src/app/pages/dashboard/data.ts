@@ -171,6 +171,7 @@ const chatData = [
 
 const transactions = [
     {
+        type: 'enroll',
         orderid: 'GL 1040086B',
         date: '01/06/2022 to 01/06/2023',
         billingname: 'Pending Cancel',
@@ -180,6 +181,7 @@ const transactions = [
         paymenthref: '/autopay/enroll/',
     },
     {
+        type: 'manage',
         orderid: 'PL 10654654',
         date: '02/01/2022 to 02/01/2023',
         billingname: 'Active',
@@ -189,18 +191,24 @@ const transactions = [
         paymenthref: '/autopay/manage/',
     },
     // {
-    //     orderid: '#NZ1565',
-    //     date: '29 Mar, 2020',
-    //     billingname: 'Jamison Clark',
-    //     total: '$123',
-    //     paymentstatus: 'Paid'
+    //     type            : 'manage',
+    //     orderid         : '#NZ1565',
+    //     date            : '29 Mar, 2020',
+    //     billingname     : 'Jamison Clark',
+    //     total           : '$123',
+    //     paymentstatus   : 'Enrolled',
+    //     paymentlink     : '(Manage)',
+    //     paymenthref     : '/autopay/manage/',
     // },
     // {
-    //     orderid: '#NZ1566',
-    //     date: '30 Mar, 2020',
-    //     billingname: 'Jewel Buckley',
-    //     total: '$112',
-    //     paymentstatus: 'Paid'
+    //     type            : 'manage',
+    //     orderid         : '#NZ1566',
+    //     date            : '30 Mar, 2020',
+    //     billingname     : 'Jewel Buckley',
+    //     total           : '$112',
+    //     paymentstatus   : 'Enrolled',
+    //     paymentlink     : '(Manage)',
+    //     paymenthref     : '/autopay/manage/',
     // },
     // {
     //     orderid: '#NZ1567',

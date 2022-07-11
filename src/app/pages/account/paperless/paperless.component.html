@@ -36,21 +36,25 @@
         <h4 class="card-header mt-0">Manage Paperless Preferences</h4>
         <div class="card-notice">For the paperless options you selected you will no longer receive the invoices through the mail.</div>
         <div class="card-body">
-          <div class="alert alert-success" role="alert">
+          <div class="alert alert-success" role="alert" *ngIf="showPaperlessUpdated">
             <i class="fas fa-check-circle mr-2 success"></i> Your preferences have been updated
+          </div>
+          <div class="alert alert-danger d-flex justify-content-between align-items-center" *ngIf="noselection">
+            <span><i class="fas fa-exclamation-triangle"></i> You must select a payment method to continue with autopay enrollment.</span>
+            <i class="fas fa-times" (click)="noselection=!noselection"></i>
           </div>
           <div class="form-group row">
             <div class="col-md-12">
               <div class="custom-control custom-checkbox pb-2 pt-2 border-bottom border-light">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" [(ngModel)]="paperlessMidyear">
                 <label class="custom-control-label" for="customCheck1">I would like to go paperless for my Mid-Year Questionnaire.<sup>* 1</sup> <a href="#" data-tooltip="When you enroll in Paperless Mid-Year Questionnaire, you will receive a courtesy email whenever a Mid-Year Questionnaire is available online for completion. You will no longer receive a Mid-Year Questionnaire through the mail."><i class="fas fa-question-circle blue-500 ml-1"></i></a></label>
               </div>
               <div class="custom-control custom-checkbox pb-2 pt-2 border-bottom border-light">
-                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <input type="checkbox" class="custom-control-input" id="customCheck2" [(ngModel)]="paperlessInvoices">
                 <label class="custom-control-label" for="customCheck2">I would like to go paperless for my Invoices.<sup>* 1</sup> <a href="#" data-tooltip="When you enroll in Paperless Invoices, you will receive a courtesy email whenever your new paperless invoices are available on www.usli.com/ezpay. You will no longer receive the invoices through the mail."><i class="fas fa-question-circle blue-500 ml-1"></i></a></label>
               </div>
               <div class="custom-control custom-checkbox pb-2 pt-2 border-bottom border-light">
-                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <input type="checkbox" class="custom-control-input" id="customCheck3" [(ngModel)]="paperlessPolicy">
                 <label class="custom-control-label" for="customCheck3">I would like to go paperless for my Policies.<sup>1</sup> <a href="#" data-tooltip="When you enroll in Paperless Policies, you will receive a courtesy email whenever your new paperless policy is available on www.usli.com/ezpay. You will no longer receive the policy through the mail."><i class="fas fa-question-circle blue-500 ml-1"></i></a></label>
               </div>              
               <p class="card-text fw-medium fs-12 mt-4">
@@ -63,7 +67,7 @@
             <div class="col-md-12">
               <button type="button" class="btn btn-link" [routerLink]="['']">Cancel</button>
               <!-- <button type="button" class="btn btn-secondary ml-2">Clear</button> -->
-              <button type="button" class="btn btn-success ml-2">Update</button>
+              <button type="button" class="btn btn-success ml-2" (click)="errorselection()">Update</button>
             </div>
           </div>
         </div>

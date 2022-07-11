@@ -98,11 +98,24 @@
                   <td><a [routerLink]="['policy']" title="Click to see Policy {{item.orderid}}">{{item.orderid}}</a></td>
                   <td>{{item.date}}</td>
                   <td>{{item.billingname}}</td>
-                  <td>{{item.paymentstatus}} 
-                    <!-- <a href="javascript:void()">{{item.paymentlink}}</a> -->
+                  <td><!--{{item.paymentstatus}}-->
+                    <!-- <ng-container *ngIf="showAutopayEnroll; else defaultBlock">
+                      Enrolled (<a class="cursor-pointer" [routerLink]="['/autopay/manage/']" title="Click here to Manage Autopay">Manage</a>)
+                    </ng-container> -->
+                    <!-- <ng-container *ngIf="showAutopayRemoved; else defaultBlock">
+                      <a class="cursor-pointer" [routerLink]="['/autopay/enroll/']" title="Click here to Enroll in AutoPay">Enroll</a>
+                    </ng-container> -->
+                    <!-- <ng-template #defaultBlock>
+                      {{item.paymentstatus}} <a class="cursor-pointer" [routerLink]="item.paymenthref" title="Click here to {{item.paymentlink != 'Enroll' ? 'Manage Autopay' : 'Enroll in AutoPay'}}">{{item.paymentlink}}</a>
+                    </ng-template> -->
+                    <!-- item.paymentlink != 'Enroll' || !showAutopayEnroll -->
 
-                    <a class="cursor-pointer" [routerLink]="item.paymenthref" title="Click here to {{item.paymentlink != 'Enroll' ? 'Manage Autopay' : 'Enroll in AutoPay'}}">{{item.paymentlink}}</a>
-                    <!-- add condition to change text for showAutopayEnroll & showAutopayRemoved notification present-->
+                    <!-- Hacky for now, will convert to use data.ts -->
+                    <ng-container [ngTemplateOutlet]="showAutopayEnroll ? enrolled : showAutopayRemoved ? removed : default"></ng-container>
+                    <ng-template #enrolled>Enrolled (<a class="cursor-pointer" [routerLink]="['/autopay/manage/']" title="Click here to Manage Autopay">Manage</a>)</ng-template>
+                    <ng-template #removed><a class="cursor-pointer" [routerLink]="['/autopay/enroll/']" title="Click here to Enroll in AutoPay">Enroll</a></ng-template>
+                    <ng-template #default>{{item.paymentstatus}} <a class="cursor-pointer" [routerLink]="item.paymenthref" title="Click here to {{item.paymentlink != 'Enroll' ? 'Manage Autopay' : 'Enroll in AutoPay'}}">{{item.paymentlink}}</a></ng-template>
+
                   </td>
                 </tr>
               </tbody>
