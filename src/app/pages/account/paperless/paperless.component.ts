@@ -29,6 +29,8 @@ export class PaperlessComponent implements OnInit {
   paperlessInvoices: string;
   paperlessPolicy: string;
 
+
+  /* Need to clean this up */
   errorselection() {
     if(!this.noselection && (this.paperlessMidyear || this.paperlessInvoices || this.paperlessPolicy) === undefined) { 
       this.noselection = !this.noselection; 
@@ -42,6 +44,12 @@ export class PaperlessComponent implements OnInit {
       this.router.navigateByUrl('/account/paperless', { state: { data:'showPaperlessUpdated' } });
     } 
     //manageautopay.controls['ap_account'].reset();
+
+    //if no checkbox and submit this.noselection = !this.noselection;
+    //if this.noselection = !this.noselection; and checkbox and submit this.noselection = !this.noselection; && this.showPaperlessUpdated = !this.showPaperlessUpdated; 
+    //if this.showPaperlessUpdated = !this.showPaperlessUpdated; and no checkboxes checked this.showPaperlessUpdated = !this.showPaperlessUpdated; && this.noselection = !this.noselection;
+    // else router to dashboard paperless has been updated or show this.showPaperlessUpdated = !this.showPaperlessUpdated;
+
   }
 
   ngOnInit() {
