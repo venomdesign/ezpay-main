@@ -37,6 +37,8 @@ export class DashboardComponent implements OnInit {
   showAutopayEnroll   : boolean;
   showAutopayUpdated  : boolean;
   showAutopayRemoved  : boolean;
+  showExpired         : boolean;
+  show30day           : boolean;
 
   // Form submit
   chatSubmit: boolean;
@@ -53,6 +55,8 @@ export class DashboardComponent implements OnInit {
     this.showAutopayEnroll    = false;
     this.showAutopayUpdated   = false;
     this.showAutopayRemoved   = false;
+    this.showExpired          = true;
+    this.show30day            = true;
 
     console.log(this.location.getState());
     console.log(history.state.data);
@@ -92,6 +96,12 @@ export class DashboardComponent implements OnInit {
   }
   autopayRemoved() {
     this.showAutopayRemoved = !this.showAutopayRemoved;
+  }
+  showExpiredRemoved() {
+    this.showExpired = !this.showExpired;
+  }
+  show30dayRemoved() {
+    this.show30day = !this.show30day;
   }
 
 
