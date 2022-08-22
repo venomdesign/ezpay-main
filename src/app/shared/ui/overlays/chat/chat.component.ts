@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'chat-card',
   templateUrl: './chat.component.html',
@@ -8,7 +7,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class ChatComponent implements OnInit {
 
-  constructor(private titleService: Title, private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal) { }
 
   /**
    * Modal Open
@@ -19,7 +18,6 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Design - Chat');
   }
 
 }
