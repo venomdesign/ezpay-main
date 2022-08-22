@@ -9,7 +9,7 @@ import timeGrigPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import bootstrapPlugin from '@fullcalendar/bootstrap';
 import { EventInput } from '@fullcalendar/core';
-
+import { Title } from '@angular/platform-browser';
 import { Event } from './event.model';
 import { category, calendarEvents } from './data';
 
@@ -52,11 +52,11 @@ export class CalendarComponent implements OnInit {
   // calendar plugin
   calendarPlugins = [dayGridPlugin, bootstrapPlugin, timeGrigPlugin, interactionPlugin, listPlugin];
 
-  constructor(private modalService: NgbModal, private formBuilder: UntypedFormBuilder) { }
+  constructor(private titleService: Title, private modalService: NgbModal, private formBuilder: UntypedFormBuilder) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Calendar', active: true }];
-
+    this.titleService.setTitle('Design - Calendar');
     /**
      * Event Model validation
      */

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-basic',
   templateUrl: './basic.component.html',
@@ -13,9 +13,10 @@ export class BasicComponent implements OnInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Tables' }, { label: 'Basic Tables', active: true }];
+    this.titleService.setTitle('Venomdesign - Basic Table');
   }
 }

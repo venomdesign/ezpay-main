@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-notfound',
   templateUrl: './notfound.component.html',
@@ -12,11 +12,11 @@ export class NotfoundComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Not Found', active: true }];
-
+    this.titleService.setTitle('Venomdesign - Not Found');
     // Collapse value
     this.isCollapsed = false;
   }

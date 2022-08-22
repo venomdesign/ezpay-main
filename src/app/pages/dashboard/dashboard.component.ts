@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ChartType, Stat, Chat, Transaction } from './dashboard.model';
-
+import { Title } from '@angular/platform-browser';
 import { statData, revenueChart, salesAnalytics, sparklineEarning, sparklineMonthly, chatData, transactions } from './data';
 
 @Component({
@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
   transactions: Transaction[];
   statData: Stat[];
 
-  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder, private location:Location) {
+  constructor(private titleService: Title, private modalService: NgbModal, public formBuilder: UntypedFormBuilder, private location:Location) {
   }
 
   // bread crumb items
@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
       message: ['', [Validators.required]],
     });
     this._fetchData();
-
+    this.titleService.setTitle('Policyholder - Dashboard');
     this.showAddedPolicy      = false;
     this.showAutopayEnroll    = false;
     this.showAutopayUpdated   = false;

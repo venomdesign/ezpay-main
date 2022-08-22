@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 
 import { ChatUser, ChatMessage } from './chat.model';
-
+import { Title } from '@angular/platform-browser';
 import { chatData, chatMessagesData } from './data';
 
 @Component({
@@ -31,12 +31,12 @@ export class ChatComponent implements OnInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
 
-  constructor(public formBuilder: UntypedFormBuilder) {
+  constructor(private titleService: Title, public formBuilder: UntypedFormBuilder) {
   }
 
   ngOnInit(): void {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Chat', active: true }];
-
+    this.titleService.setTitle('Design - Chat');
     this.formData = this.formBuilder.group({
       message: ['', [Validators.required]],
     });

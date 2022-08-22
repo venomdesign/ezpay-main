@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-general',
   templateUrl: './general.component.html',
@@ -20,9 +20,10 @@ export class GeneralComponent implements OnInit {
   alignpage1 = 1;
   alignpage2 = 2;
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'General', active: true }];
+    this.titleService.setTitle('Venomdesign - General');
   }
 }

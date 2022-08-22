@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -15,10 +15,11 @@ export class SweetalertComponent implements OnInit {
 
   // bread crum items
   breadCrumbItems: Array<{}>;
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Sweetalert 2', active: true }];
+    this.titleService.setTitle('Venomdesign - Sweetalert');
   }
   basicMessage() {
     Swal.fire({

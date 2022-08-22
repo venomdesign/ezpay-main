@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-modals',
   templateUrl: './modals.component.html',
@@ -15,10 +15,11 @@ export class ModalsComponent implements OnInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private titleService: Title, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Modals', active: true }];
+    this.titleService.setTitle('Design - Modals');
   }
 
   /**

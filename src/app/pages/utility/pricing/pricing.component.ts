@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Price } from './pricing.model';
 
 import { pricingData } from './data';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
@@ -15,11 +15,11 @@ export class PricingComponent implements OnInit {
 
   pricingData: Price[];
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit(): void {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Pricing', active: true }];
-
+    this.titleService.setTitle('Venomdesign - Pricing');
     this._fetchData();
   }
 

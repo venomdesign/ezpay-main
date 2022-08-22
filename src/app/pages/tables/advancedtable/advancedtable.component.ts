@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { Table } from './advanced.model';
 
 import { tableData } from './data';
-
+import { Title } from '@angular/platform-browser';
 import { AdvancedService } from './advanced.service';
 import { AdvancedSortableDirective, SortEvent } from './advanced-sortable.directive';
 
@@ -33,14 +33,14 @@ export class AdvancedtableComponent implements OnInit {
 
   @ViewChildren(AdvancedSortableDirective) headers: QueryList<AdvancedSortableDirective>;
 
-  constructor(public service: AdvancedService) {
+  constructor(private titleService: Title, public service: AdvancedService) {
     this.tables$ = service.tables$;
     this.total$ = service.total$;
   }
   ngOnInit() {
 
     this.breadCrumbItems = [{ label: 'Tables' }, { label: 'Advanced Table', active: true }];
-
+    this.titleService.setTitle('Venomdesign - Advanced Table');
     /**
      * fetch data
      */

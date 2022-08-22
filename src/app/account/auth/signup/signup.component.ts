@@ -6,7 +6,7 @@ import { AuthenticationService } from '../../../core/services/auth.service';
 import { environment } from '../../../../environments/environment';
 import { first } from 'rxjs/operators';
 import { UserProfileService } from '../../../core/services/user.service';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
   year: number = new Date().getFullYear();
 
   // tslint:disable-next-line: max-line-length
-  constructor(private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService,
+  constructor(private titleService: Title, private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService,
               private userService: UserProfileService) { }
 
   ngOnInit() {
@@ -35,6 +35,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
+    this.titleService.setTitle('Signup');
   }
 
   ngAfterViewInit() {

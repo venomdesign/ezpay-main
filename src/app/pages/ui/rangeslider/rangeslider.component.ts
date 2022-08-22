@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 //import { Options } from 'ng5-slider';
 
 @Component({
@@ -102,11 +102,11 @@ export class RangesliderComponent implements OnInit {
   //   showTicks: true
   // };
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Range Slider', active: true }];
-
+    this.titleService.setTitle('Venomdesign - Range slider');
   }
 
 }

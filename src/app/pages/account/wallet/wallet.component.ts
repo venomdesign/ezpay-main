@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-wallet',
   templateUrl: './wallet.component.html',
@@ -13,7 +13,7 @@ export class WalletComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor(private modalService: NgbModal) { }
+  constructor(private titleService: Title, private modalService: NgbModal) { }
 
   /**
    * Modal Open
@@ -25,7 +25,7 @@ export class WalletComponent implements OnInit {
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Manage Wallet Accounts', active: true }]; //{ label: 'Policy GL 1040086B', link: '/policy' }, 
-
+    this.titleService.setTitle('Policyholder - Manage Wallet');
     // Collapse value
     this.isCollapsed = false;
   }

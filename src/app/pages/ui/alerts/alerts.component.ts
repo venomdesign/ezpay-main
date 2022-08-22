@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { alertData } from './data';
-
+import { Title } from '@angular/platform-browser';
 import { AlertColor } from './alerts.model';
 
 @Component({
@@ -20,11 +20,11 @@ export class AlertsComponent implements OnInit {
   alertData: AlertColor[];
   alertData2: AlertColor[];
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Alerts', active: true }];
-
+    this.titleService.setTitle('Venomdesign - Alerts');
     this._fetchData();
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'privacy-card',
   templateUrl: './privacy.component.html',
@@ -8,7 +8,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PrivacyComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private titleService: Title, private modalService: NgbModal) { }
 
   /**
    * Modal Open
@@ -19,6 +19,7 @@ export class PrivacyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Privacy');
   }
 
 }

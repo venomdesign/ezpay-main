@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-createnotification',
   templateUrl: './notification.component.html',
@@ -12,11 +12,11 @@ export class CreatenotificationComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Create Account', link: '/' }, { label: 'Notification Preferences', active: true }]; //{ label: 'Policy GL 1040086B', link: '/policy' }, 
-
+    this.titleService.setTitle('Create - Notifications');
     // Collapse value
     this.isCollapsed = false;
   }

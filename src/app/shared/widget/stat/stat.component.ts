@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-stat',
   templateUrl: './stat.component.html',
@@ -11,9 +11,10 @@ export class StatComponent implements OnInit {
   @Input() value: string;
   @Input() icon: string;
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Venomdesign - Stat');
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-paperless',
   templateUrl: './paperless.component.html',
@@ -13,7 +13,7 @@ export class CreatepaperlessComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor(private modalService: NgbModal) { }
+  constructor(private titleService: Title, private modalService: NgbModal) { }
 
   /**
    * Modal Open
@@ -25,7 +25,7 @@ export class CreatepaperlessComponent implements OnInit {
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Create Account', link: '/' }, { label: 'Paperless Preferences', active: true }]; //{ label: 'Policy GL 1040086B', link: '/policy' }, 
-
+    this.titleService.setTitle('Create - Paperless');
     // Collapse value
     this.isCollapsed = false;
   }

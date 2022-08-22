@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-policy',
   templateUrl: './policy.component.html',
@@ -12,10 +12,11 @@ export class PolicyComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Policy GL 1040086B', link: 'policy', active: true }];
+    this.titleService.setTitle('Policyholder - Policy');
     // Collapse value
     this.isCollapsed = false;
   }

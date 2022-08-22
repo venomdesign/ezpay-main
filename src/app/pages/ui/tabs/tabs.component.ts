@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
@@ -17,11 +17,11 @@ export class TabsComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Tabs & Accordions', active: true }];
-
+    this.titleService.setTitle('Venomdesign - Tabs');
     // Collapse value
     this.isCollapsed = false;
   }

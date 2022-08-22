@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { Title } from '@angular/platform-browser';
 import { AuthenticationService } from '../../../core/services/auth.service';
 import { environment } from '../../../../environments/environment';
 
@@ -26,7 +26,7 @@ export class PasswordresetComponent implements OnInit, AfterViewInit {
   year: number = new Date().getFullYear();
 
   // tslint:disable-next-line: max-line-length
-  constructor(private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService) { }
+  constructor(private titleService: Title, private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     document.body.removeAttribute('data-layout');
@@ -35,6 +35,7 @@ export class PasswordresetComponent implements OnInit, AfterViewInit {
     this.resetForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
     });
+    this.titleService.setTitle('Password Reset');
   }
 
   ngAfterViewInit() {

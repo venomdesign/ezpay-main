@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-claims',
   templateUrl: './claims.component.html',
@@ -12,12 +13,12 @@ export class ClaimsComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor(private modalService: NgbModal) {
+  constructor(private titleService: Title, private modalService: NgbModal) {
   }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Policy GL 1040086B', link: 'policy' }, { label: 'Claims Activity', active: true }];
-
+    this.titleService.setTitle('Policy - Claims Activity');
     // Collapse value
     this.isCollapsed = false;
   }

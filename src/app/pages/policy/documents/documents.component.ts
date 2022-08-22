@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-documents',
   templateUrl: './documents.component.html',
@@ -12,11 +12,11 @@ export class DocumentsComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Policy GL 1040086B', link: 'policy' }, { label: 'Policy Documents', active: true }];
-
+    this.titleService.setTitle('Policy - Policy Documents');
     // Collapse value
     this.isCollapsed = false;
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 import { timelineData } from './data';
 
 @Component({
@@ -13,11 +13,11 @@ export class TimelineComponent implements OnInit {
   breadCrumbItems: Array<{}>;
 
   timelineData;
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit(): void {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Timeline', active: true }];
-
+    this.titleService.setTitle('Venomdesign - Timeline');
 
     this.timelineData = timelineData;
   }

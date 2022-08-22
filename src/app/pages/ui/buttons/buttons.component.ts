@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-buttons',
   templateUrl: './buttons.component.html',
@@ -19,9 +19,10 @@ export class ButtonsComponent implements OnInit {
     right: false
   };
   radio = 1;
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Buttons', active: true }];
+    this.titleService.setTitle('Venomdesign - Buttons');
   }
 }

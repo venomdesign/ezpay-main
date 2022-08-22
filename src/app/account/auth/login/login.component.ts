@@ -6,7 +6,7 @@ import { AuthfakeauthenticationService } from '../../../core/services/authfake.s
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-
+import { Title } from '@angular/platform-browser';
 import { environment } from '../../../../environments/environment';
 
 @Component({
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   year: number = new Date().getFullYear();
 
   // tslint:disable-next-line: max-line-length
-  constructor(private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, public authenticationService: AuthenticationService, public authFackservice: AuthfakeauthenticationService) { }
+  constructor(private titleService: Title, private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, public authenticationService: AuthenticationService, public authFackservice: AuthfakeauthenticationService) { }
 
   ngOnInit() {
     document.body.removeAttribute('data-layout');
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       email: ['admin@usli.com', [Validators.required, Validators.email]],
       password: ['123456', [Validators.required]],
     });
-
+    this.titleService.setTitle('Login');
     // reset login status
     // this.authenticationService.logout();
     // get return url from route parameters or default to '/'

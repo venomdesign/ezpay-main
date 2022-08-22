@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UntypedFormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-enroll',
@@ -16,7 +17,7 @@ export class EnrollAPComponent implements OnInit {
   isCollapsed: boolean;
   noselection: boolean;
   
-  constructor(private modalService: NgbModal, public formBuilder: UntypedFormBuilder, public router: Router) { }
+  constructor(private titleService: Title, private modalService: NgbModal, public formBuilder: UntypedFormBuilder, public router: Router) { }
 
   /**
    * Modal Open
@@ -42,7 +43,7 @@ export class EnrollAPComponent implements OnInit {
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Home', link: '/' }, { label: 'Enroll In Autopay', active: true }]; //{ label: 'Policy GL 1040086B', link: '/policy' }, 
-
+    this.titleService.setTitle('Policyholder - Enroll in Autopay');
     // Collapse value
     this.isCollapsed = false;
   }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -13,11 +13,11 @@ export class PaymentComponent implements OnInit {
   // Collapse declare
   isCollapsed: boolean;
   
-  constructor(private modalService: NgbModal) { }
+  constructor(private titleService: Title, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.breadCrumbItems = [{ label: 'Pay Online', link: '/payonline' }, { label: 'Payment Method', active: true }]; //, { label: 'Policy GL 1040086B', link: 'policy' }, { label: 'Certificate of Insurance', active: true }
-
+    this.titleService.setTitle('Policyholder - Pay Online');
     // Collapse value
     this.isCollapsed = false;
   }
