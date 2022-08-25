@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "baseHref": "https://venomdesign.github.io/ezpay-main/",
+            "baseHref": "/",
             "allowedCommonJsDependencies": [ 
               "firebase/app",
               "@firebase/app",
