@@ -1,9 +1,8 @@
-# USLI EZPay
+# Built by Venomdesign
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+
 
 ## GETTING STARTED(Please go to this link first)
-https://gigantic-binder-984.notion.site/Angular-cli-projects-and-VSCode-4c114709b2f647eab769d1e41bfb8909
 
 ## Development server
 
@@ -28,4 +27,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# policyholder
+# Venomdesign
