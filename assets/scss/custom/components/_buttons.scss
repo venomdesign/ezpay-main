@@ -36,6 +36,10 @@
   &-outline-light{
     color: $gray-900;
   }
+  &-nostyle {
+    @extend .btn;
+    all: unset;
+  }
 
   &-primary { 
     background-color: $primary; 
